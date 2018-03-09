@@ -1,0 +1,13 @@
+/* ==========================================================================
+	 MENU
+	 ===========================================================================*/
+nav{
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	position: relative;
+	z-index: 100;
+	background: $white;
+}
+
+/* end menu */
