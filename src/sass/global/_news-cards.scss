@@ -64,14 +64,20 @@
 		.card-footer{
 			width: 100%;
 			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			align-items: center;
 			padding: 0;
-			border: none;
-			background: transparent;
 			align-self: flex-end;
 		}
+
+	}
+	.card-footer{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		//padding: 0;
+		border: none;
+		background: transparent;
 		.text-muted{
 			font-size: 80%;
 			display: flex;
