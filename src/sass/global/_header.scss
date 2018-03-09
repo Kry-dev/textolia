@@ -20,4 +20,148 @@
 			margin: 0 auto;
 		}
 	}
+	.collapse{
+		display: none;
+		&.show{
+			display: flex;
+		}
+	}
+	&-search{
+		width: 100%;
+		display: flex;
+		position: relative;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+		padding: 0 1rem;
+		.icon-search{
+			display: flex;
+			width: 15px;
+			height: 15px;
+		}
+		.btn{
+			display: flex;
+			background: transparent;
+			color: $red;
+		}
+		form{
+			margin: 0 1rem;
+			position: absolute;
+			right: 0;
+			z-index: 5;
+			width: 80%;
+			flex-direction: row;
+			display: flex;
+			justify-content: space-between;
+			.form-control{
+				width: 100%;
+				color: $dark;
+			}
+			.btn{
+				position: absolute;
+				right: 0;
+			}
+		}
+
+	}
+}
+.navbar{
+	padding: 0;
+	height: 64px;
+	position: relative;
+	.nav-item{
+		display: flex;
+		align-items: center;
+		&+.nav-item{
+			margin-left: 2px;
+		}
+		&:hover,
+		&:focus,
+		&:active{
+			background: $dark;
+			.nav-link{
+				color: $gray;
+				border-bottom-color: $dark;
+			}
+			.subMenu{
+				display: flex;
+			}
+		}
+	}
+	&-nav{
+		.dropdown-menu{
+			width: 100%;
+			display: flex;
+			top: 100%;
+			left: 0;
+			right: 0;
+			flex-direction: row;
+			justify-content: flex-start;
+			align-items: center;
+			background: #343434;
+			border: none;
+			border-radius: none;
+		}
+	}
+	.nav-link{
+		position: relative;
+		font-size:0.875rem;
+		font-weight: bold;
+		padding: 1.5rem 0;
+		text-transform: uppercase;
+		line-height: 1;
+		text-align: center;
+		align-self: center;
+		justify-content: center;
+		color: $dark;
+		border-bottom: 3px solid $primary;
+		display: flex;
+		flex-direction: column;
+		.icon{
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 15px;
+			height: 15px;
+		}
+
+	}
+	#navMenu{
+		position: relative;
+	}
+	.subMenu{
+		padding: 0 1rem;
+		position: absolute;
+		width: 100%;
+		display: none;
+		top: 100%;
+		left: 0;
+		right: 0;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: center;
+		background: $dark;
+		.subMenu-item{
+			display: flex;
+			align-items: center;
+			&+.subMenu-item{
+				margin-left: 10px;
+			}
+		}
+		.subMenu-link{
+			color: $gray;
+			font-size:0.675rem;
+			font-weight: bold;
+			padding: 1.5rem 0;
+			text-transform: uppercase;
+			line-height: 1;
+			text-align: center;
+			align-self: center;
+			text-decoration: none;
+			&:hover{
+				text-decoration: none;
+				color: $white;
+			}
+		}
+	}
 }

@@ -1,18 +1,18 @@
 //
 // Color system
 //
-$blue: #234B8D;
+$blue: #2eaadd;
 $indigo:  #6610f2;
 $pink:    #ff4d5e;
 $purple: #a56478;
-$red:     #B50E0B;
+$red:     #e7422b;
 $orange:  #fd7e14;
 $yellow: #f5aa69;
 $green: #a1b868;
 $teal: #16a085;
 $cyan:    #17a2b8;
-$gray: #efefef;
-$dark: #2a2a2f;
+$gray: #8d8c8c;
+$dark: #343434;
 
 
 $error: #dd0000 ;
@@ -52,7 +52,7 @@ $colors: map-merge((
         "gray-dark":  $gray-800
 ), $colors);
 
-$primary:       $pink;
+$primary:       $blue;
 $secondary:     $gray-600;
 $success:       $green;
 $info:          $blue;
