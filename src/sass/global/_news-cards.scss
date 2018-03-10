@@ -25,6 +25,12 @@
 		background: transparent;
 		border: none;
 	}
+	&-title{
+		color: $dark;
+		a{
+			color: $dark;
+		}
+	}
 	.card-img-overlay{
 		display: flex;
 		flex-direction: column;
