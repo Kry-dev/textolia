@@ -1,0 +1,44 @@
+.statistics{
+	background: $white;
+	padding: 1rem;
+	p{
+		font-size:0.875rem;
+		a{
+			color: $red;
+			text-decoration: underline;
+		}
+	}
+	.card{
+		border: none;
+		&-body{
+			padding: .5rem;
+		}
+	}
+	&-img{
+		width: 100%;
+		height: 100%;
+		min-height: 115px;
+		display: block;
+		margin: 0 auto .5rem;
+		&.rounded{
+			width: 115px;
+			height: 115px;
+		}
+	}
+	.statistics-btn-add{
+		text-align: right;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		align-items: center;
+		justify-self: flex-end;
+		font-weight: normal;
+		.icon{
+			width: 12px;
+			margin-left: 5px;
+		}
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}
