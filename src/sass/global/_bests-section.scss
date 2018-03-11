@@ -1,5 +1,9 @@
 .bests{
 	font-size: 0.875rem;
+	@include media-breakpoint-down(sm){
+		font-size: 0.75em;
+
+	}
 	.nav-pills{
 		border-right: 5px solid $primary;
 		.nav-link{
@@ -7,6 +11,15 @@
 			color: $dark;
 			padding:.51rem 1rem;
 			position: relative;
+
+			@include media-breakpoint-down(sm){
+				padding: .5rem;
+				text-align: center;
+
+			}
+			&:focus{
+				outline: none;
+			}
 			&.active{
 				background: $white;
 				color: $primary;
@@ -17,7 +30,26 @@
 					right: -1px;
 					font-size: 1rem;
 				}
+				@include media-breakpoint-down(sm){
+					color: inherit;
+					&.show{
+						color: $primary;
+					}
+					&:after{
+						display: none;
+					}
+				}
 			}
+
+		}
+		@include media-breakpoint-down(sm){
+			border: 0;
+		}
+	}
+	.tab-content{
+		border: 0;
+		@include media-breakpoint-down(sm){
+			border-left: 5px solid $primary;
 		}
 	}
 	.table{
@@ -43,5 +75,54 @@
 			border: 0;
 			border-right: 2px solid rgba($primary, 0.1);
 		}
+	}
+	.slick-list{
+		position: relative;
+		&:before,
+		&:after{
+			position: absolute;
+			content: "";
+			display: block;
+			width: 30px;
+			height: 35px;
+			background: $white;
+			z-index: 30;
+			top: 0;
+		}
+		&:before{
+			left: 0;
+		}
+		&:after{
+			right: 0;
+		}
+	}
+	.slick-prev,
+	.slick-next{
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		background: $bg-gray;
+		z-index:50;
+	}
+	.slick-prev {
+		left: 35px;
+	}
+	.slick-next {
+		right: 35px;
+	}
+	.slick-prev:before,
+	.slick-next:before {
+		font-family: FontAwesome;
+		width: 25px;
+		height: 25px;
+		color: #939391;
+		font-size: 16px;
+	}
+	.slick-prev:before {
+		content: "\f04a";
+	}
+
+	.slick-next:before {
+		content: "\f04e";
 	}
 }

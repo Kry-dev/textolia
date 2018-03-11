@@ -1,10 +1,10 @@
 .row
-    .col-md-8.col-xs-12.bg-white.py-4
+    .col-xs-12.col-md-8.bg-white.py-4
         h5 Meilleurs joueurs du tournoi des Masters de Londres
         .row.px-3
             .col-md-3.p-0
                 #bests-tabs.nav.flex-column.nav-pills(role='tablist', aria-orientation='vertical')
-                    a#best-tab-01.nav-link.active(data-toggle='pill', href='#best-table-01', role='tab', aria-controls='best-table-01', aria-selected='true') Dimanche 12 nov
+                    a#best-tab-01.nav-link(data-toggle='pill', href='#best-table-01', role='tab', aria-controls='best-table-01', aria-selected='true') Dimanche 12 nov
                     a#best-tab-02.nav-link(data-toggle='pill', href='#best-table-02', role='tab', aria-controls='best-table-02', aria-selected='false') Lundi 13 nov
                     a#best-tab-03.nav-link(data-toggle='pill', href='#best-table-03', role='tab', aria-controls='best-table-03', aria-selected='false') Mardi 14 nov
                     a#best-tab-04.nav-link(data-toggle='pill', href='#best-table-04', role='tab', aria-controls='best-table-04', aria-selected='false') Mercredi 15 nov
@@ -17,12 +17,12 @@
                     #best-table-01.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='best-tab-01')
                         include table/bests-table-01
                     #best-table-02.tab-pane.fade(role='tabpanel', aria-labelledby='best-tab-02')
-                        include table/bests-table-01
+                        include table/bests-table-02
                     #best-table-03.tab-pane.fade(role='tabpanel', aria-labelledby='best-tab-03')
-                        include table/bests-table-01
+                        include table/bests-table-03
                     #best-table-04.tab-pane.fade(role='tabpanel', aria-labelledby='best-tab-04')
-                        include table/bests-table-01
+                        include table/bests-table-04
                     #best-table-05.tab-pane.fade(role='tabpanel', aria-labelledby='best-tab-05')
-                        include table/bests-table-01
+                        include table/bests-table-05
                     #best-table-06.tab-pane.fade(role='tabpanel', aria-labelledby='best-tab-06')
-                        include table/bests-table-01
+                        include table/bests-table-06
