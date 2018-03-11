@@ -38,4 +38,16 @@ $(document).ready(function() {
             }
         }]
     });
+    $('#bests-tabs a').on('click', function (e) {
+        e.preventDefault();
+        $(this).tab('show')
+    })
+    // $(window).on('load resize', function () {
+    //     if ($(this).width() < 640) {
+    //         $('table tfoot').hide();
+    //     } else {
+    //         $('table tfoot').show();
+    //     }
+    // });
+
 });

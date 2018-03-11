@@ -1,0 +1,47 @@
+.bests{
+	font-size: 0.875rem;
+	.nav-pills{
+		border-right: 5px solid $primary;
+		.nav-link{
+			border-radius: none;
+			color: $dark;
+			padding:.51rem 1rem;
+			position: relative;
+			&.active{
+				background: $white;
+				color: $primary;
+				&:after{
+					font-family: FontAwesome;
+					content: '\f0d9';
+					position: absolute;
+					right: -1px;
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+	.table{
+		thead{
+			background: rgba($primary, 0.1);
+			color: $primary;
+			font-weight: normal;
+			th{
+				border: 0;
+				&:last-of-type{
+					border: 0;
+				}
+			}
+		}
+		tbody tr:nth-child(2n){
+			background: rgba($primary, 0.1);
+			td{
+				border: 0;
+			}
+			border: 0;
+		}
+		tr,td{
+			border: 0;
+			border-right: 2px solid rgba($primary, 0.1);
+		}
+	}
+}
