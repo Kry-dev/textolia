@@ -1,0 +1,38 @@
+.articles{
+	.tab-pane{
+		img{
+			width: 100%;
+		}
+	}
+	.nav-pills{
+
+	}
+	.nav-link{
+		display: flex;
+		align-items: center;
+		border-radius: 0;
+		position: relative;
+		height: 64px;
+		color: $dark;
+		z-index: 5;
+		span{
+			position: relative;
+			z-index: 10;
+		}
+		&:before{
+			content: "";
+			position: absolute;
+			left: -20px;
+			top: 12px;
+			display: block;
+			width: 40px;
+			height: 40px;
+			background: transparent;
+			transform: rotate(-45deg);
+			z-index: 4;
+		}
+		&.active:before{
+			background: $primary;
+		}
+	}
+}
