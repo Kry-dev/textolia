@@ -2,6 +2,8 @@
 // Color system
 //
 $blue: #2eaadd;
+$blue-light: #a1e3ff;
+$blue-dark: #173b4a;
 $indigo:  #6610f2;
 $pink:    #ff4d5e;
 $purple: #a56478;
@@ -39,6 +41,7 @@ $footer-subtitle-color: #4e4e5d;
 $colors: () ;
 $colors: map-merge((
         "blue":       $blue,
+        "info":       $blue-light,
         "indigo":     $indigo,
         "purple":     $purple,
         "pink":       $pink,
