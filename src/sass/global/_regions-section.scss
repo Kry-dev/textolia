@@ -1,0 +1,48 @@
+$chart-color-dark-bold-blue: #173b4a;
+$chart-color-dark-blue: #176788;
+$chart-color-blue: #2ea9dc;
+$chart-color-light-blue: #a1e3ff;
+.chart-1{  background: $chart-color-dark-bold-blue;  }
+.chart-2{  background: $chart-color-dark-blue;  }
+.chart-3{  background: $chart-color-blue;  }
+.chart-4{  background: $chart-color-light-blue;  }
+
+.regions{
+	font-size: 0.875rem;
+	&-title{
+		font-weight: normal;
+	}
+	&-map{
+		display: block;
+		width: 100%;
+		img{
+			width: 100%;
+			display: block;
+		}
+	}
+	&-chart{
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 1rem;
+		&-item{
+			display: flex;
+			width: 100%;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		&-item + &-item{
+			margin-top: 10px;
+		}
+		&-text{
+			display: flex;
+			width: 50%;
+		}
+		.progress{
+			justify-content: flex-end;
+			width: 40%;
+			border-radius: 0;
+			height: 24px;
+			background: transparent;
+		}
+	}
+}
