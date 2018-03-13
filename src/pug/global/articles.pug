@@ -1,44 +1,70 @@
 .row
-    .col-md-8.bg-white.bor.bor-top.bor-3.primary
-        .box-label articles populaire en sports
-        .row
-            .col-md-6.p-0
-                #articles-tabContent.tab-content
-                    #article-01.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='article-tab-01')
-                        a(href="#")
-                            img(src="assets/img/global/article-01.jpg")
-                    #article-02.tab-pane.fade(role='tabpanel', aria-labelledby='article-tab-02')
-                        a(href="#")
-                            img(src="assets/img/global/article-02.jpg")
-                    #article-03.tab-pane.fade(role='tabpanel', aria-labelledby='article-tab-03')
-                        a(href="#")
-                            img(src="assets/img/global/article-01.jpg")
-                    #article-04.tab-pane.fade(role='tabpanel', aria-labelledby='article-tab-04')
-                        a(href="#")
-                            img(src="assets/img/global/article-02.jpg")
-                    #article-05.tab-pane.fade(role='tabpanel', aria-labelledby='article-tab-05')
-                        a(href="#")
-                            img(src="assets/img/global/article-01.jpg")
-            .col-md-6.p-0
-                #articles-tabs.nav.flex-column.nav-pills(role='tablist', aria-orientation='vertical')
-                    p.px-3.my-1
-                        | Découvrez les autres articles populaires de la
-                        | section tennis. Tous les matchs importants et les
-                        | dernières informations à ne pas manquer.
-                    a#article-tab-01.nav-link(data-toggle='pill', href='#article-01', role='tab', aria-controls='best-table-01',
-                    aria-selected='true')
-                        span Golden State sur sa planète, ball dans l'histoire de la NBA
-                    a#article-tab-02.nav-link(data-toggle='pill', href='#article-02', role='tab', aria-controls='best-table-02',
-                    aria-selected='false')
-                        span Insubmersibles, Les Celtics renversent Les Warriors et poursuivent leur série
-                    a#article-tab-03.nav-link(data-toggle='pill', href='#article-03', role='tab', aria-controls='best-table-03',
-                    aria-selected='false')
-                        span Golden State sur sa planète, ball dans l'histoire de la NBA
-                    a#article-tab-04.nav-link(data-toggle='pill', href='#article-04', role='tab', aria-controls='best-table-04',
-                    aria-selected='false')
-                        span Insubmersibles, Les Celtics contre Les Warriors
-                    a#article-tab-05.nav-link(data-toggle='pill', href='#article-05', role='tab', aria-controls='best-table-05',
-                    aria-selected='false')
-                        span Les Celtics renversent Les Warriors
+    .col-md-8.pl-0
+        .bg-white.bor.bor-top.bor-3.primary
+
+            .row
+                .box-label articles populaire en sports
+                .col-md-6
+                    #articles-tabContent.tab-content
+                        #article-01.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='article-tab-01')
+                            a(href="#")
+                                img(src="assets/img/global/article-01.jpg")
+                        #article-02.tab-pane.fade(role='tabpanel', aria-labelledby='article-tab-02')
+                            a(href="#")
+                                img(src="assets/img/global/article-02.jpg")
+                        #article-03.tab-pane.fade(role='tabpanel', aria-labelledby='article-tab-03')
+                            a(href="#")
+                                img(src="assets/img/global/article-01.jpg")
+                        #article-04.tab-pane.fade(role='tabpanel', aria-labelledby='article-tab-04')
+                            a(href="#")
+                                img(src="assets/img/global/article-02.jpg")
+                        #article-05.tab-pane.fade(role='tabpanel', aria-labelledby='article-tab-05')
+                            a(href="#")
+                                img(src="assets/img/global/article-01.jpg")
+                .col-md-6
+                    #articles-tabs.nav.flex-column.nav-pills(role='tablist', aria-orientation='vertical')
+                        p.px-3.my-1
+                            | Découvrez les autres articles populaires de la
+                            | section tennis. Tous les matchs importants et les
+                            | dernières informations à ne pas manquer.
+                        a#article-tab-01.nav-link(data-toggle='pill', href='#article-01', role='tab', aria-controls='best-table-01',
+                        aria-selected='true')
+                            span Golden State sur sa planète, ball dans l'histoire de la NBA
+                        a#article-tab-02.nav-link(data-toggle='pill', href='#article-02', role='tab', aria-controls='best-table-02',
+                        aria-selected='false')
+                            span Insubmersibles, Les Celtics renversent Les Warriors et poursuivent leur série
+                        a#article-tab-03.nav-link(data-toggle='pill', href='#article-03', role='tab', aria-controls='best-table-03',
+                        aria-selected='false')
+                            span Golden State sur sa planète, ball dans l'histoire de la NBA
+                        a#article-tab-04.nav-link(data-toggle='pill', href='#article-04', role='tab', aria-controls='best-table-04',
+                        aria-selected='false')
+                            span Insubmersibles, Les Celtics contre Les Warriors
+                        a#article-tab-05.nav-link(data-toggle='pill', href='#article-05', role='tab', aria-controls='best-table-05',
+                        aria-selected='false')
+                            span Les Celtics renversent Les Warriors
 
     .col-md-4
+        .video-box
+            h5.px-3 L'actu des Masters de Londres en vidéo
+            .row
+                .col-md-12
+                    a(href="#").video-box-link
+                        img(src="assets/img/global/video-01.jpg")
+                        .play-icon
+                            i.fa.fa-play
+            .row.px-3
+                .col-md-4.p-0
+                    a(href="#").video-box-link
+                        img(src="assets/img/global/video-01.jpg")
+                        .play-icon.play-icon-small
+                            i.fa.fa-play
+                .col-md-4.p-0
+                    a(href="#").video-box-link
+                        img(src="assets/img/global/video-01.jpg")
+                        .play-icon.play-icon-small
+                            i.fa.fa-play
+                .col-md-4.p-0
+                    a(href="#").video-box-link
+                        img(src="assets/img/global/video-01.jpg")
+                        .play-icon.play-icon-small
+                            i.fa.fa-play
