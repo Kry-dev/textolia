@@ -3,6 +3,43 @@
 	padding: 2rem 1rem;
 	&-logo{
 		text-align: center;
-		margin: 0 auto 1rem;
+		margin: 0 auto 2rem;
+	}
+	&-nav{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		&-link{
+			color: #aaaaab;
+			font-size:0.75rem;
+			&:hover{
+				text-decoration: none;
+				color: $white;
+			}
+		}
+	}
+	&-nav-title{
+		text-transform: uppercase;
+		font-weight: normal;
+		font-size: 0.875rem;
+		line-height: 1rem;
+		color: $white;
+		border-bottom: 2px solid $primary;
+
+	}
+	&-nav-col{
+		display: flex;
+		flex-direction: column;
+	}
+	&-terms{
+		font-weight: lighter;
+		color: #999999;
+		font-size: 0.8125rem;
+		text-align: center;
+		a{
+			color: $red;
+			text-decoration: underline;
+		}
 	}
 }
