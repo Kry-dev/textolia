@@ -10,6 +10,9 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		@include media-breakpoint-down(sm){
+			display: none;
+		}
 		&-link{
 			color: #aaaaab;
 			font-size:0.75rem;

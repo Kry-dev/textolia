@@ -44,6 +44,9 @@ body {
 /* CUSTOM STYLE FOR GRID */
 .container{
 	width: 100%;
+	@include media-breakpoint-down(md){
+		max-width: 100%;
+	}
 }
 .left{
 	float: left;
@@ -151,6 +154,17 @@ h2,h3{
 h4,h5{
 	font-family: 'Roboto-Bold';
 }
+.right-banner{
 
+}
+@include media-breakpoint-down(sm){
+	.mob-or-1{  order: 0;  }
+	.mob-or-2{  order: 1;  }
+	.mob-or-3{  order: 2;  }
+	.mob-or-4{  order: 3;  }
 
+	.right-banner{
+		display: none;
+	}
+}
 /* end global styles */

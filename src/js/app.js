@@ -38,6 +38,20 @@ $(document).ready(function() {
             }
         }]
     });
+    $("#video-carousel .video-carousel-list").slick({
+        slidesToShow: 3,
+        responsive: [{
+
+            breakpoint: 9999,
+            settings: 'unslick'
+
+        },{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1
+            }
+        }]
+    });
     var bestTabsSlider = function () {
         $("#bests-tabs").slick({
             slidesToShow: 3,

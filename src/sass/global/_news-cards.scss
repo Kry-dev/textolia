@@ -5,6 +5,9 @@
 	border-radius: 0;
 	&-inline{
 		flex-direction: row;
+		@include media-breakpoint-down(sm){
+			flex-direction: column;
+		}
 	}
 	&-img-top{
 		border-radius: 0;
@@ -27,6 +30,7 @@
 	}
 	&-title{
 		color: $dark;
+		font-weight: bold;
 		a{
 			color: $dark;
 		}
@@ -113,6 +117,14 @@
 	top: -1rem;
 	font-size: 0.8125rem;
 	line-height: 0.8125rem;
+	@include media-breakpoint-down(sm){
+		right: inherit;
+		text-transform: capitalize;
+		padding: .5rem;
+		top: -15px;
+		left: -3px;
+		z-index: 100;
+	}
 }
 .news-title{
 	color: $red;
@@ -120,25 +132,45 @@
 .primary{
 	.box-label{
 		color: $primary;
+		@include media-breakpoint-down(sm){
+			background: $primary;
+			color: $white;
+		}
 	}
 }
 .success{
 	.box-label{
 		color: $success;
+		@include media-breakpoint-down(sm){
+			background: $success;
+			color: $white;
+		}
 	}
 }
 .info{
 	.box-label{
 		color: $info;
+		@include media-breakpoint-down(sm){
+			background: $info;
+			color: $white;
+		}
 	}
 }
 .warning{
 	.box-label{
 		color: $warning;
+		@include media-breakpoint-down(sm){
+			background: $warning;
+			color: $white;
+		}
 	}
 }
 .danger{
 	.box-label{
 		color: $danger;
+		@include media-breakpoint-down(sm){
+			background: $danger;
+			color: $white;
+		}
 	}
 }

@@ -24,6 +24,13 @@
 			width: 115px;
 			height: 115px;
 		}
+		@include media-breakpoint-down(sm){
+			min-height: 50px;
+			max-width: 80%;
+			&.rounded{
+				width: 65px;
+				height: 65px;
+			}
+		}
 	}
-
 }
