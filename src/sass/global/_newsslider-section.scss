@@ -44,12 +44,19 @@
 		height: 38px;
 		border-radius: 50%;
 		background: $bg-gray;
+		z-index: 50;
 	}
 	.slick-prev {
 		left: -35px;
+		@include media-breakpoint-down(sm){
+			left: 0;
+		}
 	}
 	.slick-next {
 		right: -35px;
+		@include media-breakpoint-down(sm){
+			right: 0;
+		}
 	}
 	.slick-prev:before,
 	.slick-next:before {
@@ -64,5 +71,24 @@
 
 	.slick-next:before {
 		content: "\f101";
+	}
+	.slick-dots{
+		bottom: 15px;
+		z-index: 50;
+		li{
+			button{
+				&:before{
+					font-size: 30px;
+					color: $white;
+				}
+			}
+			&.slick-active{
+				button{
+					&:before{
+						font-size: 40px;
+					}
+				}
+			}
+		}
 	}
 }

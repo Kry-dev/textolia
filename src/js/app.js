@@ -25,8 +25,9 @@ $(document).ready(function() {
         }, {
             breakpoint: 768,
             settings: {
-                centerMode: false,
-                slidesToShow: 2
+                centerMode: true,
+                dots: true,
+                slidesToShow: 1
             }
         }, {
 
@@ -34,11 +35,12 @@ $(document).ready(function() {
             settings: {
                 rows: 1,
                 centerMode: false,
+                dots: true,
                 slidesToShow: 1
             }
         }]
     });
-    $("#video-carousel .video-carousel-list").slick({
+    $("#video-carousel .vid-carousel-list").slick({
         slidesToShow: 3,
         responsive: [{
 
