@@ -9,12 +9,12 @@ header.header
                     img.header-banner-img(src='assets/img/banners/banner.jpg', alt='')
 
 
-        .row
+        .row.header-bottom
             .col-md-12
                 nav.navbar.navbar-expand-lg.bg-light
                     button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navMenu',
                     aria-controls='navMenu', aria-expanded='false', aria-label='Toggle navigation')
-                        span.navbar-toggler-icon
+                        +icon('menu')
                     #navMenu.collapse.navbar-collapse
                         ul.navbar-nav.mr-auto
                             li.nav-item
@@ -46,4 +46,15 @@ header.header
                                 input.form-control(type='search', placeholder='Search', aria-label='Search')
                                 button.btn(type='submit')
                                     +icon('search')
+                    a(href='/').header-logo-mobile
+                            img(src='assets/img/global/logo.png', alt='')
+                    .header-search-mobile
+                        a.btn(data-toggle="collapse" href="#header-search-form-mob" role="button" aria-expanded="false"
+                        aria-controls="header-search-form-mob")
+                            +icon('search')
+                            +icon('cancel')
+                        form#header-search-form-mob.form-inline.collapse(action="/")
+                            input.form-control(type='search', placeholder='Search', aria-label='Search')
+                            button.btn(type='submit')
+                                +icon('search')
 

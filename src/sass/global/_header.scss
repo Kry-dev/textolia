@@ -9,6 +9,11 @@
 		width: 100%;
 		justify-content: space-between;
 		margin: auto;
+		@include media-breakpoint-down(md){
+			position: absolute;
+			max-width: 100px;
+			display: none;
+		}
 	}
 	&-logo{
 		display: block;
@@ -20,6 +25,7 @@
 			width: 100%;
 			margin: 0 auto;
 		}
+
 	}
 	.collapse{
 		display: none;
@@ -63,13 +69,92 @@
 				right: 0;
 			}
 		}
+	}
+	&-banner{
+		@include media-breakpoint-down(md){
+			display: none;
+		}
+	}
+	.header-logo-mobile{
+		display: none;
+		@include media-breakpoint-down(md){
+			display: flex;
+			width: 30%;
+			img{
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}
+	}
+	.header-search-mobile{
+		display: none;
+		height: 50px;
+		align-items: center;
+		.icon{
+			width: 15px;
+			height: 20px;
+		}
+		@include media-breakpoint-down(md){
+			display: flex;
+			.btn{
+				display: flex;
+				height: 100%;
+				align-items: center;
+				.icon-search{  display: flex;  }
+				.icon-cancel{  display: none;  }
+				&[aria-expanded="true"] {
+					box-shadow: none;
+					background: $white;
+					.icon-search{  display: none;  }
+					.icon-cancel{  display: flex;  }
+				}
+			}
+		}
+	}
+	#header-search-form-mob{
+		display: none;
+		&.collapse.show{
+			display: flex;
+		}
+		@include media-breakpoint-down(md){
+			justify-content: center;
+			position: absolute;
+			width: 100%;
+			left: 0;
+			right: 0;
+			top: 50px;
+			background: $white;
+			padding: 2rem;
+			z-index: 100;
+			.form-control{
+				min-width: 70%	;
+				border-radius: 0;
+				border: 0;
+				background: #f1f1f1;
+			}
+			.btn{
+				border-radius: 0;
+				background: $primary;
+				svg{
+					fill: $white;
+				}
 
+			}
+		}
 	}
 }
 .navbar{
 	padding: 0;
 	height: 64px;
 	position: relative;
+	@include media-breakpoint-down(md){
+		height: 50px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		align-items: center;
+	}
 	.nav-item{
 		display: flex;
 		align-items: center;
@@ -88,6 +173,10 @@
 				display: flex;
 			}
 		}
+		@include media-breakpoint-down(md){
+			width: 100%;
+
+		}
 	}
 	&-nav{
 		.dropdown-menu{
@@ -102,6 +191,10 @@
 			background: #343434;
 			border: none;
 			border-radius: none;
+		}
+		@include media-breakpoint-down(md){
+			width: 100%;
+
 		}
 	}
 	.nav-link{
@@ -129,6 +222,13 @@
 	}
 	#navMenu{
 		position: relative;
+		@include media-breakpoint-down(md){
+			width: 100%;
+			position: absolute;
+			background: $white;
+			top: 50px;
+			z-index: 100;
+		}
 	}
 	.subMenu{
 		padding: 0 1rem;
