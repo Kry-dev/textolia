@@ -172,8 +172,10 @@
 			}
 		}
 		&:hover{
+
 			background: $dark;
 			.nav-link{
+				color: $white;
 				border-bottom-color: $dark;
 			}
 			.subMenu{
