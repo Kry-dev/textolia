@@ -18,34 +18,26 @@ mixin socials(name, url, mod)
 							use(xlink:href=`assets/img/sprite/sprite.min.svg#${social.name}`)
 
 //- subMenu
-mixin subMenu
-	ul.subMenu
+mixin subMenu(id)
+	ul(id=id).subMenu
 		li.subMenu-item
-			a.subMenu-link(href="#") Sublink
+			a.subMenu-link(href="#") Tennis
 		li.subMenu-item
-			a.subMenu-link(href="#") Sublink
+			a.subMenu-link(href="#") Football
 		li.subMenu-item
-			a.subMenu-link(href="#") Sublink
+			a.subMenu-link(href="#") Volleyball
 		li.subMenu-item
-			a.subMenu-link(href="#") Sublink
+			a.subMenu-link(href="#") Rugby
 		li.subMenu-item
-			a.subMenu-link(href="#") Sublink
+			a.subMenu-link(href="#") Natation
 		li.subMenu-item
-			a.subMenu-link(href="#") Sublink
-		li.subMenu-item
-			a.subMenu-link(href="#") Sublink
-		li.subMenu-item
-			a.subMenu-link(href="#") Sublink
-		li.subMenu-item
-			a.subMenu-link(href="#") Sublink
-		li.subMenu-item
-			a.subMenu-link(href="#") Sublink
-		li.subMenu-item
-			a.subMenu-link(href="#") Sublink
-		li.subMenu-item
-			a.subMenu-link(href="#") Sublink
-		li.subMenu-item
-			a.subMenu-link(href="#") Sublink
+			a.subMenu-link(href="#") Judo
+
+
+
+
+
+
 
 //- sprite
 include svg-sprite

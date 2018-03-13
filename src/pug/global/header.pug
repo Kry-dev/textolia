@@ -18,21 +18,21 @@ header.header
                     #navMenu.collapse.navbar-collapse
                         ul.navbar-nav.mr-auto
                             li.nav-item
-                                a.nav-link(href='#') Politique
+                                a.nav-link(data-toggle="collapse", href="#submenu-01") Politique
                                     +icon('down')
-                                +subMenu
+                                +subMenu('submenu-01')
                             li.nav-item
-                                a.nav-link(href='#') Economie
+                                a.nav-link(data-toggle="collapse", href="#submenu-02") Economie
                                     +icon('down')
-                                +subMenu
+                                +subMenu('submenu-02')
                             li.nav-item
-                                a.nav-link(href='#') Culture
+                                a.nav-link(data-toggle="collapse", href="#submenu-03") Culture
                                     +icon('down')
-                                +subMenu
+                                +subMenu('submenu-03')
                             li.nav-item
-                                a.nav-link(href='#') Société
+                                a.nav-link(data-toggle="collapse", href="#submenu-04") Société
                                     +icon('down')
-                                +subMenu
+                                +subMenu('submenu-04')
                             li.nav-item
                                 a.nav-link(href='#') Sport
                                     +icon('down')
