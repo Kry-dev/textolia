@@ -1,6 +1,7 @@
 .circles{
 	background: $white;
 	padding: 1rem;
+	overflow: hidden;
 	a{
 		color: $red;
 	}
@@ -8,6 +9,12 @@
 		width: 100%;
 		position: relative;
 		min-height: 300px;
+		@include media-breakpoint-down(sm){
+			min-width: 800px;
+			overflow: auto;
+			overflow-y: hidden;
+			display: block;
+		}
 	}
 	&-item{
 		display: flex;

@@ -1,5 +1,22 @@
 .articles{
+	&-box{
+		display: flex;
+		flex-direction: row;
+		@include media-breakpoint-down(sm){
+			flex-direction: column;
+		}
+	}
+	.tab-content{
+		overflow: hidden;
+		display: flex;
+		width: 50%;
+		margin: 0 auto;
+		@include media-breakpoint-down(sm){
+			width: 100%;
+		}
+	}
 	.tab-pane{
+		width: 100%;
 		a{
 			display: block;
 			width: 100%;
@@ -11,35 +28,49 @@
 		}
 	}
 	.nav-pills{
-
+		width: 50%;
+		@include media-breakpoint-down(sm){
+			width: 100%;
+		}
 	}
 	.nav-link{
 		display: flex;
 		align-items: center;
 		border-radius: 0;
 		position: relative;
-		height: 64px;
+		height: 55px;
 		color: $dark;
 		z-index: 5;
+		@include media-breakpoint-down(sm){
+			overflow: hidden;
+		}
 		span{
 			position: relative;
 			z-index: 10;
 			font-weight: bold;
+			line-height: 1;
 		}
 		&:before{
 			content: "";
 			position: absolute;
-			left: -20px;
-			top: 12px;
+			left: -18px;
+			top: 9px;
 			display: block;
-			width: 40px;
-			height: 40px;
+			width: 36px;
+			height: 36px;
 			background: transparent;
 			transform: rotate(-45deg);
 			z-index: 4;
 		}
 		&.active:before{
 			background: $primary;
+			@include media-breakpoint-down(sm){
+				width: 10px;
+				height: 10px;
+				top: 40%;
+				left: -5px;
+				background: $white;
+			}
 		}
 	}
 }

@@ -44,8 +44,10 @@ body {
 /* CUSTOM STYLE FOR GRID */
 .container{
 	width: 100%;
-	@include media-breakpoint-down(md){
-		max-width: 100%;
+	@include media-breakpoint-down(sm){
+		.col-xs-4{
+			max-width: 33.33333% !important;
+		}
 	}
 }
 .left{
