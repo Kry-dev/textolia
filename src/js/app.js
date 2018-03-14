@@ -105,6 +105,10 @@ $(document).ready(function() {
     $('[data-toggle="popover"]').popover();
     $('#datetimepicker8').datetimepicker({
         inline: true,
-        sideBySide: true
+        sideBySide: false,
+        icons: {
+            previous: 'fa fa-angle-left',
+            next: 'fa fa-angle-right'
+        }
     });
 });
