@@ -101,5 +101,6 @@ $(document).ready(function() {
 
         fixedContentPos: false
     });
+    $('[data-toggle="popover"]').popover();
 
 });

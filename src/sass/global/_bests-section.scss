@@ -197,5 +197,17 @@
 			width: 100%;
 		}
 	}
-
+	&-text{
+		width: 100%;
+		display: block;
+		color: $dark;
+		background: $primary;
+	}
+	.popover-body{
+		display: block;
+		padding: 1rem;
+		background: $primary;
+		color: $dark;
+		border-top: 2px solid $primary;
+	}
 }
