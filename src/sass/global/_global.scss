@@ -56,6 +56,17 @@ body {
 .right{
 	float: right;
 }
+.hide-sm{
+	@include media-breakpoint-down(sm){
+		display: none !important;
+	}
+}
+.show-sm{
+	display: none;
+	@include media-breakpoint-down(sm){
+		display: flex;
+	}
+}
 /* list */
 nav ul,
 ul {

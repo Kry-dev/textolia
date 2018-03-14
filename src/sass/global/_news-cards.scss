@@ -7,11 +7,22 @@
 		flex-direction: row;
 		@include media-breakpoint-down(sm){
 			flex-direction: column;
+			.card-header{
+				.card-title{
+					font-size: 40px;
+					text-align: center;
+					text-decoration: none;
+					margin-bottom: 0;
+					padding: .5rem;
+				}
+				&:hover{
+					text-decoration: none;
+				}
+			}
+
 		}
 	}
-	&-img-top{
-		border-radius: 0;
-	}
+	&-img-top{  border-radius: 0;  }
 	&-tag-overlay{
 		position: absolute;
 		top: 0;
@@ -110,6 +121,34 @@
 		font-size: 1rem;
 		font-weight: bold;
 		color: $red;
+	}
+	.cart-mobile-title{
+		display: none;
+	}
+	@include media-breakpoint-down(sm){
+		&-header{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			.cart-mobile-title{
+				display: flex;
+				flex-direction: column;
+				height: 100%;
+				width: 100%;
+				min-height: 150px;
+				padding: 1rem;
+				justify-content: space-between;
+				small{
+					display: flex;
+					flex-direction: row;
+					justify-content: flex-start;
+					.date{  margin-right: .5rem;  }
+					.author{  margin-left: .5rem;  }
+				}
+			}
+		}
+
 	}
 }
 .box-label{
