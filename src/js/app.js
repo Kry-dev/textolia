@@ -2,6 +2,7 @@ const $ = require('jquery');
 const slick = require('slick-carousel');
 const bootstrap = require('bootstrap');
 const magnificPopup = require('magnific-popup');
+const datetimepicker = require('bootstrap4-datetimepicker');
 
 $(document).ready(function() {
 
@@ -102,5 +103,8 @@ $(document).ready(function() {
         fixedContentPos: false
     });
     $('[data-toggle="popover"]').popover();
-
+    $('#datetimepicker8').datetimepicker({
+        inline: true,
+        sideBySide: true
+    });
 });
