@@ -10,11 +10,9 @@
 	}
 	&-title{
 		color: $white;
+		padding: 0 1rem;
 		a{
 			color: $white;
-		}
-		@include media-breakpoint-down(sm){
-			text-align: center;
 		}
 	}
 	&-list{

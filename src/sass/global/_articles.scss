@@ -42,7 +42,9 @@
 		color: $dark;
 		z-index: 5;
 		@include media-breakpoint-down(sm){
+			height: 45px;
 			overflow: hidden;
+			font-size: .8rem;
 		}
 		span{
 			position: relative;

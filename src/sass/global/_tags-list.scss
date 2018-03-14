@@ -19,6 +19,9 @@
 		padding: .5rem 1rem;
 		border-radius: 5px;
 		position: relative;
+		@include media-breakpoint-down(sm){
+			padding: .5rem;
+		}
 		&:hover{
 			font-weight: normal;
 			color: $dark;
