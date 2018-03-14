@@ -174,7 +174,7 @@
 				.fa{
 					position: absolute;
 					right: 0;
-					font: 1rem;
+					font-size: 30px !important;
 				}
 				&[aria-expanded="true"]{
 					.fa{
@@ -223,6 +223,20 @@
 			display: block;
 			width: 100%;
 			border-radius: 0;
+		}
+	}
+	.datepicker{
+		width: 80%;
+		margin: 0 auto;
+		th{
+			border-radius: 0;
+		}
+	}
+	.table-condensed{
+		width: 100%;
+		thead{
+			background: $primary;
+			color: $white;
 		}
 	}
 }
