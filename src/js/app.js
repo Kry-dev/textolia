@@ -90,6 +90,9 @@ $(document).ready(function() {
         });
 
     }
+    $('#filterTab li a').on('click', function () {
+        $(this).tab('show');
+    });
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
     });
@@ -104,6 +107,14 @@ $(document).ready(function() {
     });
     $('[data-toggle="popover"]').popover();
     $('#datetimepicker8').datetimepicker({
+        inline: true,
+        sideBySide: false,
+        icons: {
+            previous: 'fa fa-angle-left',
+            next: 'fa fa-angle-right'
+        }
+    });
+    $('#datetimepicker1').datetimepicker({
         inline: true,
         sideBySide: false,
         icons: {

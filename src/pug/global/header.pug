@@ -57,9 +57,9 @@ header.header
                             input.form-control(type='search', placeholder='Search', aria-label='Search')
                             button.btn(type='submit')
                                 +icon('search')
-.filter
+form.filter(action="#")
     .container
-        ul#filterTab.filter-nav.nav.nav-tabs(role='tablist')
+        ul#filterTab.filter-nav.nav.nav-tabs.navbar-expand-lg(role='tablist')
             li.nav-item
                 a#filter-tab.nav-link(data-toggle='tab', href='#filter', role='tab', aria-controls='filter', aria-selected='true')
                     | Filters
@@ -135,10 +135,11 @@ header.header
                             .state.p-primary
                                 label Bureaux
 
+                button#filter-submit.btn.btn-primary(type="submit") Valider
             #calendar.tab-pane.fade(role='tabpanel', aria-labelledby='calendar-tab')
                 .calendar
                     .calendar-box#datetimepicker8
-            #contact.tab-pane.fade(role='tabpanel', aria-labelledby='contact-tab') 3
-
-
+                button#filter-submit.btn.btn-primary(type="submit") Valider
+            #contact.tab-pane.fade(role='tabpanel', aria-labelledby='contact-tab')
+                button#filter-submit.btn.btn-primary(type="submit") Valider
 

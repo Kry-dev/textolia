@@ -1,4 +1,7 @@
 .filter{
+	@include media-breakpoint-down(sm){
+		display: none;
+	}
 	.container{
 		position: relative;
 	}
@@ -7,6 +10,9 @@
 	}
 	&-nav{
 		background: #f6f6f6;
+		@include media-breakpoint-down(sm){
+			flex-direction: column;
+		}
 	}
 	.nav-link{
 		text-transform: uppercase;
@@ -27,7 +33,11 @@
 		top: 58px;
 		z-index: 150;
 		background: transparent;
-
+		@include media-breakpoint-down(sm){
+			position: relative;
+			top: 0;
+			padding: 0;
+		}
 	}
 	.tab-pane{
 		display: none;
@@ -40,6 +50,9 @@
 		&.active.show{
 			display: flex;
 			overflow: hidden;
+			#filter-submit{
+				display: block;
+			}
 		}
 	}
 	.tags{
@@ -72,6 +85,10 @@
 		width: 50%;
 		padding: 0 1rem;
 		display: block;
+		@include media-breakpoint-down(sm){
+			width: 100%;
+			padding-bottom: 3rem;
+		}
 		&-box{
 			width: 100%;
 			display: block;
@@ -81,13 +98,131 @@
 			table{
 				width: 100%;
 			}
-			.iconfont{
-				font-family: FontAwesome;
-
-			}
 		}
 		.timepicker{
 			display: none;
+		}
+	}
+	#filter-submit{
+		display: none;
+		position: absolute;
+		right: 2rem;
+		bottom: 1rem;
+		z-index: 200;
+	}
+
+	&-mobile{
+		display: none;
+		@include media-breakpoint-down(sm){
+			display: flex;
+		}
+
+	}
+
+}
+#showMobileFilter{
+	display: none;
+	position: absolute;
+	right: 1rem;
+	top: 0;
+	@include media-breakpoint-down(sm){
+		display: flex;
+	}
+}
+#MobileFilter{
+	width: 100%;
+	height: 100%;
+	padding-right: 0 !important;
+	.modal-header{
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 1rem;
+	}
+	.close{
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin: 0;
+		.fa{
+			font-size: 1rem;
+			margin-right: 10px;
+		}
+		&:hover,
+		&:focus{
+			box-shadow: none;
+			outline: 0;
+			cursor: pointer;
+		}
+	}
+	.modal-body{
+		padding:0;
+	}
+	.filter-mobile{
+		width: 100%;
+	}
+	.filter-accordion{
+		width: 100%;
+		padding: 1rem;
+		.card{
+			border: 0;
+			.btn-link{
+				width: 100%;
+				padding: 0;
+				text-align: left;
+				color: $dark;
+				position: relative;
+				.fa{
+					position: absolute;
+					right: 0;
+					font: 1rem;
+				}
+				&[aria-expanded="true"]{
+					.fa{
+						transform: rotate(90deg);
+					}
+				}
+			}
+			&-header{
+				.card-body{
+					padding: 0;
+				}
+			}
+		}
+		.tags-list{
+			flex-wrap: wrap;
+		}
+		.tags-list-item{
+			margin: .5rem;
+		}
+		.tags-list-link:before,
+		.tags-list-link:after{
+			display: none;
+		}
+		.fitler-check-list{
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: column;
+			.pretty{
+				display: block;
+				width: 100%;
+				margin-bottom: .5rem;
+			}
+		}
+	}
+	.modal-dialog{
+		width: 100%!important;;
+		height: 100%!important;;
+		max-width: 100% !important;
+		margin: 0 auto;
+	}
+	.modal-content{
+		border-radius: 0;
+	}
+	.modal-footer{
+		.btn{
+			display: block;
+			width: 100%;
+			border-radius: 0;
 		}
 	}
 }
