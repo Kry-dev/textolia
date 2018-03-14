@@ -1,6 +1,7 @@
 const $ = require('jquery');
 const slick = require('slick-carousel');
 const bootstrap = require('bootstrap');
+const magnificPopup = require('magnific-popup');
 
 $(document).ready(function() {
 
@@ -90,6 +91,15 @@ $(document).ready(function() {
     }
     $(function () {
         $('[data-toggle="tooltip"]').tooltip()
-    })
+    });
+    $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
+        //disableOn: 700,
+        type: 'iframe',
+        mainClass: 'mfp-fade',
+        removalDelay: 160,
+        preloader: true,
+
+        fixedContentPos: false
+    });
 
 });
