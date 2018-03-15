@@ -142,8 +142,9 @@ $font-size-lg:                ($font-size-base * 1.25);
 $font-size-sm:                ($font-size-base * .875);
 
 $fa-font-path: "../fonts/FontAwesome";
-$slick-font-path: "./fonts/slick";
+$slick-font-path: "./fonts/slick/";
 $slick-loader-path: "../fonts/slick/";
+$slick-font-family: FontAwesome;
 
 //button global styles
 //$btn-border-radius:           2rem;
@@ -197,4 +198,5 @@ $navbar-nav-link-padding-x:         .5rem;
 $navbar-brand-font-size:            2rem;
 // Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
 $navbar-brand-height:               2rem;
-
+$popover-arrow-width: 1 rem;
+$popover-arrow-outer-width: $popover-arrow-width ;

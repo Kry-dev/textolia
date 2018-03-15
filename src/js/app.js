@@ -3,12 +3,14 @@ const slick = require('slick-carousel');
 const bootstrap = require('bootstrap');
 const magnificPopup = require('magnific-popup');
 const datetimepicker = require('bootstrap4-datetimepicker');
-
 $(document).ready(function() {
-
     $('[data-toggle="collapse"]').collapse('hide');
+    $('[data-toggle="tooltip"]').tooltip();
+    $('[data-toggle="popover"]').popover();
     $("#newscarousel").slick({
         slidesToShow: 3,
+        // nextArrow: '<i class="fa fa-arrow-right"></i>',
+        // prevArrow: '<i class="fa fa-arrow-left"></i>',
         // the magic
         responsive: [
             {
@@ -44,7 +46,6 @@ $(document).ready(function() {
         $("#bests-tabs").slick({
             slidesToShow: 3,
             responsive: [{
-
                 breakpoint: 9999,
                 settings: 'unslick'
 
@@ -75,9 +76,6 @@ $(document).ready(function() {
     $('#filterTab li a').on('click', function () {
         $(this).tab('show');
     });
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-    });
     $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
         type: 'iframe',
         mainClass: 'mfp-fade',
@@ -85,7 +83,6 @@ $(document).ready(function() {
         preloader: true,
         fixedContentPos: false
     });
-    $('[data-toggle="popover"]').popover();
     $('#datetimepicker8').datetimepicker({
         inline: true,
         sideBySide: false,
