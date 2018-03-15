@@ -23,6 +23,7 @@
 		flex-direction: column;
 		line-height: 1;
 		height: 50px;
+		font-weight: bold;
 		&.active{
 			background: $white;
 			color: $primary;
@@ -117,7 +118,9 @@
 		bottom: 1rem;
 		z-index: 200;
 	}
-
+	#filter-tab{
+		color: $primary;
+	}
 	&-mobile{
 		display: none;
 		@include media-breakpoint-down(sm){
@@ -194,6 +197,9 @@
 					padding: 0;
 				}
 			}
+		}
+		h5{
+			width: 100%;
 		}
 		.tags-list{
 			flex-wrap: wrap;
