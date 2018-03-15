@@ -15,13 +15,20 @@
 		}
 	}
 	.nav-link{
+		display: flex;
 		text-transform: uppercase;
 		text-align: center;
 		color: $dark;
 		padding: 1rem 3rem;
+		flex-direction: column;
+		line-height: 1;
+		height: 50px;
 		&.active{
 			background: $white;
 			color: $primary;
+		}
+		span{
+			font-size: .5em;
 		}
 	}
 	.tab-content{
@@ -30,7 +37,7 @@
 		width: 100%;
 		left: 0;
 		padding: 0 1rem;
-		top: 58px;
+		top: 50px;
 		z-index: 150;
 		background: transparent;
 		@include media-breakpoint-down(sm){

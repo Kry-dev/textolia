@@ -8,7 +8,6 @@ header.header
                 .header-banner
                     img.header-banner-img(src='assets/img/banners/banner.jpg', alt='')
 
-
         .row.header-bottom
             .col-md-12
                 nav.navbar.navbar-expand-lg.bg-light
@@ -57,7 +56,7 @@ header.header
                             input.form-control(type='search', placeholder='Search', aria-label='Search')
                             button.btn(type='submit')
                                 +icon('search')
-form.filter(action="#")
+form.filter(action="index.html")
     .container
         ul#filterTab.filter-nav.nav.nav-tabs.navbar-expand-lg(role='tablist')
             li.nav-item
@@ -70,6 +69,7 @@ form.filter(action="#")
             li.nav-item
                 a#contact-tab.nav-link(data-toggle='tab', href='#contact', role='tab', aria-controls='contact', aria-selected='false')
                     | Abonnez vous
+                    span Ne perdez pas une miette de l’actualité
         #filterTabContent.tab-content
             #filter.tab-pane.fade.show(role='tabpanel', aria-labelledby='filter-tab')
                 .col-md-3
