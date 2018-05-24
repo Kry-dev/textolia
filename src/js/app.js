@@ -22,7 +22,8 @@ $(document).ready(function() {
         }, {
             breakpoint: 768,
             settings: {
-                centerMode: true,
+                arrows: false,
+                centerMode: false,
                 dots: true,
                 slidesToShow: 1
             }
@@ -48,10 +49,10 @@ $(document).ready(function() {
             responsive: [{
                 breakpoint: 9999,
                 settings: 'unslick'
-
             },{
                 breakpoint: 768,
                 settings: {
+                    row: 1,
                     slidesToShow: 1
                 }
             }]
