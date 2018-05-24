@@ -1,12 +1,14 @@
 main.main
     .container.mb-4
-        .row
+        .row.mb-3
             .col-md-12.mb-4
                 include news/new-inline-01
-        .row.mt-4
-            .col-md-12.mb-3
-                h5.news-title.w-60 Les faits marquants des Masters de Londres 2017
+        .row
+            .section_left
+                h5.news-title Les faits marquants des Masters de Londres 2017
+            .section_right
                 button#showMobileFilter.btn.btn-primary(data-toggle="modal" data-target="#MobileFilter") Filtrer les articles
+        .row.mt-4
             .col-md-8.col-sm-12
                 include news/new-inline-02
                 .row
@@ -24,7 +26,7 @@ main.main
         .row.mt-4
             .col-md-8
                 .row
-                    .col-md-6
+                    .col-md-6.mb-4
                         include news/new-box-05
                     .col-md-6
                         include news/new-box-06

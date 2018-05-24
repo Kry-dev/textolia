@@ -132,9 +132,6 @@
 }
 #showMobileFilter{
 	display: none;
-	position: absolute;
-	right: 1rem;
-	top: 0;
 	@include media-breakpoint-down(sm){
 		display: flex;
 	}

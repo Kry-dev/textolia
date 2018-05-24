@@ -1,7 +1,9 @@
 .header{
 	display: flex;
 	width: 100%;
-	//margin-bottom: 1rem;
+	@include media-breakpoint-down(xs){
+		margin-bottom: 1rem;
+	}
 	&-top{
 		background: $white;
 		display: flex;
@@ -91,6 +93,10 @@
 		}
 		@include media-breakpoint-down(sm){
 			width: 30%;
+		}
+		@include media-breakpoint-down(xs){
+			width: 250px;
+			height: 40px;
 		}
 	}
 	.header-search-mobile{
