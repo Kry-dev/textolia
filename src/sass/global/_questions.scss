@@ -1,0 +1,58 @@
+.questions{
+	background: $white;
+	padding: 2rem 1rem ;
+	overflow: hidden;
+	@include media-breakpoint-down(sm){
+		.border-right{  border: 0 !important;  }
+		.border-left{  border: 0 !important;  }
+	}
+	&_block{
+		display: block;
+		width: 100%;
+
+	}
+	&_quest{
+		position: relative;
+		width: 100%;
+		display: block;
+		font-weight: bold;
+		&:before{
+			content: "";
+			position: absolute;
+			display: block;
+			left: -40px;
+			top:5px;
+			width: 28px;
+			height: 28px;
+			background: url("../img/questions/question-answer.png") no-repeat 0 0;
+		}
+	}
+	&_ans{
+		position: relative;
+		width: 100%;
+		display: block;
+		&:before{
+			content: "";
+			position: absolute;
+			display: block;
+			left: -40px;
+			top:5px;
+			width: 28px;
+			height: 28px;
+			background: url("../img/questions/question-answer.png") no-repeat 0 -27px;
+		}
+	}
+	&_plus{
+		color: $primary;
+		text-decoration: underline;
+		font-size: 1.1rem;
+	}
+	&_item{
+		display: block;
+		width: 100%;
+		padding: 5px 0 5px 10px;
+		border-left: 5px solid $primary;
+		color: $primary;
+		margin-bottom: 1rem;
+	}
+}
