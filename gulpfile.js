@@ -19,6 +19,7 @@ const autoprefixer  = require('gulp-autoprefixer');
 const gulpWebpack = require('gulp-webpack');
 const webpack = require('webpack');
 const webpackConfig = require('./webpack.config.js');
+const htmlmin = require('gulp-htmlmin');
 
 // для удобства все пути в одном месте
 const paths = {
@@ -46,6 +47,11 @@ const paths = {
     fonts: {
         src: 'src/fonts/**/*.*',
         dest: 'build/assets/fonts/'
+    }
+    ,
+    html: {
+        src: 'build/**/*.html',
+        dest: 'build/'
     }
 };
 
@@ -87,7 +93,11 @@ function templates() {
         .pipe(pug({ pretty: true }))
         .pipe(gulp.dest(paths.root));
 }
-
+function html() {
+    return gulp.src('build/*.html')
+        .pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(gulp.dest(paths.html.dest))
+};
 // scss
 function styles() {
     return gulp.src('./src/sass/app.scss')
@@ -133,6 +143,7 @@ function watch() {
     gulp.watch(paths.scripts.src, scripts);
     gulp.watch(paths.styles.src, styles);
     gulp.watch(paths.templates.src, templates);
+    gulp.watch(paths.html.src, html);
     gulp.watch(paths.images.src, images);
     gulp.watch(paths.fonts.src, fonts);
 }
@@ -152,6 +163,7 @@ exports.styles = styles;
 exports.scripts = scripts;
 exports.templates = templates;
 exports.images = images;
+exports.html = html;
 exports.fonts = fonts;
 exports.watch = watch;
 exports.server = server;
@@ -161,5 +173,6 @@ exports.server = server;
 gulp.task('default', gulp.series(
     clean,
     gulp.parallel(SVGSpriteBuild, images, fonts, styles, scripts, templates),
+    //gulp.parallel(SVGSpriteBuild, images, fonts, styles, scripts, templates, html),
     gulp.parallel(watch, server)
 ));
