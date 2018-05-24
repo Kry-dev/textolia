@@ -54,6 +54,13 @@
 		&-img{
 			position: absolute;
 			z-index: 5;
+			top: -1px;
+			left: -1px;
+			width: 105%;
+			display: block;
+			img{
+				display: block;
+			}
 		}
 	}
 	&-item-160{
