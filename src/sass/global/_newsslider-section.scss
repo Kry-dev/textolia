@@ -92,3 +92,15 @@
 		}
 	}
 }
+.news-carousel .news-carousel-item{
+	overflow: hidden;
+	.card-img{
+		transition: transform .2s;
+	}
+	&:hover,
+	&:focus{
+		.card-img{
+			transform: scale(1.2);
+		}
+	}
+}
