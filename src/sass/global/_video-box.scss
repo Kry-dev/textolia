@@ -5,6 +5,7 @@
 		display: block;
 		width: 100%;
 		position: relative;
+		min-height: 160px;
 		&:hover{
 			.play-icon{
 				background: $black;
