@@ -1,0 +1,28 @@
+.questions-inline{
+	&-list{
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+	}
+	&-item{
+		background: $white;
+		//border-right: 5px solid $primary;
+		padding: 1rem 1.5rem;
+		font-size: .875rem;
+		&+ .questions-inline-item{
+			position: relative;
+			border-left: 5px solid $primary;
+			&:before{
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 50%;
+				transform: translateX(-50%) rotate(45deg);
+				width: 8px;
+				height: 8px;
+				background: $primary;
+			}
+		}
+	}
+}

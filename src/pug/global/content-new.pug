@@ -25,7 +25,8 @@ main.main
                         include news/new-box-04
             .col-md-4
                 a(href="#").right-banner
-                    img.right-banner-img(src='assets/img/banners/right-banner-01.jpg', alt='')
+                    img.right-banner-img.mb-4(src='assets/img/banners/right-banner-01.jpg', alt='')
+                include news/new-box-04
         .row.mt-4
             .col-md-8
                 .row
@@ -37,9 +38,21 @@ main.main
                         include news/new-box-07
                     .col-md-6.mt-4
                         include news/new-box-08
+                    .col-md-6.mt-4
+                        include news/new-box-07
+                    .col-md-6.mt-4
+                        include news/new-box-08
             .col-md-4
                 a(href="#").right-banner
-                    img.right-banner-img(src='assets/img/banners/right-banner-01.jpg', alt='')
+                    img.right-banner-img.mb-4(src='assets/img/banners/right-banner-01.jpg', alt='')
+                .mb-4
+                    include news/new-box-04
+                .mb-4
+                    include news/new-box-04
+
+    .questions-inline.container.mb-4
+        .row
+            include questions-inline
     .container.mb-4
         .row
             include carousel/video-carousel

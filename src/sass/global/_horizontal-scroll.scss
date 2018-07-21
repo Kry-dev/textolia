@@ -11,11 +11,6 @@
 	padding-bottom: 1rem;
 	&::-webkit-scrollbar{
 		width: 30px;
-		//background-color: #e1e1e1;
-		//overflow: inherit;
-		//position: relative;
-		//border-top: 8px solid transparent;
-		//border-bottom: 8px solid transparent;
 	}
 	&::-webkit-scrollbar-track{
 		background: linear-gradient(transparent 7px, #e1e1e1 9px, transparent 12px)
