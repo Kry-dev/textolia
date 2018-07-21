@@ -3,11 +3,14 @@ main.main
         .row.mb-3
             .col-md-12.mb-4
                 include news/axel-new
+
+        include carousel/twitter-carousel
         .row
             .section_left
                 h5.news-title Les faits marquants des Masters de Londres 2017
             .section_right
                 button#showMobileFilter.btn.btn-primary(data-toggle="modal" data-target="#MobileFilter") Filtrer les articles
+
         .row.mt-4
             .col-md-8.col-sm-12
                 include news/new-inline-02

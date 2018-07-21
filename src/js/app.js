@@ -1,8 +1,9 @@
-const $ = require('jquery');
-const slick = require('slick-carousel');
-const bootstrap = require('bootstrap');
-const magnificPopup = require('magnific-popup');
-const datetimepicker = require('bootstrap4-datetimepicker');
+var $ = require('jquery');
+var slick = require('slick-carousel');
+var bootstrap = require('bootstrap');
+var magnificPopup = require('magnific-popup');
+var datetimepicker = require('bootstrap4-datetimepicker');
+var mCustomScrollbar = require('malihu-custom-scrollbar-plugin');
 $(document).ready(function() {
     $('[data-toggle="collapse"]').collapse('hide');
     $('[data-toggle="tooltip"]').tooltip();
@@ -100,34 +101,5 @@ $(document).ready(function() {
             next: 'fa fa-angle-right'
         }
     });
-
-    // var tag = document.createElement('script');
-    // tag.src = "https://www.youtube.com/iframe_api";
-    // var firstScriptTag = document.getElementsByTagName('script')[0];
-    // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    // var player;
-    // function onYouTubeIframeAPIReady() {
-    //     player = new YT.Player('player', {
-    //         height: '720',
-    //         width: '1280',
-    //         videoId: 'iD5zxjySOzw',
-    //         events: {
-    //             'onReady': onPlayerReady,
-    //             'loop': 1,
-    //             'enablejsapi': 1,
-    //             'autoplay': 1,
-    //             'controls': 0,
-    //             'rel': 0,
-    //             'fs': 0,
-    //             'showinfo': 0,
-    //             'cc_load_policy': 0,
-    //             'iv_load_policy': 3,
-    //             'modestbranding': 1
-    //         }
-    //     });
-    // }
-    // function onPlayerReady(event) {
-    //     event.target.playVideo();
-    // }
 
 });

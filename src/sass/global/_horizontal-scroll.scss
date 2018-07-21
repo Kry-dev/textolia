@@ -1,0 +1,44 @@
+.horiz-scroll{
+	width: 100%;
+	//display: block;
+	flex-wrap: nowrap;
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	margin-bottom: 2rem;
+	padding-bottom: 1rem;
+	&::-webkit-scrollbar{
+		height: 20px;
+		width: 40px;
+		//background-color: #e1e1e1;
+		//overflow: inherit;
+		//position: relative;
+		//border-top: 8px solid transparent;
+		//border-bottom: 8px solid transparent;
+	}
+	&::-webkit-scrollbar-track{
+		border-radius: 20px;
+		//background-color: #e1e1e1;
+		background: linear-gradient(transparent 10px, #e1e1e1 12px, transparent 14px);
+		overflow: inherit;
+		position: relative;
+	}
+	&::-webkit-scrollbar-thumb{
+		background: white url('../img/global/hr-scroll.png') no-repeat center;
+		border-radius: 15px;
+		width: 30px !important;
+		height: 20px;
+		min-width: 40px;
+	}
+}
+
+.horiz-scroll .item{
+	//display: inline-block;
+	//float: left;
+	display: flex;
+	width: 32%;
+	flex: 1 0 auto;
+	margin: 0 1.05%;
+}

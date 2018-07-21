@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 html(lang="en")
-    include global/head
+    include global/head-new
     +head(
     'SudInfo'
     )
@@ -19,9 +19,10 @@ html(lang="en")
 
 
         script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js")
-        //script(type="text/javascript", src="https://www.youtube.com/iframe_api")
         script(src="assets/js/bundle.js")
+        script(type="text/javascript", src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js")
+        script(type="text/javascript", src="http://jscrollpane.kelvinluck.com/script/jquery.jscrollpane.min.js")
         script.
-
             $(document).ready(function () {
+                //$(".scroll-pane").jScrollPane({});
             });
