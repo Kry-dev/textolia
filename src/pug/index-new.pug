@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+html(lang="en")
+    include global/head
+    +head(
+    'SudInfo'
+    )
+    include mixin/all-mixin
+    body
+        include global/header-new
+        //- wrapper
+        #wrapper.wrapper
+            include global/breadcrumb-new
+            include global/content-new
+
+        include global/footer
+        include global/popup-form
+        include global/popup-mobile-filter
+
+
+
+        script(type="text/javascript", src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js")
+        //script(type="text/javascript", src="https://www.youtube.com/iframe_api")
+        script(src="assets/js/bundle.js")
+        script.
+
+            $(document).ready(function () {
+            });

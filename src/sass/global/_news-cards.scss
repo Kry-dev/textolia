@@ -64,6 +64,9 @@
 			color: $white;
 		}
 	}
+	&-text{
+		font-size: 0.875rem;
+	}
 	&-text-list{
 		display: flex;
 		flex-direction: column;

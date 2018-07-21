@@ -1,0 +1,34 @@
+header.header
+    .container
+        .row.header-top
+            .col-md-4
+                a(href='/').header-logo
+                    img(src='assets/img/global/logo.png', alt='')
+            .col-md-8
+                .header-banner
+                    img.header-banner-img(src='assets/img/banners/banner.jpg', alt='')
+
+        .row.header-bottom
+            .col-md-12
+                nav.navbar.navbar-expand-lg.bg-light
+                    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navMenu',
+                    aria-controls='navMenu', aria-expanded='false', aria-label='Toggle navigation')
+                        +icon('menu')
+                    #navMenu.collapse.navbar-collapse
+                        ul.navbar-nav.mr-auto
+                            li.nav-item
+                                a.nav-link(href='#') Sport
+                            li.nav-item
+                                a.nav-link(href='#') Environnement
+                    a(href='/').header-logo-mobile
+                            img(src='assets/img/global/logo.png', alt='')
+                    .header-search-mobile
+                        a.btn(data-toggle="collapse" href="#header-search-form-mob" role="button" aria-expanded="false"
+                        aria-controls="header-search-form-mob")
+                            +icon('search')
+                            +icon('cancel')
+                        form#header-search-form-mob.form-inline.collapse(action="#")
+                            input.form-control(type='search', placeholder='Search', aria-label='Search')
+                            button.btn(type='submit')
+                                +icon('search')
+
