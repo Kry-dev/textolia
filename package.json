@@ -40,6 +40,7 @@
   "dependencies": {
     "gulp-cache": "^1.0.2",
     "gulp-htmlmin": "^4.0.0",
+    "jplist": "0.0.3",
     "jquery": "^3.2.1",
     "malihu-custom-scrollbar-plugin": "^3.1.5"
   }
