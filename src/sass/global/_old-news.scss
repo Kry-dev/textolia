@@ -15,6 +15,9 @@
 		font-size: .75rem;
 		background: #fcfcfc;
 		margin-bottom: 3px;
+		@include media-breakpoint-down(sm){
+			justify-content: center;
+		}
 		&-prev,
 		&-next{
 			display: flex;
@@ -28,10 +31,19 @@
 				outline: none;
 				text-decoration: none;
 			}
+			@include media-breakpoint-down(sm){
+				width: 20%;
+			}
+		}
+		&-prev{
+			text-align: left;
 		}
 		&-prev:before{
 			content: "<<";
 			margin-right: .5rem;
+		}
+		&-next{
+			text-align: right;
 		}
 		&-next:after{
 			content: ">>";
@@ -46,9 +58,14 @@
 			justify-content: space-between;
 			align-items: center;
 			padding: .5rem;
+			@include media-breakpoint-down(sm){
+				justify-content: center;
+				width: 60%;
+			}
 		}
 		&-item > a{
 			color: $dark;
+			margin: 0 5px;
 			&.active,
 			&:hover,
 			&:focus{

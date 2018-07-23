@@ -30,4 +30,7 @@
 	width: 32%;
 	flex: 1 0 auto;
 	margin: 0 1.05%;
+	@include media-breakpoint-down(sm){
+		width: 100%;
+	}
 }

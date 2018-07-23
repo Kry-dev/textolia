@@ -97,6 +97,21 @@ $theme-colors: map-merge((
 .gray-dark   {color:$gray-800;}
 .black   {color:$black;}
 
+.bg-blue        {background:$blue;}
+.bg-indigo      {background:$indigo;}
+.bg-purple      {background:$purple;}
+.bg-pink        {background:$pink;}
+.bg-red         {background:$red;}
+.bg-orange      {background:$orange;}
+.bg-yellow      {background:$yellow;}
+.bg-green       {background:$green;}
+.bg-teal        {background:$teal;}
+.bg-cyan        {background:$cyan;}
+.bg-white       {background:$white;}
+.bg-gray        {background:$gray-600;}
+.bg-gray-dark   {background:$gray-800;}
+.bg-black       {background:$black;}
+
 // This variable affects the `.h-*` and `.w-*` classes.
 $sizes: (
         10: 10%,

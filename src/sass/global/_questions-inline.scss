@@ -4,15 +4,21 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-start;
+		@include media-breakpoint-down(sm){
+			flex-direction: column;
+		}
 	}
 	&-item{
 		background: $white;
-		//border-right: 5px solid $primary;
 		padding: 1rem 1.5rem;
 		font-size: .875rem;
 		&+ .questions-inline-item{
 			position: relative;
 			border-left: 5px solid $primary;
+			@include media-breakpoint-down(sm){
+				border-left: 0;
+				border-top: 5px solid $primary;
+			}
 			&:before{
 				content: "";
 				position: absolute;
@@ -22,7 +28,13 @@
 				width: 8px;
 				height: 8px;
 				background: $primary;
+				@include media-breakpoint-down(sm){
+					top: 1px;
+					left: 50%;
+					transform: translate(-50% , -50%) rotate(45deg);
+				}
 			}
+
 		}
 	}
 }
