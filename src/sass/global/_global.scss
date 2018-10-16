@@ -131,24 +131,24 @@ body.lock-position {
 }
 
 /* ЗАПОЛНЯЕМ НЕОБХОДИМЫЕ АТРИБУТЫ ! */
-a:not([href]):after {
-	 content: 'Это должна быть ссылка или кнопка? Она никуда не ведёт!';
-	 display: block !important;
-	 background: pink !important;
-	 padding: 0.5em !important;
-	 font-family: 'comic sans ms', cursive !important;
-	 color: #000 !important;
-	 font-size: 16px !important;
-}
-a.button[class*="disabled"]:after,
-a.btn.disabled:after,
-a[class*="button"][class*="disabled"]:after {
-	 content: 'Ссылки нельзя отключать. Используйте элемент button с disabled="disabled".';
-	 /*… уродливый стиль …*/
-}
-form button:not([type]):after {
-	content: 'Это кнопка отправки информации, кнопка обнуления полей или что? Используйте type="submit", type="reset" или type="button"';
-}
+//a:not([href]):after {
+//	 //content: 'Это должна быть ссылка или кнопка? Она никуда не ведёт!';
+//	 display: block !important;
+//	 background: pink !important;
+//	 padding: 0.5em !important;
+//	 font-family: 'comic sans ms', cursive !important;
+//	 color: #000 !important;
+//	 font-size: 16px !important;
+//}
+//a.button[class*="disabled"]:after,
+//a.btn.disabled:after,
+//a[class*="button"][class*="disabled"]:after {
+//	 //content: 'Ссылки нельзя отключать. Используйте элемент button с disabled="disabled".';
+//	 /*… уродливый стиль …*/
+//}
+//form button:not([type]):after {
+//	//content: 'Это кнопка отправки информации, кнопка обнуления полей или что? Используйте type="submit", type="reset" или type="button"';
+//}
 h1{
 	font-family: 'Roboto-Bold';
 	@include media-breakpoint-down(sm){

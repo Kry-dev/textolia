@@ -4,70 +4,53 @@
 @import "global/slick-theme";
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
-//@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables";
 //
-//@import "../../node_modules/bootstrap/scss/bootstrap-grid";
-//@import "../../node_modules/bootstrap/scss/utilities/display";
-//@import "../../node_modules/bootstrap/scss/utilities";
-//@import "../../node_modules/bootstrap/scss/grid";
-//@import "../../node_modules/bootstrap/scss/buttons";
-//@import "../../node_modules/bootstrap/scss/button-group";
-//@import "../../node_modules/bootstrap/scss/breadcrumb";
-//@import "../../node_modules/bootstrap/scss/transitions";
-//@import "../../node_modules/bootstrap/scss/modal";
-//@import "../../node_modules/bootstrap/scss/carousel";
-//@import "../../node_modules/bootstrap/scss/dropdown";
-//@import "../../node_modules/bootstrap/scss/navbar";
-//@import "../../node_modules/bootstrap/scss/nav";
-//@import "../../node_modules/bootstrap/scss/forms";
-//@import "../../node_modules/bootstrap/scss/progress";
-//@import "../../node_modules/bootstrap/scss/popover";
-//@import "../../node_modules/bootstrap/scss/tables";
-//@import "../../node_modules/bootstrap/scss/dropdown";
-//@import "../../node_modules/bootstrap/scss/type";
-//@import "../../node_modules/bootstrap/scss/card";
-//@import "../../node_modules/bootstrap/scss/list-group";
-//@import "../../node_modules/bootstrap/scss/forms";
-//@import "../../node_modules/bootstrap/scss/images";
-//@import "../../node_modules/bootstrap/scss/functions";
-//@import "../../node_modules/bootstrap/scss/mixins";
+@import "../../node_modules/bootstrap/scss/bootstrap-grid";
+@import "../../node_modules/bootstrap/scss/utilities/display";
+@import "../../node_modules/bootstrap/scss/utilities";
+@import "../../node_modules/bootstrap/scss/grid";
+@import "../../node_modules/bootstrap/scss/buttons";
+@import "../../node_modules/bootstrap/scss/button-group";
+@import "../../node_modules/bootstrap/scss/breadcrumb";
+@import "../../node_modules/bootstrap/scss/transitions";
+@import "../../node_modules/bootstrap/scss/modal";
+@import "../../node_modules/bootstrap/scss/carousel";
+@import "../../node_modules/bootstrap/scss/dropdown";
+@import "../../node_modules/bootstrap/scss/navbar";
+@import "../../node_modules/bootstrap/scss/nav";
+@import "../../node_modules/bootstrap/scss/forms";
+@import "../../node_modules/bootstrap/scss/progress";
+@import "../../node_modules/bootstrap/scss/popover";
+@import "../../node_modules/bootstrap/scss/tables";
+@import "../../node_modules/bootstrap/scss/dropdown";
+@import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/card";
+@import "../../node_modules/bootstrap/scss/list-group";
+@import "../../node_modules/bootstrap/scss/forms";
+@import "../../node_modules/bootstrap/scss/images";
+@import "../../node_modules/bootstrap/scss/mixins";
 @import "../../node_modules/font-awesome/scss/font-awesome";
 @import "../../node_modules/magnific-popup/src/css/main";
+//@import "../../node_modules/select2-bootstrap-theme/src/build";
+
 @import "../../node_modules/pretty-checkbox/src/pretty-checkbox";
 
-//@import "global/bootstrap-datetimepicker.min.css";
 
 
 
 @import "global/helpers/helpers_all";
 @import "global/global";
 @import "global/_typography";
-@import "global/_form";
+//@import "global/_form";
 @import "global/_buttons";
-@import "global/_tables";
+//@import "global/_tables";
+@import "global/_progressbar";
 
 
-@import "sprite/sprite";
-@import "global/header";
-@import "global/filter";
-@import "global/breadcrumbs";
-@import "global/border";
-@import "global/news-cards";
-@import "global/tags-list";
-@import "global/video-carousel";
-@import "global/statistics-section";
-@import "global/newsslider-section";
-@import "global/bests-section";
-@import "global/regions-section";
-@import "global/widget";
-@import "global/circles";
-@import "global/articles";
-@import "global/video-box";
-@import "global/bottom-banner";
-@import "global/questions";
-@import "global/_horizontal-scroll";
-@import "global/_questions-inline";
-@import "global/_old-news";
+@import "global/sidebar";
+//@import "global/header";
+//@import "global/breadcrumbs";
+//@import "global/border";
 
-@import "global/_footer";
-@import "../../node_modules/bootstrap4-datetimepicker/src/sass/bootstrap-datetimepicker-build";
+//@import "global/_footer";

@@ -15,7 +15,7 @@ $teal: #16a085;
 $cyan:    #17a2b8;
 $gray: #8d8c8c;
 $dark: #343434;
-
+$text: #534747;
 $bg-gray: #efefef;
 
 $error: #dd0000 ;
@@ -32,6 +32,12 @@ $gray-700: #495057;
 $gray-800: $dark;
 $gray-middle: #EEEEEE;
 $black: #000;
+// Create grayscale
+$gray-dark:                 #292b2c;
+$gray:                      #464a4c;
+$gray-light:                #636c72;
+$gray-lighter:              #eceeef;
+$gray-lightest:             #f7f7f9;
 
 
 $footer-link-color: #858590;
@@ -215,3 +221,7 @@ $navbar-brand-font-size:            2rem;
 $navbar-brand-height:               2rem;
 $popover-arrow-width: 1 rem;
 $popover-arrow-outer-width: $popover-arrow-width ;
+
+$border-radius:          .25rem;
+$border-radius-lg:       .3rem;
+$border-radius-sm:       .2rem;

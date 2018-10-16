@@ -1,7 +1,7 @@
 {
-  "name": "Sud Info",
+  "name": "TEXtolia",
   "version": "1.0.0",
-  "description": "Sud Info news portal prototype",
+  "description": "TEXtolia app prototype",
   "main": "gulpfile.js",
   "keywords": [],
   "author": "yaroslavkryvda@gmail.com",
@@ -25,7 +25,6 @@
     "gulp-svgmin": "^1.2.4",
     "gulp-svgstore": "^6.1.0",
     "gulp-webpack": "^1.5.0",
-    "jquery": "^3.2.1",
     "magnific-popup": "^1.1.0",
     "modernizr": "^3.5.0",
     "node-sass": "^4.5.3",
@@ -33,15 +32,16 @@
     "popper.js": "^1.12.9",
     "pretty-checkbox": "^3.0.3",
     "pug": "^2.0.0-rc.3",
+    "select2-bootstrap-theme": "0.1.0-beta.10",
     "slick-carousel": "^1.8.1",
     "uglifyjs-webpack-plugin": "^1.0.0-beta.2",
     "webpack": "^3.5.5"
   },
   "dependencies": {
+    "bootstrap-select": "^1.13.2",
     "gulp-cache": "^1.0.2",
     "gulp-htmlmin": "^4.0.0",
     "jplist": "0.0.3",
-    "jquery": "^3.2.1",
     "malihu-custom-scrollbar-plugin": "^3.1.5"
   }
 }

@@ -1,105 +1,42 @@
-var $ = require('jquery');
-var slick = require('slick-carousel');
-var bootstrap = require('bootstrap');
-var magnificPopup = require('magnific-popup');
-var datetimepicker = require('bootstrap4-datetimepicker');
-var mCustomScrollbar = require('malihu-custom-scrollbar-plugin');
-$(document).ready(function() {
-    $('[data-toggle="collapse"]').collapse('hide');
-    $('[data-toggle="tooltip"]').tooltip();
-    $('[data-toggle="popover"]').popover();
-    $("#newscarousel").slick({
-        slidesToShow: 3,
-        // nextArrow: '<i class="fa fa-arrow-right"></i>',
-        // prevArrow: '<i class="fa fa-arrow-left"></i>',
-        // the magic
-        responsive: [
-            {
-            breakpoint: 1200,
-            settings: {
-                slidesToShow: 3,
-                infinite: true
-            }
-        }, {
-            breakpoint: 768,
-            settings: {
-                arrows: false,
-                centerMode: false,
-                dots: true,
-                slidesToShow: 1
-            }
-        }]
+$(document).ready(function () {
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
     });
-    $("#video-carousel .vid-carousel-list").slick({
-        slidesToShow: 3,
-        responsive: [{
+    // function updateInputProgress(){
+    //
+    // }
 
-            breakpoint: 9999,
-            settings: 'unslick'
-
-        },{
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 1
+    //Input Progress
+    var totalFields = $("#input-progress").find("input, select, textarea").length;
+    var updateInputProgress = $("#input-progress").click(function(){
+        var filledFields = 0;
+        $("#input-progress").find("input[type='text'],input[type='radio']:checked, select option:selected").each(function(){
+            if($(this).val() != ""){
+                console.log(filledFields.length);
+                filledFields++;
             }
-        }]
-    });
-    var bestTabsSlider = function () {
-        $("#bests-tabs").slick({
-            slidesToShow: 3,
-            responsive: [{
-                breakpoint: 9999,
-                settings: 'unslick'
-            },{
-                breakpoint: 768,
-                settings: {
-                    row: 1,
-                    slidesToShow: 1
-                }
-            }]
         });
-    };
-    bestTabsSlider();
-    var bestsTabChange = function () {
-        $('#bests-tabs a').on('click', function (e) {
-            e.preventDefault();
-            $(this).tab('show');
-        })
-    };
-    if($(window).width() > 767 ){
-         bestsTabChange();
-    }
-    if($(window).width()<767 ){
-        $('#bests-tabs .slick-arrow').on('click', function () {
-            $('#bests-tabs .slick-slide').children().children().removeClass('active show');
-            $('#bests-tabs .slick-active').children().children().tab('show');
-        });
-    }
-    $('#filterTab li a').on('click', function () {
-        $(this).tab('show');
-    });
-    $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-        type: 'iframe',
-        mainClass: 'mfp-fade',
-        removalDelay: 160,
-        preloader: true,
-        fixedContentPos: false
-    });
-    $('#datetimepicker8').datetimepicker({
-        inline: true,
-        sideBySide: false,
-        icons: {
-            previous: 'fa fa-angle-left',
-            next: 'fa fa-angle-right'
+
+        // var percent = Math.ceil(100 * filledFields / totalFields);
+        var percent = Math.ceil(100 * filledFields / 5);
+        $("#progress-inputs .progress-bar").attr("aria-valuenow", percent).height(percent + "%");
+        if(percent >= 26){
+            $('.step-number-1').addClass('complete');
         }
-    });
-    $('#datetimepicker1').datetimepicker({
-        inline: true,
-        sideBySide: false,
-        icons: {
-            previous: 'fa fa-angle-left',
-            next: 'fa fa-angle-right'
+        if(percent >= 50){
+            $('.step-number-2').addClass('complete');
         }
+        if(percent >= 75){
+            $('.step-number-3').addClass('complete');
+        }
+        return percent;
     });
+    $("#input-progress #validate").click(function(){
+        var percent = updateInputProgress();
+        if(percent == 100){
+            alert("Finished inputs successfully!");
+        }
+    })
+
 
 });

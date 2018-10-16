@@ -17,59 +17,6 @@ mixin socials(name, url, mod)
 						svg(class=`icon icon-${social.name}`)
 							use(xlink:href=`assets/img/sprite/sprite.min.svg#${social.name}`)
 
-//- subMenu
-mixin subMenu(id)
-	ul(id=id).subMenu
-		li.subMenu-item
-			a.subMenu-link(href="#") Tennis
-		li.subMenu-item
-			a.subMenu-link(href="#") Football
-		li.subMenu-item
-			a.subMenu-link(href="#") Volleyball
-		li.subMenu-item
-			a.subMenu-link(href="#") Rugby
-		li.subMenu-item
-			a.subMenu-link(href="#") Natation
-		li.subMenu-item
-			a.subMenu-link(href="#") Judo
-
-//- news card template
-mixin news-card(url)
-	.card
-		.card-header
-			a(href="#")
-				img.card-img-top(src=url, alt='')
-			.card-tag-overlay sport
-			.cart-mobile-title
-				h3.card-title
-					a(href="#") Masters de Londres DIRECT : Cilic - Federer en live
-				small.text-muted
-					.date nov. 05,
-					| by
-					a(href="#").author Jean Monet
-		.card-body
-			h5.card-title.hide-sm
-				a(href="#") Masters de Londres DIRECT : Cilic - Federer en live
-			ul.card-text-list
-				li.card-text-list-item
-					| Grigor Dimitrov remporte son premier match des
-					b  master de Londres
-				li.card-text-list-item
-					b  L’Autrichien Dominic
-					|  Thiem est battu en trois sets
-				li.card-text-list-item
-					| La prochaine rencontre de Grigor Dimitrov sera contre
-					b  Rafael Nadal
-		.card-footer.hide-sm
-			a.read-more(href="#") Lire plus
-			small.text-muted
-				.date nov. 05,
-				| by
-				a(href="#").author Jean Monet
-
-
-
-
 
 
 
