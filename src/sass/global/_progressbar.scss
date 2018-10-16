@@ -61,8 +61,9 @@
 		padding: 15px;
 		border-radius: 30px !important;
 		z-index: 30;
-		color: #534747;
-		font-weight: 100;
+		color: #534747 !important;
+		font-size: 20px;
+		font-weight: normal;
 		&:after{
 			right: 70px;
 			font-family: FontAwesome;
@@ -96,6 +97,11 @@
 		background: $white;
 		box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.2);
 		overflow: auto !important;
+		li a{
+			font-weight: normal;
+			font-size: 20px;
+			color: #534747;
+		}
 	}
 	.dropdown-item{
 		padding: 10px 15px;
@@ -126,16 +132,20 @@
 	padding: 15px;
 	border-radius: 30px;
 	border: 0;
+	font-size: 20px;
+	color: #534747;
+	font-weight: normal;
 }
 
 .validate{
 	position: relative;
 	font-size: 28px;
+	font-weight: 900;
 	text-transform: uppercase;
 	background: $white;
 	color: #d45357;
 	border-radius: 30px;
-	padding: 10px 40px;
+	padding: 10px;
 	border: none;
 	left: 0;
 	transform: translateX(-30%);

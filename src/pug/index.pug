@@ -69,7 +69,20 @@ html(lang="en")
                                             span 2
                                         .step-number.step-number-3
                                             span 3
-                                button#validate.validate(type="submit") validate
+                                //button#validate.validate(type="submit") validate
+                                button#validate.validate(type="submit")
+                                    // SVG
+                                    svg(width='100%', height='30px', xmlns='http://www.w3.org/2000/svg')
+                                        defs
+                                            lineargradient#gradient(y1='0', y2='1')
+                                                stop(stop-color='#d45357', offset='0')
+                                                stop(stop-color='#e37825', offset='1')
+                                        g
+                                            text#validate-svg(y='30',x='20%', font-family='Roboto', font-size='28', font-weight='900',
+                                            fill='url' +
+                                            '(#gradient)') Validate
+
+
                             .col-md-10
                                 #step1.row.step-content.pt-2
                                     .form-group.col-6
@@ -82,7 +95,7 @@ html(lang="en")
                                             option(value='Entertainment') Entertainment
                                             option(value='Other') Other ...
                                     .form-group.col-6
-                                        p previous picks
+                                        p.mb-4 previous picks
                                         .pretty.p-default.p-round
                                             input(type='radio', name='radio1',required)
                                             .state.p-danger
@@ -96,7 +109,7 @@ html(lang="en")
                                             .state.p-danger
                                                 label Entertainment
                                 #step2.row.step-content
-                                    .form-group.col-12
+                                    .form-group.col-6
                                         p.pl-3 What do you want to write about?
                                         input.form-control.step-input(type="text",placeholder="...", required="required")
 
@@ -109,7 +122,7 @@ html(lang="en")
                                                 option(value="Educational") Educational
                                                 option(value="Sports") Sports
                                     .form-group.col-6
-                                        p previous picks
+                                        p.mb-4 previous picks
                                         .pretty.p-default.p-round
                                             input(type='radio', name='radio2',required)
                                             .state.p-danger

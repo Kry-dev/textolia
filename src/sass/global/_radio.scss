@@ -1,5 +1,12 @@
-/*----------------------------------------
-	RADIO
-----------------------------------------*/
-
-/* end radio*/
+.pretty{
+	.state{
+		label{
+			font-size: 16px;
+			color: #534747;
+			font-weight: normal;
+		}
+	}
+}
+.pretty .state label:before, .pretty .state label:after{
+	top: calc((0% - (100% - 1em)) - 9%);
+}

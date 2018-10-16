@@ -1,16 +1,4 @@
-@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700";
-body {
-	font-family: 'Roboto', sans-serif;
-	background: #faf9f4;
-}
 
-p {
-	font-family: 'Roboto', sans-serif;
-	font-size: 1.1em;
-	font-weight: 300;
-	line-height: 1.7em;
-	color: #999;
-}
 
 a,
 a:hover,
@@ -125,7 +113,8 @@ a:focus {
 			flex-direction: row-reverse;
 			align-items: center;
 			padding: 10px;
-			font-size: 1rem;
+			font-size: 20px;
+			font-weight: 500;
 			color: $text;
 			border-bottom: 1px solid #f5f4ea;
 			z-index: 10;
@@ -149,7 +138,8 @@ a:focus {
 		flex-direction: column;
 		align-items: center;
 		p{
-			font-size: .7rem;
+			color: #534747;
+			font-size: 14px;
 			text-align: center;
 		}
 	}
@@ -205,17 +195,14 @@ a[data-toggle="collapse"] {
 		span{
 			font-size: 24px;
 			font-family: "Roboto";
-			font-weight: 100;
+			font-weight: 300;
 		}
 	}
 	.text-logo{
-		font-size: 48px;
-		font-weight: 100;
+		font-size: 44px;
+		font-weight: 900;
 		text-transform: uppercase;
 		margin-right: 10px;
 	}
 }
 
-.pretty .state label:before, .pretty .state label:after{
-	top: calc((0% - (100% - 1em)) - 9%);
-}

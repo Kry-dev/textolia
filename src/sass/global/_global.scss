@@ -19,11 +19,11 @@ html{
 body {
 	position: relative;
 	overflow-x: hidden;
+	background: #faf9f4;
 	/* FLEX */
 	@include flexbox();
 	flex-flow:column;
 	min-height: 100vh;
-	background-color: $body-bg;
 	.collapse{
 		display: none;
 		&.show{
