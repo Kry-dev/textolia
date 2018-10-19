@@ -65,13 +65,7 @@ body {
 ----------------------*/
 
 .text-field-meta {
-    width: 100%;
-    resize: none;
-    border: none;
-    font-size: 16px;
-    font-weight: normal;
-    height: 35px;
-    margin-left: -2px;
+
     &::placeholder {
         font-size: 16px;
         color: #534747;
@@ -148,6 +142,15 @@ body {
        font-weight: 800; 
     }
 }
+
+.text-input-yes.input_inform--icon{
+        .text-field-meta {
+            height: 35px;
+        }
+    }
+    
+
+
 .text-input-no.input_inform--icon::before {
     position: absolute;
     content: ' ';
@@ -178,12 +181,13 @@ body {
 .negative--block.text_negative--block {
     margin-left: 0px;
     margin-bottom: 5px;
+    font-size: 12px;
 }
 
 .text_input--hidden {
     position: absolute;
     background: #fff;
-    right: -235px;
+    right: -210px;
     top: -10px;
    
     border-top-left-radius: 45px;
@@ -234,10 +238,7 @@ body {
 
 /* LEFT COL STYLES -------
 -------------------------*/
-.left-col {
-    background: #fff;
-    margin-left: -1000%;
-}
+
 
 /* RIGHT COL STYLES -------
 -------------------------*/
@@ -494,7 +495,10 @@ body {
         }
     }
 }
-
+   .advice_span--bold {
+        font-weight: 800;
+       
+    }
 .dial {
     border-color: #c3ca0a;
     color: #f0f2c2;
@@ -518,6 +522,29 @@ body {
         position: absolute;
     }
 }
+
+.article-content.article_content--edit {
+    font-size: 16px;
+    .advice_span--bold {
+        display: block;
+        margin-top: 29px;
+    }
+    .field_text--negative {
+        color: #df8184;
+    }
+        .text-field-article {
+        height: auto;
+    }
+}
+.article-info.article_info--edit {
+    span {
+        font-weight: normal;
+    }
+
+}
+
+
+
 
 
 
@@ -851,7 +878,9 @@ body {
 		margin-left: 25px;
 	}
 }
-
+.nav-col-bg.nav-col-bg-p3 {
+    right: 15px;
+}
 .nav-col-bg {
 	background-color: #fff;
 	position: absolute;
@@ -945,6 +974,8 @@ body {
 
 .sel-form {
 	float: right;
+
+
 }
 
 .jq-selectbox__select {
@@ -955,17 +986,22 @@ body {
 	box-shadow: inset 0px 2px 6px -2px #6b4d4da3;
 	outline: none;
 	height: 37px;
-	span {
-		font-weight: bold;
-	}
+ 
 }
-
+   .jq-selectbox__select-text {
+        font-weight: 800;
+           padding-left: 18px;
+    }
+.jq-selectbox {
+    width:240px;
+}
 .jq-selectbox__trigger-arrow {
 	background: url("../img/toggle-arrow.png") 0 0 no-repeat;
 	border: none;
 	width: 16px;
 	height: 11px;
 	top: 13px;
+    padding-right: 20px;
 }
 
 .jq-selectbox__trigger {
@@ -1045,3 +1081,10 @@ body {
 	color: #000;
 }
 
+.orange-border {
+	margin-left: -90px;
+}
+
+.left-nav-list-p3 {
+	right: 20px
+}
