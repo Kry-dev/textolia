@@ -28,56 +28,62 @@ html(lang='en')
     main.main
       .container
         .row
-          .col-1
-            .left-col
-          .col-3
-            .aside-block
-              .top_aside--block
-                span.aside_text--span Readability: 
-                .aside-notifications.aside-notifications--red 2 sentences are very difficult to read
-                .aside-notifications 2 phrases has a simpler alternative
-              .seo_aside--block
-                span.aside_text--span SEO 
-                .dial-block
-                .dial-block
-                  .dial.dial_block--1(data-linewidth='3', data-width='115') 85
-                  .dial.dial.dial_block--2(data-linewidth='3', data-width='115') 65
-                .seo_aside--information
-                  span.keyword-span Keyword density
-                  p.keyword-paragraph
-                    | Select additional words that you haven’t
-                    | add yet to your text:
-                  .checkbox-wrap.checkbox
-                    input#lang(type='checkbox')
-                    label Feline
-                  .checkbox-wrap
-                    input#lang(type='checkbox')
-                    label Kittens
-                  p.keyword-paragraph  Remove some words that are overused:
-                  .checkbox_wrap--2
-                    input#lang(type='checkbox')
-                    label Neva mascarade
-                .dial-block
-                  .dial.dial_block--3(data-linewidth='3', data-width='115') 73
-                  .dial.dial.dial_block--4(data-linewidth='3', data-width='115') 20
-                .seo_aside--information
-                  span.keyword-span Similarity
-                  p.keyword-paragraph
-                    | This parameter determines the similarity
-                    | index of your text. If it is 100%, then your
-                    | text is written from scratch.
-                    br
-                    br
-                    |                                     80% of your article is similar to the texts
-                    |                                     of your competitors. To reduce similarity,
-                    |                                     we advise you to :
-                    |                                     - use more keywords
-                    |                                     - use more sentences suggestions
-              .bottom_aside--block
-                span.aside_text--span Structure 
-                .negative--block.aside_negative--block Use at least 2 words in each Hx
-                .negative--block.aside_negative--block
-                  | Add 1 H2-H6 tag(s) to your page.
+          .col-sm-4
+            .row
+              .col-sm-3
+                .nav-col-bg.nav-col-bg-p3
+                ul.left-nav-list.left-nav-list-p3
+                  li.left-nav-list__logo.clearfix
+                    a(href='#')
+                      img(src='img/logo.png', alt='')
+              .col-sm-9.no-pad
+                .aside-block
+                  .top_aside--block
+                    span.aside_text--span Readability: 
+                    .aside-notifications.aside-notifications--red 2 sentences are very difficult to read
+                    .aside-notifications 2 phrases has a simpler alternative
+                  .seo_aside--block
+                    span.aside_text--span SEO 
+                    .dial-block
+                    .dial-block
+                      .dial.dial_block--1(data-linewidth='3', data-width='115') 85
+                      .dial.dial.dial_block--2(data-linewidth='3', data-width='115') 65
+                    .seo_aside--information
+                      span.keyword-span Keyword density
+                      p.keyword-paragraph
+                        | Select additional words that you haven’t
+                        | add yet to your text:
+                      .checkbox-wrap.checkbox
+                        input#lang(type='checkbox')
+                        label Feline
+                      .checkbox-wrap
+                        input#lang(type='checkbox')
+                        label Kittens
+                      p.keyword-paragraph  Remove some words that are overused:
+                      .checkbox_wrap--2
+                        input#lang(type='checkbox')
+                        label Neva mascarade
+                    .dial-block
+                      .dial.dial_block--3(data-linewidth='3', data-width='115') 73
+                      .dial.dial.dial_block--4(data-linewidth='3', data-width='115') 20
+                    .seo_aside--information
+                      span.keyword-span Similarity
+                      p.keyword-paragraph
+                        | This parameter determines the similarity
+                        | index of your text. If it is 100%, then your
+                        | text is written from scratch.
+                        br
+                        br
+                        |                                     80% of your article is similar to the texts
+                        |                                     of your competitors. To reduce similarity,
+                        |                                     we advise you to :
+                        |                                     - use more keywords
+                        |                                     - use more sentences suggestions
+                  .bottom_aside--block
+                    span.aside_text--span Structure 
+                    .negative--block.aside_negative--block Use at least 2 words in each Hx
+                    .negative--block.aside_negative--block
+                      | Add 1 H2-H6 tag(s) to your page.
           .col-sm-8.col-right
             .filter-wrap
               .filter
@@ -135,7 +141,12 @@ html(lang='en')
                     button.article-style-pannel__button-5
                   .article-style-pannel__button
                     button.article-style-pannel__button-6
-              form.article-content(action='')
+                form.sel-form
+                  select
+                    option template style: Academic
+                    option template style: Acad
+                    option template style: Academ
+              form.article-content.article_content--edit(action='')
                 p.text-field-article
                   | The Siberian is a landrace variety of domestic cat, present in Russia for centuries, and more recently developed as a formal breed, 
                   span.field_text--negative with standards promulgated since the late 1980s.
