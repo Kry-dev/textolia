@@ -136,31 +136,42 @@ html(lang='en')
                   .article-style-pannel__button
                     button.article-style-pannel__button-6
               form.article-content(action='')
-                textarea.text-field-article(name='title')
-                  | The Siberian is a landrace variety of domestic cat, present in Russia for centuries, and more recently developed as a formal breed, with standards promulgated since the late 1980s.
-                  | The forest cat
-                  | They vary from medium to medium-large in size. A longer name of the formal breed is
-                  | Siberian Forest Cat, but it is usually referred to as the Siberian or the Siberian ! cat. Another
-                  | name for the formal breed is the Moscow Semi-Longhair. The cat is an ancient breed that is
+                p.text-field-article
+                  | The Siberian is a landrace variety of domestic cat, present in Russia for centuries, and more recently developed as a formal breed, 
+                  span.field_text--negative with standards promulgated since the late 1980s.
+                  span.advice_span--bold The forest cat
+                  | They vary from medium to medium-large in size. A longer name of the formal breed is 
+                  | Siberian Forest Cat, but it is usually referred to as the Siberian or the Siberian ! cat. Another 
+                  | name for the formal breed is the Moscow Semi-Longhair. The cat is an ancient breed that is 
                   | now believed to be ancestral to all modern long-haired cats.
-                  | The cat has similarities with the Norwegian forest cat, to which it is likly closely related. It is
-                  | a natural breed of Siberia and the national cat of Russia.
-                  | A forest cat
+                  | The cat has similarities with 
+                  span.field_text--negative
+                    | the Norwegian forest cat, to which it is likly closely related. It is
+                    | a natural breed of Siberia and the national cat of Russia.
+                  span.advice_span--bold A forest cat
                   | While it began as a landrace, it is selectively bred and pedigreed today in at least seven major
                   | cat fancier and breeder organisations. The colorpoint variant of the breed is called the Neva
                   | Masquerade by some registries, including Fédération Internationale Féline (FIFé).
-              .article-bottom
-                ul.article-info
+              .article-bottom.article_bottom--edit
+                ul.article-info.article_info--edit
                   li
                     | Words 
-                    span 1500
+                    span
+                      span.article_text--normal 1500
+                      | /1600
                   li
                     | Characters 
-                    span 3450
+                    span
+                      span.article_text--negative 3450
+                      | /6000
                   li
                     | Sentences 
-                    span 100
+                    span
+                      span.article_text--good 100
+                      | /100
     footer
-    script(src='js/libs.min.js')
+    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
     script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
+    script(src='js/libs.min.js')
     script(src='js/user.js')

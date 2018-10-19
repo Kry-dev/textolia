@@ -1,0 +1,120 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Textolia
+    meta(name='keywords', content='')
+    meta(name='description', content='')
+    meta(name='format-detection', content='telephone=no')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin='anonymous')
+    link(href='https://fonts.googleapis.com/css?family=Roboto:300,400,700,900', rel='stylesheet')
+    link(rel='stylesheet', href='css/jquery.formstyler.css', type='text/css')
+    link(rel='stylesheet', href='css/jquery.formstyler.theme.css', type='text/css')
+    link(rel='stylesheet', href='css/main.css', type='text/css')
+  body
+    header
+      .container
+        .row.justify-content-end
+          .col-11.offset-1
+            .orange-border
+            ul.nav.menu-navbar
+              li.nav-item
+                a.nav-link(href='#')
+                  img(src='img/menu_img.png', alt='')
+              li.nav-item.active
+                a.nav-link(href='page_4.html') Write
+              li.nav-item
+                a.nav-link(href='page_3.html') Edit
+    main.main
+      .container
+        .row
+          .col-1
+            .left-col
+          .col-3
+          .col-sm-8.col-right
+            .filter-wrap
+              .filter
+                .filter-name
+                  | your topic:
+                .filter-value
+                  | Siberian cat
+              .filter
+                .filter-name
+                  | website category:
+                .filter-value
+                  | Animal
+              .filter
+                .filter-name
+                  | content type:
+                .filter-value
+                  | Informative
+              .filter.filter-link
+                a.filter-link(href='#') Modify
+            .block-main-wrap.advice-block
+              | We advice you to write a text of 
+              span.advice_span--bold 2000 words.
+              |  The complexity should be low and the global repetition should
+              |                         be minimum 5 times the most important keywords.
+              |                         We have discovered a rich snippet opportunity with the question 
+              span.advice_span--bold What is a siberian cat?
+              |  Answer the
+              |                         question with a list with at least 
+              span.advice_span--bold 3 bullet points.
+            .block-main-wrap.text-input.text-input-yes.text-input--inform.input_inform--icon.clearfix
+              .seo-title Title:
+              form(action='')
+                textarea.text-field-title(name='title')
+              ul.seo-key
+                li Cat
+                li Siberian
+                li Information
+              .seo-characters
+                span.char-bold 200
+                | /200 characters left
+              .input_inform--negative
+                | We advice you to write a title of 200
+                | characters including at least 
+                span.advice_span--bold
+                  | 3 of the
+                  | most important keywords.
+            .block-main-wrap.text-input.text-input-yes.input_inform--icon
+              .seo-title Meta:
+              form(action='')
+                textarea.text-field-meta(name='title', placeholder='Type your meta here with max 200 characters')
+            .block-main-wrap.text-input.text-input-no.input_inform--icon
+              .seo-title H1
+              form(action='')
+                textarea.text-field-h1(name='title', placeholder='Type your H1 here with max 200 characters')
+            .block-main-wrap.block-main-article
+              .article-top
+                .seo-title Article:
+                .article-style-pannel
+                  .article-style-pannel__button
+                    button.article-style-pannel__button-1
+                  .article-style-pannel__button
+                    button.article-style-pannel__button-2
+                  .article-style-pannel__button
+                    button.article-style-pannel__button-3
+                  .article-style-pannel__button
+                    button.article-style-pannel__button-4
+                  .article-style-pannel__button
+                    button.article-style-pannel__button-5
+                  .article-style-pannel__button
+                    button.article-style-pannel__button-6
+              form.article-content(action='')
+                span.article_content--span Intro
+              .article-bottom.article_bottom--edit
+                ul.article-info.article_info--edit
+                  li
+                    | Words 
+                    span.advice_span--bold 1500
+                  li
+                    | Characters 
+                    span.advice_span--bold 3450
+                  li
+                    | Sentences 
+                    span.advice_span--bold 100
+    footer
+    script(src='js/libs.min.js')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
+    script(src='js/user.js')
