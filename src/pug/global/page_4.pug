@@ -1,0 +1,122 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Textolia
+    meta(name='keywords', content='')
+    meta(name='description', content='')
+    meta(name='format-detection', content='telephone=no')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin='anonymous')
+    link(href='https://fonts.googleapis.com/css?family=Roboto:300,400,700,900', rel='stylesheet')
+    link(rel='stylesheet', href='css/main.css', type='text/css')
+  body
+    header
+    main.main
+      .container
+        .row.justify-content-end
+          .col-11.offset-1
+            .orange-border
+            ul.nav.menu-navbar
+              li.nav-item
+                a.nav-link(href='#')
+                  img(src='img/menu_img.png', alt='')
+              li.nav-item.active
+                a.nav-link(href='page_4.html') Write
+              li.nav-item
+                a.nav-link(href='page_3.html') Edit
+        .row
+          .col-sm-4
+          .col-sm-8.col-right
+            .filter-wrap
+              .filter
+                .filter-name
+                  | your topic:
+                .filter-value
+                  | Siberian cat
+              .filter
+                .filter-name
+                  | website category:
+                .filter-value
+                  | Animal
+              .filter
+                .filter-name
+                  | content type:
+                .filter-value
+                  | Informative
+              .filter.filter-link
+                a.filter-link(href='#') Modify
+            .block-main-wrap.advice-block
+              | We advice you to write a text of 
+              strong 2000 words
+              | . The complexity should be low and the global repetition should be minimum 5 times the most important keywords. 
+              br
+              |                 We have discovered a rich snippet opportunity with the question 
+              strong What is a siberian cat?
+              |  Answer the question with a list with at least 
+              strong 3 bullet points
+              | .
+            .block-main-wrap.text-input.text-input-yes
+              .seo-title Title:
+              form(action='')
+                textarea.text-field-title(name='title') Siberian Cat Breed Information, Pictures, Characteristics & Facts
+              ul.seo-key
+                li Cat
+                li Siberian
+                li Information
+              .seo-characters
+                span.char-bold 200
+                | /200 characters left
+            .block-main-wrap.text-input.text-input-yes
+              .seo-title Meta:
+              form(action='')
+                textarea.text-field-meta(name='title')
+                  | From Russia with love: that’s the Siberian, a glamorous native cat from the taiga of Siberia, a forested area with a subarctic climate that no doubt contributed to this cat’s long, thick, protective coat. See all Siberian characteristics below!
+            .block-main-wrap.text-input.text-input-no
+              .seo-title H1
+              form(action='')
+                textarea.text-field-h1(name='title') Siberian Cat Breed Information
+            .block-main-wrap.block-main-article
+              .article-top
+                .seo-title Article:
+                .article-style-pannel
+                  .article-style-pannel__button
+                    button.article-style-pannel__button-1
+                  .article-style-pannel__button
+                    button.article-style-pannel__button-2
+                  .article-style-pannel__button
+                    button.article-style-pannel__button-3
+                  .article-style-pannel__button
+                    button.article-style-pannel__button-4
+                  .article-style-pannel__button
+                    button.article-style-pannel__button-5
+                  .article-style-pannel__button
+                    button.article-style-pannel__button-6
+              form.article-content(action='')
+                textarea.text-field-article(name='title')
+                  | The Siberian is a landrace variety of domestic cat, present in Russia for centuries, and more recently developed as a formal breed, with standards promulgated since the late 1980s.
+                  | The forest cat
+                  | They vary from medium to medium-large in size. A longer name of the formal breed is
+                  | Siberian Forest Cat, but it is usually referred to as the Siberian or the Siberian ! cat. Another
+                  | name for the formal breed is the Moscow Semi-Longhair. The cat is an ancient breed that is
+                  | now believed to be ancestral to all modern long-haired cats.
+                  | The cat has similarities with the Norwegian forest cat, to which it is likly closely related. It is
+                  | a natural breed of Siberia and the national cat of Russia.
+                  | A forest cat
+                  | While it began as a landrace, it is selectively bred and pedigreed today in at least seven major
+                  | cat fancier and breeder organisations. The colorpoint variant of the breed is called the Neva
+                  | Masquerade by some registries, including Fédération Internationale Féline (FIFé).
+              .article-bottom
+                ul.article-info
+                  li
+                    | Words 
+                    span 1500
+                  li
+                    | Characters 
+                    span 3450
+                  li
+                    | Sentences 
+                    span 100
+    footer
+    script(src='js/libs.min.js')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
+    script(src='js/user.js')
