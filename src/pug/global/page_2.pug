@@ -28,9 +28,60 @@ html(lang='en')
     main.main
       .container
         .row
-          .col-1
-            .left-col
-          .col-3
+          .col-sm-4
+            .row
+              .col-sm-4
+                .nav-col-bg
+                ul.left-nav-list
+                  li.left-nav-list__logo.clearfix
+                    a(href='#')
+                      img(src='img/logo.png', alt='')
+                  li.left-nav-list__item
+                    i.icon-1
+                    .list-item-inner.dropdown
+                      button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle.drop-custom(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                        | Keyword suggestions
+                      .dropdown-menu(aria-labelledby='dropdownMenuButton', x-placement='bottom-start')
+                        .dropdown-item.drop-item-2p.drop-item-2p-key
+                          .key-sugg
+                            | Cat 
+                            .key-sugg-number.key-sugg-number__red 0/3
+                          .key-sugg
+                            | Long Hair 
+                            .key-sugg-number.key-sugg-number__orange 1/2
+                          .key-sugg
+                            | Breed 
+                            .key-sugg-number.key-sugg-number__green 2/2
+                        .dropdown-item.drop-item-2p.drop-item-2p-key
+                          .key-sugg.key-sugg__red
+                            | Siberian
+                            .key-sugg-number.key-sugg-number__red 0/4
+                          .key-sugg.key-sugg__red
+                            | Russia
+                            .key-sugg-number.key-sugg-number__red 0/4
+                          .key-sugg.key-sugg__red
+                            | Neva mascarade
+                            .key-sugg-number.key-sugg-number__yellow 3/1
+                        .dropdown-item.drop-item-2p.drop-item-2p-key.drop-item-2p-keybn
+                          .key-sugg.key-sugg__yellow
+                            | Feline 
+                            .key-sugg-number.key-sugg-number__red 0/3
+                          .key-sugg.key-sugg__yellow
+                            | Kittens 
+                            .key-sugg-number.key-sugg-number__orange 1/2
+                        .dropdown-item.drop-item-2p.drop-item-2p-key.drop-item-2p-keybn
+                          a.filter-link(href='#') See more
+                  li.left-nav-list__item
+                    i.icon-2
+                    .list-item-inner.dropdown
+                      button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle.drop-custom(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                        | Sentence suggestions
+                      .dropdown-menu(aria-labelledby='dropdownMenuButton', x-placement='bottom-start')
+                        a.dropdown-item.drop-item-2p(href='#') This cat typically weighs 8 to 17
+                        a.dropdown-item.drop-item-2p(href='#') The Siberian’s heart is as warm as his homeland is cold.
+                        a.dropdown-item.drop-item-2p(href='#') Siberian cat vs russian blue
+                        a.dropdown-item.drop-item-2p(href='#') Siberian cat vs bengal cat
+              .col-sm-8
           .col-sm-8.col-right
             .filter-wrap
               .filter
@@ -101,8 +152,27 @@ html(lang='en')
                     button.article-style-pannel__button-5
                   .article-style-pannel__button
                     button.article-style-pannel__button-6
-              form.article-content(action='')
-                span.article_content--span Intro
+                form.sel-form
+                  select
+                    option template style: Academic
+                    option template style: Acad
+                    option template style: Academ
+              article
+                h2 Intro
+                p  
+                p  
+                h2 H2
+                p You can make a list here
+                ul
+                  li Item 1
+                  li Item 3
+                  li Item 3
+                p  
+                p  
+                h2 H2
+                p Use our sentence suggestions tool
+                p  
+                h2 Conclusion
               .article-bottom.article_bottom--edit
                 ul.article-info.article_info--edit
                   li

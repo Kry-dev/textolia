@@ -68,17 +68,19 @@ html(lang='en')
                       .dial.dial.dial_block--4(data-linewidth='3', data-width='115') 20
                     .seo_aside--information
                       span.keyword-span Similarity
-                      p.keyword-paragraph
+                      p.keyword-paragraph.keyword-paragraph--second
                         | This parameter determines the similarity
                         | index of your text. If it is 100%, then your
                         | text is written from scratch.
                         br
                         br
-                        |                                     80% of your article is similar to the texts
+                        span.advice_span--bold 80%
+                        |   of your article is similar to the texts
                         |                                     of your competitors. To reduce similarity,
                         |                                     we advise you to :
-                        |                                     - use more keywords
-                        |                                     - use more sentences suggestions
+                      ul.advise-list
+                        li.advise-list--item - use more keywords
+                        li.advise-list--item  - use more sentences suggestions
                   .bottom_aside--block
                     span.aside_text--span Structure 
                     .negative--block.aside_negative--block Use at least 2 words in each Hx

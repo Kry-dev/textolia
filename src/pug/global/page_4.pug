@@ -77,7 +77,7 @@ html(lang='en')
               strong 2000 words
               | . The complexity should be low and the global repetition should be minimum 5 times the most important keywords. 
               br
-              |                      We have discovered a rich snippet opportunity with the question 
+              |                         We have discovered a rich snippet opportunity with the question 
               strong What is a siberian cat?
               |  Answer the question with a list with at least 
               strong 3 bullet points
@@ -123,20 +123,27 @@ html(lang='en')
                     option template style: Academic
                     option template style: Acad
                     option template style: Academ
-              form.article-content(action='')
-                textarea.text-field-article(name='title')
+              article
+                p
                   | The Siberian is a landrace variety of domestic cat, present in Russia for centuries, and more recently developed as a formal breed, with standards promulgated since the late 1980s.
-                  | The forest cat
-                  | They vary from medium to medium-large in size. A longer name of the formal breed is
-                  | Siberian Forest Cat, but it is usually referred to as the Siberian or the Siberian ! cat. Another
-                  | name for the formal breed is the Moscow Semi-Longhair. The cat is an ancient breed that is
-                  | now believed to be ancestral to all modern long-haired cats.
-                  | The cat has similarities with the Norwegian forest cat, to which it is likly closely related. It is
-                  | a natural breed of Siberia and the national cat of Russia.
-                  | A forest cat
-                  | While it began as a landrace, it is selectively bred and pedigreed today in at least seven major
-                  | cat fancier and breeder organisations. The colorpoint variant of the breed is called the Neva
-                  | Masquerade by some registries, including Fédération Internationale Féline (FIFé).
+                h2 The forest cat
+                p
+                  | They vary from medium to medium-large in size. A longer name of the formal breed is Siberian Forest Cat, but it is usually referred to as the Siberian or the 
+                  span.article-orange Siberian !
+                  |  cat. Another name for the formal breed is the Moscow Semi-Longhair. The cat is an ancient breed that is now believed to be ancestral to all modern long-haired cats. The cat has similarities with the Norwegian forest cat, to which it is 
+                  span.article-violet likly
+                  |  closely related. It is a natural breed of Siberia and the national cat of Russia.
+                h2 A forest cat
+                p
+                  | While it began as a landrace, it is selectively bred and pedigreed today in at least seven major cat fancier and breeder organisations. The colorpoint variant of the breed is called the Neva Masquerade by some registries, including Fédération Internationale Féline (FIFé).
+                .article_synonyms--block
+                  span.synonyms-span Synonyms 
+                  .checkbox-wrap.checkbox
+                    input#lang(type='checkbox')
+                    label Past
+                  .checkbox-wrap
+                    input#lang(type='checkbox')
+                    label Familial
               .article-bottom
                 ul.article-info
                   li
