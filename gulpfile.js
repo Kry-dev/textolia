@@ -29,8 +29,12 @@ const paths = {
         dest: 'build/assets/css/'
     },
     scripts: {
-        src: 'src/js/**/*.js',
+        src: 'src/js/*.js',
         dest: 'build/assets/js/'
+    },
+    vendorScripts: {
+        src: 'src/js/vendor/*.js',
+        dest: 'build/assets/js/vendor/'
     },
     templates: {
         src: 'src/pug/**/*.pug',
@@ -131,6 +135,11 @@ function images() {
         })))
         .pipe(gulp.dest(paths.images.dest));
 }
+// copy Vendor Scripts
+function vendorScripts() {
+    return gulp.src(paths.vendorScripts.src)
+        .pipe(gulp.dest(paths.vendorScripts.dest));
+}
 // copy fonts
 function fonts() {
     return gulp.src(paths.fonts.src)
@@ -141,6 +150,7 @@ function fonts() {
 function watch() {
     gulp.watch(paths.svgIcons.src, SVGSpriteBuild);
     gulp.watch(paths.scripts.src, scripts);
+    gulp.watch(paths.vendorScripts.src, vendorScripts);
     gulp.watch(paths.styles.src, styles);
     gulp.watch(paths.templates.src, templates);
     //gulp.watch(paths.html.src, html);
@@ -161,6 +171,7 @@ exports.clean = clean;
 exports.SVGSpriteBuild = SVGSpriteBuild;
 exports.styles = styles;
 exports.scripts = scripts;
+exports.vendorScripts = vendorScripts;
 exports.templates = templates;
 exports.images = images;
 exports.html = html;
@@ -172,7 +183,7 @@ exports.server = server;
 // сборка и слежка
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(SVGSpriteBuild, images, fonts, styles, scripts, templates),
-    //gulp.parallel(SVGSpriteBuild, images, fonts, styles, scripts, templates, html),
+    gulp.parallel(SVGSpriteBuild, images, fonts, styles, scripts, vendorScripts, templates),
+    // gulp.parallel(SVGSpriteBuild, images, fonts, styles, scripts, templates),
     gulp.parallel(watch, server)
 ));

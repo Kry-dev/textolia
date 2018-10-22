@@ -54,7 +54,7 @@ html(lang="en")
                     button#sidebarCollapse.btn.btn-default(type="button")
                         i.fas.fa-bars
                 .content-body
-                    form#input-progress(role='form').container-fluid
+                    form#input-progress(role='form').container-fluid.progress-form
                         .row
                             .col-md-2.p-0
                                 #progress-inputs.progress.progress-vertical
@@ -87,8 +87,8 @@ html(lang="en")
                                 #step1.row.step-content.pt-2
                                     .form-group.col-6
                                         p.pl-3 Select the desired content type
-                                        select#desiredContent.selectpicker.w-100(required)
-                                            option(value="")
+                                        select#desiredContent.selectpicker.w-100(required, title="Choose one of the following...")
+                                            //option(value="")
                                             option(value='Infromative') Infromative
                                             option(value='Educational') Educational
                                             option(value='Sports') Sports
@@ -116,8 +116,8 @@ html(lang="en")
                                 #step3.row.step-content
                                     .form-group.col-6
                                             p.pl-3 Select the category of your website
-                                            select#categorySite.selectpicker.w-100(required)
-                                                option(value="")
+                                            select#categorySite.selectpicker.w-100(required, title="Choose one of the following...")
+                                                //option(value="")
                                                 option(value="Technology") Technology
                                                 option(value="Educational") Educational
                                                 option(value="Sports") Sports

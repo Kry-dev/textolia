@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    $('#desiredContent').selectpicker('');
+    $('#categorySite').selectpicker('');
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
     });
