@@ -50,20 +50,61 @@
         <div class="container">
 
             <div class="row">
+                <div class="col-sm-4">
+                  <div class="row">
+                    <div class="col-sm-4">
+                      <div class="nav-col-bg">
+                      </div>
+                      <ul class="left-nav-list">
+                        <li class="left-nav-list__logo clearfix"><a href="#"><img src="img/logo.png" alt=""></a></li>
+                        <li class="left-nav-list__item">
+                           <i class="icon-1"></i>
+                           <div class="list-item-inner dropdown" >
+                             <button class="btn btn-secondary dropdown-toggle drop-custom" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                 Keyword suggestions
+                               </button>
+                               <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" x-placement="bottom-start">
+                                 <div class="dropdown-item drop-item-2p drop-item-2p-key">
+                                  <div class="key-sugg">Cat <div class="key-sugg-number key-sugg-number__red">0/3</div></div>
+                                  <div class="key-sugg">Long Hair <div class="key-sugg-number key-sugg-number__orange">1/2</div></div>
+                                  <div class="key-sugg">Breed <div class="key-sugg-number key-sugg-number__green">2/2</div></div>
+                                 </div>
 
-                <div class="col-1">
+                                 <div class="dropdown-item drop-item-2p drop-item-2p-key"><div class="key-sugg key-sugg__red">Siberian<div class="key-sugg-number key-sugg-number__red">0/4</div></div>
+                                  <div class="key-sugg key-sugg__red">Russia<div class="key-sugg-number key-sugg-number__red">0/4</div></div>
+                                  <div class="key-sugg key-sugg__red">Neva mascarade<div class="key-sugg-number key-sugg-number__yellow">3/1</div></div></div>
 
-                    <div class="left-col"></div>
+                                 <div class="dropdown-item drop-item-2p drop-item-2p-key drop-item-2p-keybn"><div class="key-sugg key-sugg__yellow">Feline <div class="key-sugg-number key-sugg-number__red">0/3</div></div>
+                                  <div class="key-sugg key-sugg__yellow">Kittens <div class="key-sugg-number key-sugg-number__orange">1/2</div></div></div>
+                                 <div class="dropdown-item drop-item-2p drop-item-2p-key drop-item-2p-keybn"><a href="#" class="filter-link">See more</a></div>
+                               </div>
+                           </div>
+                         </li>
+                        <li class="left-nav-list__item">
+                          <i class="icon-2"></i>
+                          <div class="list-item-inner dropdown" >
+                            <button class="btn btn-secondary dropdown-toggle drop-custom" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Sentence suggestions
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" x-placement="bottom-start">
+                                <a class="dropdown-item drop-item-2p" href="#">This cat typically weighs 8 to 17</a>
+                                <a class="dropdown-item drop-item-2p" href="#">The Siberian’s heart is as warm as his homeland is cold.</a>
+                                <a class="dropdown-item drop-item-2p" href="#">Siberian cat vs russian blue</a>
+                                <a class="dropdown-item drop-item-2p" href="#">Siberian cat vs bengal cat</a>
+                              </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-sm-8"></div>
+                  </div>
                 </div>
-
-
-
-                <div class="col-3">
+                
 
 
 
 
-                </div>
+                
 
                 <div class="col-sm-8 col-right">
                     <div class="filter-wrap">
@@ -120,7 +161,7 @@
 
                             We advice you to write a title of 200
                             characters including at least <span class="advice_span--bold">3 of the
-                                most important keywords.</span>
+most important keywords.</span>
                         </div>
                     </div>
 
@@ -151,12 +192,32 @@
                                 <div class="article-style-pannel__button"><button class="article-style-pannel__button-5"></button></div>
                                 <div class="article-style-pannel__button"><button class="article-style-pannel__button-6"></button></div>
                             </div>
+                            <form class="sel-form">
+                              <select>
+                                <option>template style: <span>Academic</span></option>
+                                <option>template style: <span>Acad</span></option>
+                                <option>template style: <span>Academ</span></option>
+                              </select>
+                            </form>
                         </div>
-                        <form action="" class="article-content">
-                            <span class="article_content--span">Intro</span>
-
-
-                        </form>
+                        <article>
+                          <h2>Intro</h2>
+                          <p>&nbsp;</p>
+                          <p>&nbsp;</p>
+                          <h2>H2</h2>
+                          <p>You can make a list here</p>
+                          <ul>
+                            <li>Item 1</li>
+                            <li>Item 3</li>
+                            <li>Item 3</li>
+                          </ul>
+                          <p>&nbsp;</p>
+                          <p>&nbsp;</p>
+                          <h2>H2</h2>
+                          <p>Use our sentence suggestions tool</p>
+                          <p>&nbsp;</p>
+                          <h2>Conclusion</h2>
+                        </article>
                         <div class="article-bottom article_bottom--edit">
                             <ul class="article-info article_info--edit">
                                 <li>Words <span class="advice_span--bold">1500</span></li>
@@ -176,11 +237,11 @@
     </main>
     <footer></footer>
 </body>
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<script src="js/libs.min.js"></script>
-<script src="js/user.js"></script>
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+   <script src="js/libs.min.js"></script>
+   <script src="js/user.js"></script>
 
 
 
