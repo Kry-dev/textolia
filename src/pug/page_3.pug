@@ -1,190 +1,191 @@
 doctype html
 html(lang='en')
-    head
-        meta(charset='utf-8')
-        title Textolia
-        meta(name='keywords', content='')
-        meta(name='description', content='')
-        meta(name='format-detection', content='telephone=no')
-        link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin='anonymous')
-        link(href='https://fonts.googleapis.com/css?family=Roboto:300,400,700,900', rel='stylesheet')
-        //link(rel='stylesheet', href='assets/css/jquery.formstyler.css', type='text/css')
-        //link(rel='stylesheet', href='assets/css/jquery.formstyler.theme.css', type='text/css')
-        link(rel='stylesheet', href='assets/css/app.min.css', type='text/css')
-    body
-        header
-            .container
-                .row.justify-content-end
-                    .col-11.offset-1
-                        .orange-border
-                        ul.nav.menu-navbar
-                            li.nav-item
-                                a.nav-link(href='#')
-                                    img(src='assets/img/global/menu_img.png', alt='')
-                            li.nav-item.active
-                                a.nav-link(href='page_4.html') Write
-                            li.nav-item
-                                a.nav-link(href='page_3.html') Edit
-        main.main
-            .container
-                .row
-                    .col-sm-4
-                        .row
-                            .col-sm-3
-                                .nav-col-bg.nav-col-bg-p3
-                                ul.left-nav-list.left-nav-list-p3
-                                    li.left-nav-list__logo.clearfix
-                                        a(href='#')
-                                            img(src='assets/img/global/logo.png', alt='')
-                            .col-sm-9.no-pad
-                                .aside-block
-                                    .top_aside--block
-                                        span.aside_text--span Readability:
-                                        .aside-notifications.aside-notifications--red 2 sentences are very difficult to read
-                                        .aside-notifications 2 phrases has a simpler alternative
-                                    .seo_aside--block
-                                        span.aside_text--span SEO
-                                        .dial-block
-                                        .dial-block
-                                            .dial.dial_block--1(data-linewidth='3', data-width='115') 85
-                                            .dial.dial.dial_block--2(data-linewidth='3', data-width='115') 65
-                                        .seo_aside--information
-                                            span.keyword-span Keyword density
-                                            p.keyword-paragraph
-                                                | Select additional words that you haven’t
-                                                | add yet to your text:
-                                            .checkbox-wrap.checkbox
-                                                input#lang(type='checkbox')
-                                                label Feline
-                                            .checkbox-wrap
-                                                input#lang(type='checkbox')
-                                                label Kittens
-                                            p.keyword-paragraph  Remove some words that are overused:
-                                            .checkbox_wrap--2
-                                                input#lang(type='checkbox')
-                                                label Neva mascarade
-                                        .dial-block
-                                            .dial.dial_block--3(data-linewidth='3', data-width='115') 73
-                                            .dial.dial.dial_block--4(data-linewidth='3', data-width='115') 20
-                                        .seo_aside--information
-                                            span.keyword-span Similarity
-                                            p.keyword-paragraph.keyword-paragraph--second
-                                                | This parameter determines the similarity
-                                                | index of your text. If it is 100%, then your
-                                                | text is written from scratch.
-                                                br
-                                                br
-                                                span.advice_span--bold 80%
-                                                |   of your article is similar to the texts
-                                                |                                   of your competitors. To reduce similarity,
-                                                |                                   we advise you to :
-                                            ul.advise-list
-                                                li.advise-list--item - use more keywords
-                                                li.advise-list--item  - use more sentences suggestions
-                                    .bottom_aside--block
-                                        span.aside_text--span Structure
-                                        .negative--block.aside_negative--block Use at least 2 words in each Hx
-                                        .negative--block.aside_negative--block
-                                            | Add 1 H2-H6 tag(s) to your page.
-                    .col-sm-8.col-right
-                        .filter-wrap
-                            .filter
-                                .filter-name
-                                    | your topic:
-                                .filter-value
-                                    | Siberian cat
-                            .filter
-                                .filter-name
-                                    | website category:
-                                .filter-value
-                                    | Animal
-                            .filter
-                                .filter-name
-                                    | content type:
-                                .filter-value
-                                    | Informative
-                            .filter.filter-link
-                                a.filter-link(href='#') Modify
-                        .block-main-wrap.advice-block
-                            | Your text is adapted to the keyword
-                            span.advice_span--bold “Siberian”.
-                            |  Pay attention to the similarity of your text with other texts.
-                        .block-main-wrap.text-input.text-input-yes
-                            .seo-title Title:
-                            form(action='')
-                                textarea.text-field-title.text-field-title--edit(name='title') Siberian Cat Breed Information, Pictures, Characteristics & Facts
-                            // <div class="seo-characters"><span class="char-bold">200</span>/200 characters left</div>
-                        .block-main-wrap.text-input.text-input-yes
-                            .seo-title Meta:
-                            form(action='')
-                                textarea.text-field-meta(name='title')
-                                    | From Russia with love: that’s the Siberian, a glamorous native cat from the taiga of Siberia, a forested area with a subarctic climate that no doubt contributed to this cat’s long, thick, protective coat. See all Siberian characteristics below!
-                        .block-main-wrap.text-input.text-input-no
-                            .seo-title H1
-                            form(action='')
-                                textarea.text-field-h1(name='title') Siberian Cat Breed Information
-                            .text_input--hidden
-                                .negative--block.text_negative--block  Meta too short (200 characters)
-                                .negative--block.text_negative--block
-                                    | Not enough keywords
-                        .block-main-wrap.block-main-article
-                            .article-top
-                                .seo-title Article:
-                                .article-style-pannel
-                                    .article-style-pannel__button
-                                        button.article-style-pannel__button-1
-                                    .article-style-pannel__button
-                                        button.article-style-pannel__button-2
-                                    .article-style-pannel__button
-                                        button.article-style-pannel__button-3
-                                    .article-style-pannel__button
-                                        button.article-style-pannel__button-4
-                                    .article-style-pannel__button
-                                        button.article-style-pannel__button-5
-                                    .article-style-pannel__button
-                                        button.article-style-pannel__button-6
-                                form.sel-form
-                                    select
-                                        option template style: Academic
-                                        option template style: Acad
-                                        option template style: Academ
-                            form.article-content.article_content--edit(action='')
-                                p.text-field-article
-                                    | The Siberian is a landrace variety of domestic cat, present in Russia for centuries, and more recently developed as a formal breed,
-                                    span.field_text--negative with standards promulgated since the late 1980s.
-                                    span.advice_span--bold The forest cat
-                                    | They vary from medium to medium-large in size. A longer name of the formal breed is
-                                    | Siberian Forest Cat, but it is usually referred to as the Siberian or the Siberian ! cat. Another
-                                    | name for the formal breed is the Moscow Semi-Longhair. The cat is an ancient breed that is
-                                    | now believed to be ancestral to all modern long-haired cats.
-                                    | The cat has similarities with
-                                    span.field_text--negative
-                                        | the Norwegian forest cat, to which it is likly closely related. It is
-                                        | a natural breed of Siberia and the national cat of Russia.
-                                    span.advice_span--bold A forest cat
-                                    | While it began as a landrace, it is selectively bred and pedigreed today in at least seven major
-                                    | cat fancier and breeder organisations. The colorpoint variant of the breed is called the Neva
-                                    | Masquerade by some registries, including Fédération Internationale Féline (FIFé).
-                            .article-bottom.article_bottom--edit
-                                ul.article-info.article_info--edit
-                                    li
-                                        | Words
-                                        span
-                                            span.article_text--normal 1500
-                                            | /1600
-                                    li
-                                        | Characters
-                                        span
-                                            span.article_text--negative 3450
-                                            | /6000
-                                    li
-                                        | Sentences
-                                        span
-                                            span.article_text--good 100
-                                            | /100
-        footer
-        script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
-        script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
-        script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
-        script(src='assets/js/vendor/libs.min.js')
-        script(src='assets/js/vendor/user.js')
+  head
+    meta(charset='utf-8')
+    title Textolia
+    meta(name='keywords', content='')
+    meta(name='description', content='')
+    meta(name='format-detection', content='telephone=no')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin='anonymous')
+    link(href='https://fonts.googleapis.com/css?family=Roboto:300,400,700,900', rel='stylesheet')
+    link(rel='stylesheet', href='css/jquery.formstyler.css', type='text/css')
+    link(rel='stylesheet', href='css/jquery.formstyler.theme.css', type='text/css')
+    link(rel='stylesheet', href='css/main.css', type='text/css')
+  body
+    .global_main--block
+      header
+        .container
+          .row.justify-content-end
+            .col-11.offset-1
+              .orange-border
+              ul.nav.menu-navbar
+                li.nav-item
+                  a.nav-link(href='#')
+                    img(src='img/menu_img.png', alt='')
+                li.nav-item.active
+                  a.nav-link(href='page_4.html') Write
+                li.nav-item
+                  a.nav-link(href='page_3.html') Edit
+      main.main
+        .container
+          .row
+            .col-sm-4
+              .row
+                .col-sm-3
+                  .nav-col-bg.nav-col-bg-p3
+                  ul.left-nav-list.left-nav-list-p3
+                    li.left-nav-list__logo.clearfix
+                      a(href='#')
+                        img(src='img/logo.png', alt='')
+                .col-sm-9.no-pad
+                  .aside-block
+                    .top_aside--block
+                      span.aside_text--span Readability: 
+                      .aside-notifications.aside-notifications--red 2 sentences are very difficult to read
+                      .aside-notifications 2 phrases has a simpler alternative
+                    .seo_aside--block
+                      span.aside_text--span SEO 
+                      .dial-block
+                      .dial-block
+                        .dial.dial_block--1(data-linewidth='3', data-width='115') 85
+                        .dial.dial.dial_block--2(data-linewidth='3', data-width='115') 65
+                      .seo_aside--information
+                        span.keyword-span Keyword density
+                        p.keyword-paragraph
+                          | Select additional words that you haven’t
+                          | add yet to your text:
+                        .checkbox-wrap.checkbox
+                          input#lang(type='checkbox')
+                          label Feline
+                        .checkbox-wrap
+                          input#lang(type='checkbox')
+                          label Kittens
+                        p.keyword-paragraph  Remove some words that are overused:
+                        .checkbox_wrap--2
+                          input#lang(type='checkbox')
+                          label Neva mascarade
+                      .dial-block
+                        .dial.dial_block--3(data-linewidth='3', data-width='115') 73
+                        .dial.dial.dial_block--4(data-linewidth='3', data-width='115') 20
+                      .seo_aside--information
+                        span.keyword-span Similarity
+                        p.keyword-paragraph.keyword-paragraph--second
+                          | This parameter determines the similarity
+                          | index of your text. If it is 100%, then your
+                          | text is written from scratch.
+                          br
+                          br
+                          span.advice_span--bold 80%
+                          |  of your article is similar to the texts
+                          |                                                 of your competitors. To reduce similarity,
+                          |                                                 we advise you to :
+                        ul.advise-list
+                          li.advise-list--item - use more keywords
+                          li.advise-list--item  - use more sentences suggestions
+                    .bottom_aside--block
+                      span.aside_text--span Structure 
+                      .negative--block.aside_negative--block Use at least 2 words in each Hx
+                      .negative--block.aside_negative--block
+                        | Add 1 H2-H6 tag(s) to your page.
+            .col-sm-8.col-right
+              .filter-wrap
+                .filter
+                  .filter-name
+                    | your topic:
+                  .filter-value
+                    | Siberian cat
+                .filter
+                  .filter-name
+                    | website category:
+                  .filter-value
+                    | Animal
+                .filter
+                  .filter-name
+                    | content type:
+                  .filter-value
+                    | Informative
+                .filter.filter-link
+                  a.filter-link(href='#') Modify
+              .block-main-wrap.advice-block
+                | Your text is adapted to the keyword 
+                span.advice_span--bold “Siberian”.
+                |  Pay attention to the similarity of your text with other texts.
+              .block-main-wrap.text-input.text-input-yes
+                .seo-title Title:
+                form(action='')
+                  textarea.text-field-title.text-field-title--edit(name='title') Siberian Cat Breed Information, Pictures, Characteristics & Facts
+                // <div class="seo-characters"><span class="char-bold">200</span>/200 characters left</div>
+              .block-main-wrap.text-input.text-input-yes
+                .seo-title Meta:
+                form(action='')
+                  textarea.text-field-meta(name='title')
+                    | From Russia with love: that’s the Siberian, a glamorous native cat from the taiga of Siberia, a forested area with a subarctic climate that no doubt contributed to this cat’s long, thick, protective coat. See all Siberian characteristics below!
+              .block-main-wrap.text-input.text-input-no
+                .seo-title H1
+                form(action='')
+                  textarea.text-field-h1(name='title') Siberian Cat Breed Information
+                .text_input--hidden
+                  .negative--block.text_negative--block  Meta too short (200 characters)
+                  .negative--block.text_negative--block
+                    | Not enough keywords
+              .block-main-wrap.block-main-article
+                .article-top
+                  .seo-title Article:
+                  .article-style-pannel
+                    .article-style-pannel__button
+                      button.article-style-pannel__button-1
+                    .article-style-pannel__button
+                      button.article-style-pannel__button-2
+                    .article-style-pannel__button
+                      button.article-style-pannel__button-3
+                    .article-style-pannel__button
+                      button.article-style-pannel__button-4
+                    .article-style-pannel__button
+                      button.article-style-pannel__button-5
+                    .article-style-pannel__button
+                      button.article-style-pannel__button-6
+                  form.sel-form
+                    select
+                      option template style: Academic
+                      option template style: Acad
+                      option template style: Academ
+                form.article-content.article_content--edit(action='')
+                  p.text-field-article
+                    | The Siberian is a landrace variety of domestic cat, present in Russia for centuries, and more recently developed as a formal breed, 
+                    span.field_text--negative with standards promulgated since the late 1980s.
+                    span.advice_span--bold The forest cat
+                    |                                     They vary from medium to medium-large in size. A longer name of the formal breed is
+                    |                                     Siberian Forest Cat, but it is usually referred to as the Siberian or the Siberian ! cat. Another
+                    |                                     name for the formal breed is the Moscow Semi-Longhair. The cat is an ancient breed that is
+                    |                                     now believed to be ancestral to all modern long-haired cats.
+                    |                                     The cat has similarities with 
+                    span.field_text--negative
+                      | the Norwegian forest cat, to which it is likly closely related. It is
+                      | a natural breed of Siberia and the national cat of Russia.
+                    span.advice_span--bold A forest cat
+                    |                                     While it began as a landrace, it is selectively bred and pedigreed today in at least seven major
+                    |                                     cat fancier and breeder organisations. The colorpoint variant of the breed is called the Neva
+                    |                                     Masquerade by some registries, including Fédération Internationale Féline (FIFé).
+                .article-bottom.article_bottom--edit
+                  ul.article-info.article_info--edit
+                    li
+                      | Words 
+                      span
+                        span.article_text--normal 1500
+                        | /1600
+                    li
+                      | Characters 
+                      span
+                        span.article_text--negative 3450
+                        | /6000
+                    li
+                      | Sentences 
+                      span
+                        span.article_text--good 100
+                        | /100
+      footer
+    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
+    script(src='js/libs.min.js')
+    script(src='js/user.js')
