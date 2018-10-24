@@ -13,7 +13,7 @@ $(document).ready(function () {
     var updateInputProgress = $("#input-progress").click(function(){
         var filledFields = 0;
         $("#input-progress").find("input[type='text'],input[type='radio']:checked, select option:selected").each(function(){
-            if($(this).val() != ""){
+            if($(this).val() != ''){
                 console.log(filledFields.length);
                 filledFields++;
             }
@@ -33,7 +33,7 @@ $(document).ready(function () {
         }
         return percent;
     });
-    $("#input-progress #validate").click(function(){
+    $("#validate").click(function(){
         var percent = updateInputProgress();
         if(percent == 100){
             alert("Finished inputs successfully!");
