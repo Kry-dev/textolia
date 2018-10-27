@@ -1,0 +1,148 @@
+.steps-form{
+	display: flex;
+	padding: 0 1rem;
+	width: 100%;
+	flex-direction: column;
+	.step{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 100%;
+		flex-wrap: wrap;
+		&-progress{
+			width: 20%;
+			display: block;
+			flex-direction: column;
+			padding: 0 1rem;
+			justify-content: center;
+			position: relative;
+
+			&.step-progress-active{
+				.step-number,
+				.step-line{
+					background: $warning;
+					color: $white;
+				}
+			}
+		}
+		&-content{
+			display: flex;
+			width: 80%;
+			padding: 1rem 1rem 0;
+			flex-direction: row;
+			.form-group{
+				padding: 0 1rem;
+				margin-bottom: 0;
+			}
+		}
+		&-number{
+			display: flex;
+			width: 30px;
+			height: 30px;
+			margin: 0 auto;
+			justify-content: center;
+			align-items: center;
+			background: $white;
+			color: $warning;
+			border-radius: 50%;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translate(-50%,50%);
+			z-index: 3;
+			font-family: "Roboto";
+			font-weight: 900;
+		}
+		&-line-start{
+			position: absolute;
+			background: $warning;
+			display: flex;
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			top: 0;
+			left: 50%	;
+			transform: translateX(-50%);
+			z-index: 2;
+		}
+		&-line{
+			position: absolute;
+			display: flex;
+			height: 100%;
+			width: 3px;
+			background: $white;
+			margin: 0 auto;
+			//top: 15px;
+			top: 0;
+			left: 50%	;
+			transform: translateX(-50%);
+			z-index: 1;
+		}
+	}
+	.dropdown.bootstrap-select{
+		width: 100% !important;
+		>.dropdown-toggle{
+			width: 100%;
+			border-radius: 30px;
+			font-size: 20px;
+			font-family: "Roboto";
+			padding: 10px 15px;
+			box-shadow: 0px 3px 9px 0px rgba(0,0,0,0.05);
+			&[aria-expanded="true"]{
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+				box-shadow: none;
+			}
+			.filter-option-inner-inner{
+				padding: 10px 0;
+			}
+		}
+		>.dropdown-menu{
+			border-radius: 0;
+			border: 0;
+			margin-top: -60px;
+			padding-top: 60px;
+			background: rgba($white, .3);
+			.inner{
+				box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.2);
+			}
+		}
+		.dropdown-item{
+			font-size: 20px;
+			font-family: "Roboto";
+			padding: 20px 15px;
+			&:hover,
+			&:focus,
+			&.selected{
+				border-radius: 0;
+				background: #faf9f4;
+				font-weight: bold;
+				color: #534747;
+			}
+		}
+		.dropdown-toggle::after{  display: none;  }
+		.dropdown-toggle::before{
+			//position: absolute;
+			font-family: FontAwesome;
+			content: "\f078";
+			text-align: center;
+			padding-top: 10px;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background: #f5f4ea;
+			border: none !important;
+			margin: 0;
+			box-shadow: inset 1px 2px 2px 0px rgba(0,0,0,0.2);
+		}
+	}
+	.step-input{
+		width: 100%;
+		border-radius: 30px;
+		font-size: 20px;
+		font-family: "Roboto";
+		padding: 20px 15px;
+		border: 0;
+		box-shadow: 0px 3px 9px 0px rgba(0,0,0,0.05);
+	}
+}

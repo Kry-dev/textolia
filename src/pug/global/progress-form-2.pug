@@ -1,0 +1,72 @@
+form#steps-form(role='form').steps-form
+    .step.step-1
+        .step-progress.step-progress-active
+            span.step-line-start
+            span.step-line
+            span.step-number 1
+        .step-content.mt-3
+            .form-group.w-50
+                p.pl-3 Select the desired content type
+                select#desiredContent.selectpicker(required, title="Choose one ...")
+                    option(value='Infromative') Infromative
+                    option(value='Educational') Educational
+                    option(value='Sports') Sports
+                    option(value='Entertainment') Entertainment
+                    option(value='Other') Other ...
+            .form-group.w-50
+                p.mb-4 previous picks
+                .pretty.p-default.p-round
+                    input(type='checkbox', name='radio1')
+                    .state.p-danger
+                        label Night Life
+                .pretty.p-default.p-round
+                    input(type='checkbox', name='radio1')
+                    .state.p-danger
+                        label Sports
+                .pretty.p-default.p-round
+                    input(type='checkbox', name='radio1')
+                    .state.p-danger
+                        label Entertainment
+    .step.step-2
+        .step-progress
+            span.step-line
+            span.step-number 2
+        .step-content
+            .form-group.w-80
+                p.pl-3 What do you want to write about?
+                input.form-control.step-input(type="text",placeholder="...", required="required")
+    .step.step-3
+        .step-progress
+            span.step-line
+            span.step-number 3
+        .step-content
+            .form-group.col-6
+                p.pl-3 Select the category of your website
+                select#categorySite.selectpicker(required, title="Choose one ...")
+                    option(value="Technology") Technology
+                    option(value="Educational") Educational
+                    option(value="Sports") Sports
+            .form-group.col-6
+                p.mb-4 previous picks
+                .pretty.p-default.p-round
+                    input(type='checkbox', name='radio2')
+                    .state.p-danger
+                        label Medical Services
+                .pretty.p-default.p-round
+                    input(type='checkbox', name='radio2')
+                    .state.p-danger
+                        label Gaming
+    .step.step-4
+        .step-progress
+            span.step-line
+            button#validate.validate(type="submit")
+                // SVG
+                svg(width='100%', height='30px', xmlns='http://www.w3.org/2000/svg')
+                    defs
+                        lineargradient#gradient(y1='0', y2='1')
+                            stop(stop-color='#d45357', offset='0')
+                            stop(stop-color='#e37825', offset='1')
+                    g
+                        text#validate-svg(y='30',x='20%', font-family='Roboto', font-size='28', font-weight='900',
+                        fill='url' +
+                        '(#gradient)') Validate

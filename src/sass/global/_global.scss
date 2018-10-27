@@ -99,7 +99,17 @@ video {
 		max-width: none;
 	}
 }
-
+.row-equal {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-wrap: wrap;
+}
+.row-equal > [class*='col-'] {
+	display: flex;
+	flex-direction: column;
+}
 
 /* FOR SAFARI */
 //input,
@@ -181,3 +191,8 @@ h4,h5{
 	}
 }
 /* end global styles */
+
+.content-body{
+	display: block;
+	width: 100%;
+}
