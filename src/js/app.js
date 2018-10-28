@@ -1,6 +1,9 @@
 $(document).ready(function () {
-    $('#desiredContent').selectpicker('');
-    $('#categorySite').selectpicker('');
+    // $('#desiredContent').selectpicker('');
+    // $('#categorySite').selectpicker('');
+    $('.selectpicker').selectpicker({
+        size: 4
+    });
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
     });

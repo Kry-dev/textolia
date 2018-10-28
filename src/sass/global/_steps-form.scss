@@ -109,6 +109,12 @@
 			.inner{
 				box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.2);
 			}
+			&.show{
+				//top: 60px!important;
+				transform: translate3d(0px, 0, 0px)!important;
+				overflow: inherit !important;
+				top: 60px !important;
+			}
 		}
 		.dropdown-item{
 			font-size: 20px;
@@ -161,6 +167,7 @@
 		z-index: 30;
 		font-size: 28px;
 		font-weight: 900;
+		font-family: 'Roboto-Bold';
 		text-transform: uppercase;
 		background: $white;
 		color: #d45357;
