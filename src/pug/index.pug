@@ -8,7 +8,7 @@ html(lang="en")
     body
         .wrapper
             // Sidebar
-            nav#sidebar.sidebar
+            nav#sidebar.sidebar.active
                 .sidebar-header
                     a.sidebar-logo(href="index.html")
                         img.logo(src="assets/img/global/logo.png")
@@ -51,7 +51,7 @@ html(lang="en")
                     h1.content-title
                         span.text-logo Textolia
                         span Your indispensable tool for optimized content
-                    button#sidebarCollapse.btn.btn-default(type="button")
+                    //button#sidebarCollapse.btn.btn-default(type="button")
                         i.fas.fa-bars
                 .content-body
                     //include global/progress-form
@@ -59,7 +59,7 @@ html(lang="en")
 
 
 
-    // jQuery CDN - Slim version (=without AJAX)
+    // jQuery CDN - Slim version
     script(src='https://code.jquery.com/jquery-3.3.1.min.js')
     // Popper.JS
     script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js', integrity='sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ', crossorigin='anonymous')
@@ -67,4 +67,47 @@ html(lang="en")
     script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js', integrity='sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm', crossorigin='anonymous')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js', crossorigin='anonymous')
 
-    script(src="assets/js/bundle.js")
+    //script(src="assets/js/bundle.js")
+    script.
+        $(document).ready(function () {
+            var validateStep1 = function () {
+                var step1Val1 = [];
+                var step1Checks2 = [];
+                var step1Val1 = $('#step-1 .selectpicker').val();
+                var step1Checks2 = $("#step-1-picks  input[type='checkbox']:checked");
+                if(step1Val1 != 0 && step1Checks2.length > 0){
+                    $('#step-1').addClass('step-complete');
+                }else {
+                    $('#step-1').removeClass('step-complete');
+                }
+            }
+            var validateStep2 = function () {
+                var step2Val = $("#step-2 input").val();
+                if (step2Val != '') {
+                    $('#step-2').addClass('step-complete');
+                } else {
+                    $('#step-2').removeClass('step-complete');
+                }
+            }
+            var validateStep3 = function () {
+                var step3Val1 = [];
+                var step3Checks2 = [];
+                var step3Val1 = $('#step-3 .selectpicker').val();
+                var step3Checks2 = $("#step-3-picks  input[type='checkbox']:checked");
+                if (step3Val1 != 0 && step3Checks2.length > 0) {
+                    $('#step-3').addClass('step-complete');
+                } else {
+                    $('#step-3').removeClass('step-complete');
+                }
+            }
+            var validateForm = $('#steps-form').on('click', function (e) {
+                e.preventDefault();
+                validateStep1();
+                validateStep2();
+                validateStep3();
+            })
+            $('#validate').on('submit', function () {
+                validateForm();
+            })
+
+        });

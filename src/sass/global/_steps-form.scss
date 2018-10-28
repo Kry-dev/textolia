@@ -16,13 +16,12 @@
 			padding: 0 1rem;
 			justify-content: center;
 			position: relative;
-
-			&.step-progress-active{
-				.step-number,
-				.step-line{
-					background: $warning;
-					color: $white;
-				}
+		}
+		&.step-complete{
+			.step-number,
+			.step-line{
+				background: $warning;
+				color: $white;
 			}
 		}
 		&-content{
@@ -80,7 +79,6 @@
 		}
 	}
 	.dropdown.bootstrap-select{
-		width: 100% !important;
 		>.dropdown-toggle{
 			width: 100%;
 			border-radius: 30px;
@@ -144,5 +142,8 @@
 		padding: 20px 15px;
 		border: 0;
 		box-shadow: 0px 3px 9px 0px rgba(0,0,0,0.05);
+	}
+	.form-group-fill{
+		box-shadow: 0px 3px 9px 0px rgba($success,0.05);
 	}
 }
