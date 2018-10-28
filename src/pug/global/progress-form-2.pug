@@ -9,11 +9,9 @@ form#steps-form(role='form').steps-form
                 p.pl-3 Select the desired content type
                 select#desiredContent.selectpicker(
                 title="Choose one ...",
-                data-width="100%",
-                data-selected-text-format="count > 1",
                 required,
-                data-validation-if-checked="limited",
-                data-validation-if-checked-value="yes"
+                data-width="100%",
+                data-selected-text-format="count > 1"
                 )
                     option(value='Infromative') Infromative
                     option(value='Educational') Educational
@@ -23,15 +21,15 @@ form#steps-form(role='form').steps-form
             #step-1-picks.form-group.w-50
                 p.mb-4 previous picks
                 .pretty.p-default.p-round
-                    input(type='checkbox', name='pick1', value="",required)
+                    input(type='radio', name='pick1', value="",required)
                     .state.p-danger
                         label Night Life
                 .pretty.p-default.p-round
-                    input(type='checkbox', name='pick1', value="",required)
+                    input(type='radio', name='pick1', value="",required)
                     .state.p-danger
                         label Sports
                 .pretty.p-default.p-round
-                    input(type='checkbox', name='pick1', value="",required)
+                    input(type='radio', name='pick1', value="",required)
                     .state.p-danger
                         label Entertainment
     #step-2.step
@@ -51,11 +49,9 @@ form#steps-form(role='form').steps-form
                 p.pl-3 Select the category of your website
                 select#categorySite.selectpicker(
                 title="Choose one ...",
+                required,
                 data-width="100%",
                 data-selected-text-format="count > 1",
-                data-validation="required",
-                data-validation-if-checked="limited",
-                data-validation-if-checked-value="yes"
                 )
                     option(value="Technology") Technology
                     option(value="Educational") Educational
@@ -63,24 +59,25 @@ form#steps-form(role='form').steps-form
             #step-3-picks.form-group.col-6
                 p.mb-4 previous picks
                 .pretty.p-default.p-round
-                    input.step-field(type='checkbox', name='radio2',value="")
+                    input.step-field(type='radio', name='radio2',value="", required)
                     .state.p-danger
                         label Medical Services
                 .pretty.p-default.p-round
-                    input.step-field(type='checkbox', name='radio2',value="")
+                    input.step-field(type='radio', name='radio2',value="", required)
                     .state.p-danger
                         label Gaming
     #step-4.step
         .step-progress
             span.step-line
-        button#validate.validate(type="submit")
-            // SVG
-            svg(width='100%', height='30px', xmlns='http://www.w3.org/2000/svg')
-                defs
-                    lineargradient#gradient(y1='0', y2='1')
-                        stop(stop-color='#d45357', offset='0')
-                        stop(stop-color='#e37825', offset='1')
-                g
-                    text#validate-svg(y='30',x='20%', font-family='Roboto', font-size='28', font-weight='900',
-                    fill='url' +
-                    '(#gradient)') Validate
+            button#validate.validate(type="submit")
+                // SVG
+                svg(width='100%', height='30px', xmlns='http://www.w3.org/2000/svg')
+                    defs
+                        lineargradient#gradient(y1='0', y2='1')
+                            stop(stop-color='#d45357', offset='0')
+                            stop(stop-color='#e37825', offset='1')
+                    g
+                        text#validate-svg(y='25',x='20%', font-family='Roboto', font-size='28', font-weight='900',
+                        fill='url' +
+                        '(#gradient)') Validate
+        .step-content.my-5

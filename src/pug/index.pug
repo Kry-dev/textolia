@@ -8,7 +8,7 @@ html(lang="en")
     body
         .wrapper
             // Sidebar
-            nav#sidebar.sidebar.active
+            nav#sidebar.sidebar
                 .sidebar-header
                     a.sidebar-logo(href="index.html")
                         img.logo(src="assets/img/global/logo.png")
@@ -54,7 +54,6 @@ html(lang="en")
                     //button#sidebarCollapse.btn.btn-default(type="button")
                         i.fas.fa-bars
                 .content-body
-                    //include global/progress-form
                     include global/progress-form-2
 
 
@@ -75,7 +74,7 @@ html(lang="en")
                 var step1Val1 = [],
                     step1Checks2 = [],
                     step1Val1 = $('#step-1 .selectpicker').val(),
-                    step1Checks2 = $("#step-1-picks  input[type='checkbox']:checked");
+                    step1Checks2 = $("#step-1-picks  input[type='radio']:checked");
                 if(step1Val1 != 0 && step1Checks2.length > 0){
                     $('#step-1').addClass('step-complete');
                     $('#step-2').addClass('step-active');
@@ -96,7 +95,7 @@ html(lang="en")
                 var step3Val1 = [],
                     step3Checks2 = [],
                     step3Val1 = $('#step-3 .selectpicker').val(),
-                    step3Checks2 = $("#step-3-picks  input[type='checkbox']:checked");
+                    step3Checks2 = $("#step-3-picks  input[type='radio']:checked");
                 if (step3Val1 != 0 && step3Checks2.length > 0) {
                     $('#step-3').addClass('step-complete');
                     $('#step-4').addClass('step-active');
@@ -107,15 +106,9 @@ html(lang="en")
             var validateForm = $('#steps-form').on('click', function (e) {
                 stepsProgress();
             })
+            // validate button
             $('#validate').on('submit', function () {
-                //validateForm();
-                var filledFields = 0;
-                 $("#input-progress").find("input[type='text'],input[type='checkbox']:checked, select option:selected").each(function(){
-                     if($(this).val() != ''){
-                         filledFields++;
-                         validateForm();
-                     }
-                  });
+                validateForm();
             })
 
         });
