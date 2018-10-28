@@ -16,6 +16,13 @@
 			padding: 0 1rem;
 			justify-content: center;
 			position: relative;
+			margin-top: -1rem;
+		}
+		&.step-active{
+			.step-line{
+				background: $warning;
+				color: $white;
+			}
 		}
 		&.step-complete{
 			.step-number,
@@ -23,6 +30,9 @@
 				background: $warning;
 				color: $white;
 			}
+		}
+		&.step-uncomplete{
+
 		}
 		&-content{
 			display: flex;

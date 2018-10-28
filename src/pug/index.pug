@@ -70,44 +70,52 @@ html(lang="en")
     //script(src="assets/js/bundle.js")
     script.
         $(document).ready(function () {
-            var validateStep1 = function () {
-                var step1Val1 = [];
-                var step1Checks2 = [];
-                var step1Val1 = $('#step-1 .selectpicker').val();
-                var step1Checks2 = $("#step-1-picks  input[type='checkbox']:checked");
+            //validation of step 1
+            var stepsProgress = function () {
+                var step1Val1 = [],
+                    step1Checks2 = [],
+                    step1Val1 = $('#step-1 .selectpicker').val(),
+                    step1Checks2 = $("#step-1-picks  input[type='checkbox']:checked");
                 if(step1Val1 != 0 && step1Checks2.length > 0){
                     $('#step-1').addClass('step-complete');
+                    $('#step-2').addClass('step-active');
                 }else {
                     $('#step-1').removeClass('step-complete');
+                    $('#step-2').removeClass('step-active');
                 }
-            }
-            var validateStep2 = function () {
+            //validation of step 2
                 var step2Val = $("#step-2 input").val();
                 if (step2Val != '') {
                     $('#step-2').addClass('step-complete');
+                    $('#step-3').addClass('step-active');
                 } else {
                     $('#step-2').removeClass('step-complete');
+                    $('#step-3').removeClass('step-active');
                 }
-            }
-            var validateStep3 = function () {
-                var step3Val1 = [];
-                var step3Checks2 = [];
-                var step3Val1 = $('#step-3 .selectpicker').val();
-                var step3Checks2 = $("#step-3-picks  input[type='checkbox']:checked");
+            //validation of step 3
+                var step3Val1 = [],
+                    step3Checks2 = [],
+                    step3Val1 = $('#step-3 .selectpicker').val(),
+                    step3Checks2 = $("#step-3-picks  input[type='checkbox']:checked");
                 if (step3Val1 != 0 && step3Checks2.length > 0) {
                     $('#step-3').addClass('step-complete');
+                    $('#step-4').addClass('step-active');
                 } else {
                     $('#step-3').removeClass('step-complete');
                 }
             }
             var validateForm = $('#steps-form').on('click', function (e) {
-                e.preventDefault();
-                validateStep1();
-                validateStep2();
-                validateStep3();
+                stepsProgress();
             })
             $('#validate').on('submit', function () {
-                validateForm();
+                //validateForm();
+                var filledFields = 0;
+                 $("#input-progress").find("input[type='text'],input[type='checkbox']:checked, select option:selected").each(function(){
+                     if($(this).val() != ''){
+                         filledFields++;
+                         validateForm();
+                     }
+                  });
             })
 
         });

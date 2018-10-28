@@ -1,5 +1,5 @@
 form#steps-form(role='form').steps-form
-    #step-1.step
+    #step-1.step.step-active
         .step-progress
             span.step-line-start
             span.step-line
@@ -11,7 +11,7 @@ form#steps-form(role='form').steps-form
                 title="Choose one ...",
                 data-width="100%",
                 data-selected-text-format="count > 1",
-                data-validation="required",
+                required,
                 data-validation-if-checked="limited",
                 data-validation-if-checked-value="yes"
                 )
@@ -23,15 +23,15 @@ form#steps-form(role='form').steps-form
             #step-1-picks.form-group.w-50
                 p.mb-4 previous picks
                 .pretty.p-default.p-round
-                    input.form-check-input(type='checkbox', name='pick1', value="")
+                    input(type='checkbox', name='pick1', value="",required)
                     .state.p-danger
                         label Night Life
                 .pretty.p-default.p-round
-                    input.form-check-input(type='checkbox', name='pick1', value="")
+                    input(type='checkbox', name='pick1', value="",required)
                     .state.p-danger
                         label Sports
                 .pretty.p-default.p-round
-                    input.form-check-input(type='checkbox', name='pick1', value="")
+                    input(type='checkbox', name='pick1', value="",required)
                     .state.p-danger
                         label Entertainment
     #step-2.step
@@ -41,7 +41,7 @@ form#steps-form(role='form').steps-form
         .step-content
             .form-group.w-80
                 p.pl-3 What do you want to write about?
-                input.form-control.step-input.step-field(type="text",placeholder="...", required="required")
+                input.form-control.step-input(type="text",placeholder="...", required="required")
     #step-3.step
         .step-progress
             span.step-line
@@ -70,7 +70,7 @@ form#steps-form(role='form').steps-form
                     input.step-field(type='checkbox', name='radio2',value="")
                     .state.p-danger
                         label Gaming
-    .step
+    #step-4.step
         .step-progress
             span.step-line
         button#validate.validate(type="submit")
