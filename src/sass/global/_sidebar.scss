@@ -33,13 +33,12 @@ a:focus {
 
 .sidebar {
 	display: block;
-	min-width: 400px;
-	max-width: 400px;
+	min-width: 300px;
+	max-width: 300px;
 	background: $white;
 	transition: all 0.3s;
 	position: relative;
 	min-height: 100vh;
-	height: 100%;
 	position: relative;
 	&:after{
 		content: "";
@@ -56,7 +55,7 @@ a:focus {
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-end;
-		padding: 60px 20px;
+		padding: 40px 20px;
 	}
 	.logo-sm{
 		display: none;
@@ -66,7 +65,7 @@ a:focus {
 		max-width: 50px;
 		text-align: center;
 		.sidebar-header{
-			padding: 60px 5px;
+			padding: 40px 5px;
 		}
 		.sidebar-logo{
 			width: 30px;
@@ -131,7 +130,7 @@ a:focus {
 	.view-switch{
 		position: absolute;
 		right: 0;
-		bottom: 0;
+		bottom: 8vh;
 		display: flex;
 		padding: 20px;
 		width: 150px;
@@ -189,7 +188,7 @@ a[data-toggle="collapse"] {
 	background: #faf9f4;
 	&-header{
 		display: flex;
-		padding: 53px 20px;
+		padding: 35px 20px;
 	}
 	&-title{
 		span{

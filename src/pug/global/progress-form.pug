@@ -1,0 +1,74 @@
+form#input-progress(role='form').container-fluid.progress-form
+    .row
+        .col-md-2.p-0
+            #progress-inputs.progress.progress-vertical
+                .progress-bar(role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
+                style='height:0%;')
+                    span.sr-only 0%
+                    .step-number.step-number-0
+                        span
+                    .step-number.step-number-1
+                        span 1
+                    .step-number.step-number-2
+                        span 2
+                    .step-number.step-number-3
+                        span 3
+            button#validate.validate(type="submit")
+                // SVG
+                svg(width='100%', height='30px', xmlns='http://www.w3.org/2000/svg')
+                    defs
+                        lineargradient#gradient(y1='0', y2='1')
+                            stop(stop-color='#d45357', offset='0')
+                            stop(stop-color='#e37825', offset='1')
+                    g
+                        text#validate-svg(y='30',x='20%', font-family='Roboto', font-size='28', font-weight='900',
+                        fill='url' +
+                        '(#gradient)') Validate
+
+
+        .col-md-10
+            #step1.row.step-content.pt-2
+                .form-group.col-6
+                    p.pl-3 Select the desired content type
+                    select#desiredContent.selectpicker(required, title="Choose one ...")
+                        option(value='Infromative') Infromative
+                        option(value='Educational') Educational
+                        option(value='Sports') Sports
+                        option(value='Entertainment') Entertainment
+                        option(value='Other') Other ...
+                .form-group.col-6
+                    p.mb-4 previous picks
+                    .pretty.p-default.p-round
+                        input(type='radio', name='radio1',required)
+                        .state.p-danger
+                            label Night Life
+                    .pretty.p-default.p-round
+                        input(type='radio', name='radio1' required)
+                        .state.p-danger
+                            label Sports
+                    .pretty.p-default.p-round
+                        input(type='radio', name='radio1' required)
+                        .state.p-danger
+                            label Entertainment
+            #step2.row.step-content
+                .form-group.col-6
+                    p.pl-3 What do you want to write about?
+                    input.form-control.step-input(type="text",placeholder="...", required="required")
+
+            #step3.row.step-content
+                .form-group.col-6
+                    p.pl-3 Select the category of your website
+                    select#categorySite.selectpicker.w-100(required, title="Choose one ...")
+                        option(value="Technology") Technology
+                        option(value="Educational") Educational
+                        option(value="Sports") Sports
+                .form-group.col-6
+                    p.mb-4 previous picks
+                    .pretty.p-default.p-round
+                        input(type='radio', name='radio2',required)
+                        .state.p-danger
+                            label Medical Services
+                    .pretty.p-default.p-round
+                        input(type='radio', name='radio2',required)
+                        .state.p-danger
+                            label Gaming
