@@ -1,35 +1,35 @@
-form#steps-form(role='form').steps-form
-    #step-1.step.step-active
+form#steps-form(role='form', method="get").steps-form
+    #step-1.step.step-active.step-null
         .step-progress
             span.step-line-start
             span.step-line
             span.step-number 1
         .step-content.mt-3
-            .form-group.w-50
+            #step-1-select.form-group.w-50
                 p.pl-3 Select the desired content type
-                select#desiredContent.selectpicker(
-                title="Choose one ...",
+                select#step-1-selectpicker.selectpicker(
                 required,
                 data-width="100%",
-                data-selected-text-format="count > 1"
+                multiple,
+                data-max-options="1",
                 )
-                    option(value='Infromative') Infromative
-                    option(value='Educational') Educational
-                    option(value='Sports') Sports
-                    option(value='Entertainment') Entertainment
-                    option(value='Other') Other ...
+                    option(value='1') Infromative
+                    option(value='2') Educational
+                    option(value='3') Sports
+                    option(value='4') Entertainment
+                    option(value='5') Other ...
             #step-1-picks.form-group.w-50
                 p.mb-4 previous picks
                 .pretty.p-default.p-round
-                    input(type='radio', name='pick1', value="",required)
+                    input(type='radio', name='pick1', value="")
                     .state.p-danger
                         label Night Life
                 .pretty.p-default.p-round
-                    input(type='radio', name='pick1', value="",required)
+                    input(type='radio', name='pick1', value="")
                     .state.p-danger
                         label Sports
                 .pretty.p-default.p-round
-                    input(type='radio', name='pick1', value="",required)
+                    input(type='radio', name='pick1', value="")
                     .state.p-danger
                         label Entertainment
     #step-2.step
@@ -39,31 +39,32 @@ form#steps-form(role='form').steps-form
         .step-content
             .form-group.w-80
                 p.pl-3 What do you want to write about?
-                input.form-control.step-input(type="text",placeholder="...", required="required")
+                input.form-control.step-input(type="text",placeholder="...",required)
     #step-3.step
         .step-progress
             span.step-line
             span.step-number 3
         .step-content
-            .form-group.col-6
+            #step-3-select.form-group.col-6
                 p.pl-3 Select the category of your website
                 select#categorySite.selectpicker(
-                title="Choose one ...",
                 required,
                 data-width="100%",
-                data-selected-text-format="count > 1",
+                multiple,
+                data-max-options="1",
                 )
-                    option(value="Technology") Technology
-                    option(value="Educational") Educational
-                    option(value="Sports") Sports
+                    option(value='1') Technology
+                    option(value='2') Educational
+                    option(value='3') Sports
+                    option(value='4') Choose one ...
             #step-3-picks.form-group.col-6
                 p.mb-4 previous picks
                 .pretty.p-default.p-round
-                    input.step-field(type='radio', name='radio2',value="", required)
+                    input.step-field(type='radio', name='radio2',value="")
                     .state.p-danger
                         label Medical Services
                 .pretty.p-default.p-round
-                    input.step-field(type='radio', name='radio2',value="", required)
+                    input.step-field(type='radio', name='radio2',value="")
                     .state.p-danger
                         label Gaming
     #step-4.step

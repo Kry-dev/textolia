@@ -8,7 +8,7 @@ html(lang="en")
     body
         .wrapper
             // Sidebar
-            nav#sidebar.sidebar
+            nav#sidebar.sidebar.active
                 .sidebar-header
                     a.sidebar-logo(href="index.html")
                         img.logo(src="assets/img/global/logo.png")
@@ -54,9 +54,8 @@ html(lang="en")
                     //button#sidebarCollapse.btn.btn-default(type="button")
                         i.fas.fa-bars
                 .content-body
+                    //include global/progress-form
                     include global/progress-form-2
-
-
 
     // jQuery CDN - Slim version
     script(src='https://code.jquery.com/jquery-3.3.1.min.js')
@@ -65,30 +64,52 @@ html(lang="en")
     // Bootstrap JS
     script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js', integrity='sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm', crossorigin='anonymous')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js', crossorigin='anonymous')
-
-    //script(src="assets/js/bundle.js")
+    script(src="assets/js/bundle.js")
     script.
         $(document).ready(function () {
             //validation of step 1
+            $("#step-1-select").click(function () {
+                $("#step-1-picks  input[type='radio']").each(function () {
+                    if ($(this).val() !== "1") {
+                        console.log('clear input radio');
+                        $(this).prop("checked", false);
+                    }
+                });
+            });
+            $("#step-1-picks input").focus(function () {
+                console.log('clear select');
+                $("#categorySite").selectpicker('val', 'refresh');
+            });
+            $("#step-3-select").click(function () {
+                $("#step-3-picks  input[type='radio']").each(function () {
+                    if ($(this).val() !== "1") {
+                        console.log('clear input radio');
+                        $(this).prop("checked", false);
+                    }
+                });
+            });
+            $("#step-3-picks input").focus(function () {
+                console.log('clear select');
+                $("#categorySite").selectpicker('val', 'refresh');
+            });
             var stepsProgress = function () {
                 var step1Val1 = [],
-                    step1Checks2 = [],
-                    step1Val1 = $('#step-1 .selectpicker').val(),
+                    step1Checks2 = [];
+                    step1Val1 = $('#step-1 select option:selected').val();
                     step1Checks2 = $("#step-1-picks  input[type='radio']:checked");
-                if(step1Val1 != 0 && step1Checks2.length > 0){
+                if(step1Val1 != "" && step1Val1 > 0 || step1Checks2.length > 0) {
+                    $('#step-1').removeClass('step-active step-complete step-null');
                     $('#step-1').addClass('step-complete');
-                    $('#step-2').addClass('step-active');
-                }else {
-                    $('#step-1').removeClass('step-complete');
-                    $('#step-2').removeClass('step-active');
+                    $('#step-2').addClass('step-active step-null');
                 }
             //validation of step 2
                 var step2Val = $("#step-2 input").val();
-                if (step2Val != '') {
+                if (step2Val != 0) {
+                    $('#step-2').removeClass('step-null');
                     $('#step-2').addClass('step-complete');
-                    $('#step-3').addClass('step-active');
+                    $('#step-3').addClass('step-active step-null');
                 } else {
-                    $('#step-2').removeClass('step-complete');
+                    $('#step-2').removeClass('step-complete step-null');
                     $('#step-3').removeClass('step-active');
                 }
             //validation of step 3
@@ -96,7 +117,8 @@ html(lang="en")
                     step3Checks2 = [],
                     step3Val1 = $('#step-3 .selectpicker').val(),
                     step3Checks2 = $("#step-3-picks  input[type='radio']:checked");
-                if (step3Val1 != 0 && step3Checks2.length > 0) {
+                if (step3Val1 != 0 || step3Checks2.length > 0) {
+                    $('#step-2').addClass('step-active');
                     $('#step-3').addClass('step-complete');
                     $('#step-4').addClass('step-active');
                 } else {
@@ -105,9 +127,18 @@ html(lang="en")
             }
             var validateForm = $('#steps-form').on('click', function (e) {
                 stepsProgress();
-            })
-            // validate button
-            $('#validate').on('submit', function () {
+            });
+            //validate button
+            $('#validate').on('submit', function (e) {
+                //e.preventDefault();
+                //if(!$('#step-2').hasClass('step-complete')){
+                //    $('#step-1').addClass('step-null');
+                //}else
+                //if(!$('#step-3').hasClass('step-complete')){
+                //    $('#step-1').addClass('step-null');
+                //}else{
+                //    return false;
+                //}
                 validateForm();
             })
 

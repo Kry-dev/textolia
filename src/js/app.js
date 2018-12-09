@@ -1,47 +1,54 @@
 $(document).ready(function () {
-    // $('#desiredContent').selectpicker('');
-    // $('#categorySite').selectpicker('');
-    $('.selectpicker').selectpicker({
-        size: 4
-    });
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
     });
-    // function updateInputProgress(){
-    //
-    // }
+    //function updateInputProgress(){
+        //var filledFields = 0;
+        //var textFields =  $("#input-progress").find("input[type='text']");
+        //var radioFields =  $("#input-progress .step-content").find("input[type='radio']");
+        //var radioFieldsChecked =  $("radioFields:checked");
+        //console.log(radioFields.length);
+        //console.log(radioFieldsChecked.length);
+        //var selectFields =  $("#input-progress .step-content").find("select option").filter(":selected").val();
+        //console.log(selectFields);
+
+        //var selectVal = "";
+        //if (selectFields != 0) {
+        //    selectVal = select.val();
+        //}
+        //var checkedRadioVal = "";
+        //var checkedRadio = $("#input-progress input[type='radio']:checked");
+        //if (checkedRadio.length > 0) {
+        //    checkedRadioVal = checkedRadio.val();
+        //}
+        ////$("#input-progress").find("input[type='text'],checkedRadio, select option:selected").each(function(){
+        //$("#input-progress").find("selectVal,input[type='text'],checkedRadio").each(function(){
+        //    if($(this).val() != ""){
+        //        filledFields++;
+        //    }
+        //});
+
+        //var percent = Math.ceil(100 * filledFields / totalFields);
+        ////var percent = Math.ceil(100 * filledFields / 3);
+        //$("#progress-inputs .progress-bar").attr("aria-valuenow", percent).height(percent + "%");
+        //return percent;
+    //}
 
     //Input Progress
-    // var totalFields = $("#input-progress").find("input, select, textarea").length;
-    // var updateInputProgress = $("#input-progress").click(function(){
-    //     var filledFields = 0;
-    //     $("#input-progress").find("input[type='text'],input[type='radio']:checked, select option:selected").each(function(){
-    //         if($(this).val() != ''){
-    //             console.log(filledFields.length);
-    //             filledFields++;
-    //         }
-    //     });
-    //
-    //     // var percent = Math.ceil(100 * filledFields / totalFields);
-    //     var percent = Math.ceil(100 * filledFields / 5);
-    //     $("#progress-inputs .progress-bar").attr("aria-valuenow", percent).height(percent + "%");
-    //     if(percent >= 26){
-    //         $('.step-number-1').addClass('complete');
-    //     }
-    //     if(percent >= 50){
-    //         $('.step-number-2').addClass('complete');
-    //     }
-    //     if(percent >= 75){
-    //         $('.step-number-3').addClass('complete');
-    //     }
-    //     return percent;
+    //var totalFields = $("#input-progress").find("input[type='radio']:checked, select option:selected, input[type='text']").length;
+    //$("#input-progress").click(function(){
+    //    updateInputProgress();
+    //});
+    //$("#input-progress #validate").click(function(){
+    //    var percent = updateInputProgress();
+    //    if(percent == 100){
+    //        alert("Finished inputs successfully!");
+    //    }
+    //})
+    // $("#inputGroupSelect01").on('change', function () {
+    //     $(this).closest('.step-content').attr('data-progress','complete');
+    //     // $("#step1").find("input[type='radio']").attr('checked',false);
     // });
-    // $("#validate").click(function(){
-    //     var percent = updateInputProgress();
-    //     if(percent == 100){
-    //         alert("Finished inputs successfully!");
-    //     }
-    // })
 
 
 });
