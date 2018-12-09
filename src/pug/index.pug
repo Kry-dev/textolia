@@ -8,7 +8,7 @@ html(lang="en")
     body
         .wrapper
             // Sidebar
-            nav#sidebar.sidebar.active
+            nav#sidebar.sidebar
                 .sidebar-header
                     a.sidebar-logo(href="index.html")
                         img.logo(src="assets/img/global/logo.png")
@@ -67,32 +67,30 @@ html(lang="en")
     script(src="assets/js/bundle.js")
     script.
         $(document).ready(function () {
-            //validation of step 1
             $("#step-1-select").click(function () {
                 $("#step-1-picks  input[type='radio']").each(function () {
                     if ($(this).val() !== "1") {
-                        console.log('clear input radio');
                         $(this).prop("checked", false);
                     }
                 });
             });
             $("#step-1-picks input").focus(function () {
-                console.log('clear select');
-                $("#categorySite").selectpicker('val', 'refresh');
+                $("#step-1-selectpicker").selectpicker('val', 'refresh');
+                $("#step-1-selectpicker").prop("required", false);
             });
             $("#step-3-select").click(function () {
                 $("#step-3-picks  input[type='radio']").each(function () {
                     if ($(this).val() !== "1") {
-                        console.log('clear input radio');
                         $(this).prop("checked", false);
                     }
                 });
             });
             $("#step-3-picks input").focus(function () {
-                console.log('clear select');
                 $("#categorySite").selectpicker('val', 'refresh');
+                $("#categorySite").prop("required", false);
             });
             var stepsProgress = function () {
+            //validation of step 1
                 var step1Val1 = [],
                     step1Checks2 = [];
                     step1Val1 = $('#step-1 select option:selected').val();
@@ -130,15 +128,7 @@ html(lang="en")
             });
             //validate button
             $('#validate').on('submit', function (e) {
-                //e.preventDefault();
-                //if(!$('#step-2').hasClass('step-complete')){
-                //    $('#step-1').addClass('step-null');
-                //}else
-                //if(!$('#step-3').hasClass('step-complete')){
-                //    $('#step-1').addClass('step-null');
-                //}else{
-                //    return false;
-                //}
+                e.preventDefault();
                 validateForm();
             })
 
