@@ -98,18 +98,18 @@ html(lang="en")
                     step1Val1 = $('#step-1 select option:selected').val();
                     step1Checks2 = $("#step-1-picks  input[type='radio']:checked");
                 if(step1Val1 != "" && step1Val1 > 0 || step1Checks2.length > 0) {
-                    $('#step-1').removeClass('step-active step-complete step-null');
+                    $('#step-1').removeClass('step-active step-complete');
                     $('#step-1').addClass('step-complete');
-                    $('#step-2').addClass('step-active step-null');
+                    $('#step-2').addClass('step-active');
                 }
             //validation of step 2
                 var step2Val = $("#step-2 input").val();
                 if (step2Val != 0) {
-                    $('#step-2').removeClass('step-null');
+                    //$('#step-2').removeClass('step-null');
                     $('#step-2').addClass('step-complete');
-                    $('#step-3').addClass('step-active step-null');
+                    $('#step-3').addClass('step-active');
                 } else {
-                    $('#step-2').removeClass('step-complete step-null');
+                    $('#step-2').removeClass('step-complete');
                     $('#step-3').removeClass('step-active');
                 }
             //validation of step 3
