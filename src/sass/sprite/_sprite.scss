@@ -5,6 +5,7 @@
 	height: 2em;
 	&-lamp{@include icon('lamp', 28px, 28px);  }
 	&-save{@include icon('save', 28px, 28px);  }
+	&-save-white{@include icon('save-white', 28px, 28px);  }
 	&-list{@include icon('list', 28px, 28px);  }
 	&-Tt{@include icon('Tt', 23px, 26px);  }
 	&-i{@include icon('i', 26px, 27px);  }
