@@ -3,24 +3,18 @@
 	display: inline-block;
 	width: 2em;
 	height: 2em;
-	&-lamp{
-		@include icon('lamp', 28px, 28px);
-	}
-	&-save{
-		@include icon('save', 28px, 28px);
-	}
-	&-list{
-		@include icon('list', 28px, 28px);
-	}
-	&-Tt{
-		@include icon('Tt', 23px, 26px);
-	}
-	&-i{
-		@include icon('i', 26px, 26px);
-	}
-	&-arrow-l{
-		@include icon('arrow-l', 10px, 15px);
-	}
+	&-lamp{@include icon('lamp', 28px, 28px);  }
+	&-save{@include icon('save', 28px, 28px);  }
+	&-list{@include icon('list', 28px, 28px);  }
+	&-Tt{@include icon('Tt', 23px, 26px);  }
+	&-i{@include icon('i', 26px, 26px);  }
+	&-arrow-l{@include icon('arrow-l', 10px, 15px);  }
+	&-T{@include icon('T', 20px, 22px);  }
+	&-t-it{@include icon('t-it', 9px, 16px);  }
+	&-T-udrl{@include icon('T-udrl', 20px, 20px);  }
+	&-clip{@include icon('clip', 18px, 20px);  }
+	&-m-list{@include icon('m-list', 22px, 22px);  }
+	&-shelude{@include icon('shelude', 22px, 22px);  }
 }
 .icon-cancel {
 	font-size:(512/10)*1rem;

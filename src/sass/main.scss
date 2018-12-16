@@ -767,8 +767,10 @@ body {
 
 
 .article-style-pannel {
-    display: inline-block;
-    vertical-align: middle;
+    display: flex;
+    float: right;
+    align-items: center;
+    //vertical-align: middle;
     margin-left: 45px;
 }
 
@@ -794,19 +796,27 @@ body {
     }
 }
 
-.article-style-pannel__button-1 {
-    &:before {
-        position: absolute;
-        content: ' ';
-        background: url("../img/global/1.png") 0 0 no-repeat;
-        width: 16px;
-        height: 16px;
-        top: calc(50% - 8px);
-        left: calc(50% - 8px);
+.article-style-pannel__btn {
+    position: relative;
+    width: 37px;
+    height: 37px;
+    border-radius: 7px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    border: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:focus {
+        background-color: #faf9f4;
+        box-shadow: 0 0 5px #000;
+        outline: none;
+        box-shadow: inset 0px 2px 6px -2px #6b4d4da3;
     }
 }
 
-.article-style-pannel__button-2 {
+.article-style-pannel__btn-2 {
     &:before {
         position: absolute;
         content: ' ';
@@ -818,7 +828,7 @@ body {
     }
 }
 
-.article-style-pannel__button-3 {
+.article-style-pannel__btn-3 {
     &:before {
         position: absolute;
         content: ' ';
@@ -830,7 +840,7 @@ body {
     }
 }
 
-.article-style-pannel__button-4 {
+.article-style-pannel__btn-4 {
     &:before {
         position: absolute;
         content: ' ';
@@ -842,7 +852,7 @@ body {
     }
 }
 
-.article-style-pannel__button-5 {
+.article-style-pannel__btn-5 {
     &:before {
         position: absolute;
         content: ' ';
@@ -854,7 +864,7 @@ body {
     }
 }
 
-.article-style-pannel__button-6 {
+.article-style-pannel__btn-6 {
     &:before {
         position: absolute;
         content: ' ';
@@ -867,6 +877,9 @@ body {
 }
 
 .article-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     border-bottom: 2px dotted #dddada;
     padding-bottom: 15px;
     margin-bottom: 15px;
