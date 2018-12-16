@@ -1,8 +1,5 @@
 /* GLOBAL STYLES ----------
 -------------------------*/
-
-
-
 body {
     font-family: 'Roboto', sans-serif;
     background-color: #faf9f4;
@@ -11,9 +8,6 @@ body {
     line-height: 20px;
     overflow-x: hidden;
 }
-
-
-
 .container {
     max-width: 1200px;
 }
@@ -46,19 +40,18 @@ body {
     text-transform: uppercase;
 }
 
-.menu-navbar .nav-item.active .nav-link {
-    color: #fff;
-}
-
-.menu-navbar .nav-item.active {
+.menu-navbar .nav-item.active,
+.menu-navbar .nav-item:focus,
+.menu-navbar .nav-item:hover {
     background: #e37825;
-
+    .nav-link {
+        color: #fff;
+    }
 }
 
 .menu-navbar .nav-item.active img {
     background: #fff;
 }
-
 
 
 /* PAGE 2 STYLES -------

@@ -174,7 +174,21 @@ a[data-toggle="collapse"] {
 	right: 5px;
 }
 
-
+$sidebar-w: 200px;
+.wrapper.wrapper-text-blocks{
+	.sidebar{
+		position: fixed;
+		top: 0;
+		left: 0;
+		max-width: $sidebar-w;
+		min-width: $sidebar-w;
+		height: 100%;
+		z-index: 200;
+	}
+	.left-nav{
+		padding-left:($sidebar-w - 72px);
+	}
+}
 
 /* ---------------------------------------------------
     CONTENT STYLE
