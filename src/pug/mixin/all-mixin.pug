@@ -1,30 +1,5 @@
-//- link
-mixin link(href,text)
-	a(href= href )= text
-		block
-//- link item
-mixin nav-link(href,text,mod)
-	li.nav-item
-		a(class=`nav-link ${mod}` , href= href )= text
-
-//- socials
-mixin socials(name, url, mod)
-	ul.socials
-		- var socials = [{name: "fb", url: "#"},{name: "tw", url: "#"},{name: "in", url: "#"},{name:"pin",  url: "#"}];
-			each social in socials
-				li.socials-item
-					a.socials-link(href=`${social.url}`, target="_blank")
-						svg(class=`icon icon-${social.name}`)
-							use(xlink:href=`assets/img/sprite/sprite.min.svg#${social.name}`)
-
-
 //- svg icons
 mixin icon(name,mod)
 	- mod = mod || ''
 	i(class=`icon icon-${name} ${mod}`)
-
-
-
-//- breadcrumbs
-include breadcrumbs
 

@@ -12,6 +12,7 @@ html(lang='en')
     //link(rel='stylesheet', href='css/jquery.formstyler.theme.css', type='text/css')
     link(rel='stylesheet', href='assets/css/app.min.css', type='text/css')
   include mixin/all-mixin
+
   body
     .wrapper
       // Sidebar
@@ -89,22 +90,22 @@ html(lang='en')
         .container
           .row
             .col-sm-3
-            .col-sm-9.col-right
+            .col-sm-8.col-right
               .filter-wrap
                 .filter
                   .filter-name
                     | your topic:
-                  .filter-value
+                  a(href="#").filter-value
                     | Siberian cat
                 .filter
                   .filter-name
                     | website category:
-                  .filter-value
+                  a(href="#").filter-value
                     | Animal
                 .filter
                   .filter-name
                     | content type:
-                  .filter-value
+                  a(href="#").filter-value
                     | Informative
                 .filter.filter-link
                   a.filter-link(href='#') Modify
@@ -118,47 +119,90 @@ html(lang='en')
                   span.advice_span--bold  What is a siberian cat?
                   |  Answer the question with a list with at least
                   span.advice_span--bold  3 bullet points.
-              .block-main-wrap.text-input.text-input-yes.text-input--inform.input_inform--icon.clearfix
-                .seo-title Title:
-                form(action='')
-                  textarea.text-field-title(name='title')
-                ul.seo-key
-                  li Cat
-                  li Siberian
-                  li Information
-                .seo-characters
-                  span.char-bold 200
-                  | /200 characters left
-                .input_inform--negative
-                  | We advice you to write a title of 200
-                  | characters including at least
-                  span.advice_span--bold
-                    | 3 of the
-                    | most important keywords.
-              .block-main-wrap.text-input.text-input-yes.input_inform--icon
-                .seo-title Meta:
-                form(action='')
-                  textarea.text-field-meta(name='title', placeholder='Type your meta here with max 200 characters')
-              .block-main-wrap.text-input.text-input-no.input_inform--icon
-                .seo-title H1
-                form(action='')
-                  textarea.text-field-h1(name='title', placeholder='Type your H1 here with max 200 characters')
+              #textBlocks.textBlocks
+                .card.mb-3.text-input--inform
+                  #headingOne.card-header
+                    .form-group(data-toggle='collapse', data-target='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                      h5.mb-0
+                        label(for='Title') Title:
+                      textarea#Title.form-control(rows='1',placeholder="Type your title here with max 200 characters")
+                  button.card-popover(data-toggle="popover" data-container="body" data-placement="right" type="button" data-html="true"
+                  id="popoverTitle")
+                    +icon('i')
+                  #collapseOne.collapse.show(aria-labelledby='headingOne', data-parent='#textBlocks')
+                    .card-body
+                      .text-input--inform
+                        ul.seo-key
+                          li
+                            a(href="#") Cat
+                          li
+                            a(href="#") Siberian
+                          li
+                            a(href="#") Information
+                        .seo-characters
+                          span.char-bold 200
+                          | /200 characters left
+                .card.mb-3
+                  #headingTwo.card-header
+                    .form-group(data-toggle='collapse', data-target='#collapseTwo', aria-expanded='true', aria-controls='collapseTwo')
+                      h5.mb-0
+                        label(for='Meta') Meta:
+                      textarea#Meta.form-control(rows='1',placeholder="Type your Meta with max 200 characters")
+                    button.card-popover(data-toggle="popover" data-container="body" data-placement="right" type="button" data-html="true"
+                    id="popoverMeta")
+                      +icon('i')
+                  #collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#textBlocks')
+                    .card-body
+                      .text-input--inform
+                        ul.seo-key
+                          li
+                            a(href="#") Cat
+                          li
+                            a(href="#") Siberian
+                          li
+                            a(href="#") Information
+                        .seo-characters
+                          span.char-bold 200
+                          | /200 characters left
+                .card.mb-3
+                  #headingThree.card-header
+                    .form-group(data-toggle='collapse', data-target='#collapseThree', aria-expanded='true', aria-controls='collapseThree')
+                      h5.mb-0
+                        label(for='H1') H1:
+                      textarea#H1.form-control(rows='1',placeholder="Type your H1 here with max 200 characters")
+                    button.card-popover(data-toggle="popover" data-container="body" data-placement="right" type="button" data-html="true"
+                    id="popoverH1")
+                      +icon('i')
+                  #collapseThree.collapse(aria-labelledby='headingThree', data-parent='#textBlocks')
+                    .card-body
+                      .text-input--inform
+                        ul.seo-key
+                          li
+                            a(href="#") Cat
+                          li
+                            a(href="#") Siberian
+                          li
+                            a(href="#") Information
+                        .seo-characters
+                          span.char-bold 200
+                          | /200 characters left
+
               .block-main-wrap.block-main-article
                 .article-top
                   .seo-title Article:
                   .article-style-pannel
-                      button.article-style-pannel__btn
-                        +icon('T')
-                      button.article-style-pannel__btn
-                        +icon('t-it')
-                      button.article-style-pannel__btn
-                        +icon('T-udrl')
-                      button.article-style-pannel__btn
-                        +icon('clip')
-                      button.article-style-pannel__btn
-                        +icon('m-list')
-                      button.article-style-pannel__btn
-                        +icon('shelude')
+                    button.article-style-pannel__btn
+                      +icon('T')
+                    button.article-style-pannel__btn
+                      +icon('t-it')
+                    button.article-style-pannel__btn
+                      +icon('T-udrl')
+                    button.article-style-pannel__btn
+                      +icon('clip')
+                    button.article-style-pannel__btn
+                      +icon('m-list')
+                    button.article-style-pannel__btn
+                      +icon('shelude')
                   form.sel-form
                     select
                       option template style: Academic
@@ -191,9 +235,31 @@ html(lang='en')
                     li
                       | Sentences
                       span.advice_span--bold 100
+
     footer
-    script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js', integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo', crossorigin='anonymous')
-    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
-    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
+    #popover-content-popoverTitle.d-none
+      | We advice you to write a title of 200 characters including at least
+      b  3 of the most important keywords
+    #popover-content-popoverMeta.d-none
+      | We advice you to write a title of 200 characters including at least
+      b  3 of the most important keywords
+    #popover-content-popoverH1.d-none
+      | We advice you to write a title of 200 characters including at least
+      b  3 of the most important keywords
     script(src='assets/js/vendor/libs.min.js')
     script(src='assets/js/vendor/user.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
+    script.
+        $(document).ready(function () {
+            $("[data-toggle=popover]").each(function (i, obj) {
+                $(this).popover({
+                    html: true,
+                    content: function () {
+                        var id = $(this).attr('id')
+                        return $('#popover-content-' + id).html();
+                    }
+                });
+            });
+        });
+
