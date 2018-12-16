@@ -18,10 +18,12 @@ mixin socials(name, url, mod)
 							use(xlink:href=`assets/img/sprite/sprite.min.svg#${social.name}`)
 
 
+//- svg icons
+mixin icon(name,mod)
+	- mod = mod || ''
+	i(class=`icon icon-${name} ${mod}`)
 
 
-//- sprite
-include svg-sprite
 
 //- breadcrumbs
 include breadcrumbs

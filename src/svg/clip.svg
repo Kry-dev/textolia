@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="30px" height="32px" viewBox="0 0 30 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Combined Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="59.998305%" y1="40.3764562%" x2="42.6742702%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#E05743" offset="0%"></stop>
+            <stop stop-color="#F76B1C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="shutterstock_631988546" transform="translate(-665.000000, -840.000000)" fill="url(#linearGradient-1)">
+            <g id="Group-5" transform="translate(665.000000, 840.000000)">
+                <path d="M26.707,3.293 C30.13,6.716 30.13,12.284 26.707,15.707 L26.726,15.726 L12.706,29.744 L11.292,28.33 L12.707,29.743 C11.449,31.001 9.777,31.694 8,31.694 C6.223,31.694 4.551,31.001 3.293,29.743 C2.035,28.485 1.342,26.813 1.342,25.036 C1.342,23.259 2.035,21.587 3.293,20.329 L17.312,6.312 C19.079,4.542 21.958,4.542 23.726,6.312 C25.494,8.08 25.494,10.957 23.726,12.726 L9.707,26.743 L8.293,25.329 L22.312,11.312 C23.3,10.323 23.3,8.714 22.312,7.726 C21.323,6.737 19.714,6.737 18.726,7.726 L4.707,21.743 C2.892,23.559 2.892,26.514 4.707,28.329 C6.52292394,30.1459239 9.47675255,30.146 11.2927718,28.3292283 L25.312,14.312 L25.293,14.293 C27.936,11.65 27.936,7.35 25.293,4.707 C22.65,2.064 18.35,2.064 15.707,4.707 L1.707,18.707 L0.293,17.293 L14.293,3.293 C17.715,-0.129 23.285,-0.129 26.707,3.293 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

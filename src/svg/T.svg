@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="37.8443843%" y1="9.89843744%" x2="62.4245206%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#E05743" offset="0%"></stop>
+            <stop stop-color="#F5AA69" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="shutterstock_631988546" transform="translate(-144.000000, -320.000000)" fill="url(#linearGradient-1)">
+            <g id="Group-2" transform="translate(144.000000, 320.000000)">
+                <path d="M18,4 L18,28 L22,28 L22,32 L10,32 L10,28 L14,28 L14,4 L4,4 L4,7 L0,7 L0,0 L32,0 L32,7 L28,7 L28,4 L18,4 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

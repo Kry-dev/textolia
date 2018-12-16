@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="31px" viewBox="0 0 28 31" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="41.8273372%" y1="23.5022184%" x2="71.2515373%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#E05743" offset="0%"></stop>
+            <stop stop-color="#F5AA69" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="shutterstock_631988546" transform="translate(-978.000000, -217.000000)" fill="url(#linearGradient-1)">
+            <g id="Group" transform="translate(978.000000, 217.000000)">
+                <path d="M14,2 L14,29 L17,29 L17,31 L9,31 L9,29 L12,29 L12,2 L2,2 L2,5 L0,5 L0,0 L25,0 L25,5 L23,5 L23,2 L14,2 Z M23,19 L20,19 L20,17 L23,17 L23,13 L25,13 L25,17 L28,17 L28,19 L25,19 L25,28 C25,28.551 25.45,29 26,29 L28,29 L28,31 L26,31 C24.35,31 23,29.654 23,28 L23,19 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

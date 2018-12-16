@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Fill 172</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="23.6392842%" y1="6.3865803%" x2="73.3853027%" y2="97.8340089%" id="linearGradient-1">
+            <stop stop-color="#E05743" offset="0%"></stop>
+            <stop stop-color="#F76B1C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="shutterstock_578869888" transform="translate(-872.000000, -528.000000)" fill="url(#linearGradient-1)">
+            <path d="M888,560 C896.837,560 904,552.836 904,544 C904,535.164 896.837,528 888,528 C884.652,528 881.546,529.032 878.977,530.791 C877.879826,531.587217 877.113454,532.22228 876.677883,532.69619 C876.242312,533.170101 875.613351,533.93037 874.791,534.977 C873.032,537.546 872,540.651 872,544 C872,552.836 879.164,560 888,560 Z M901,544 C901,546.628786 900.216286,549.163786 898.733357,551.330143 L898.173429,552.148214 L896.148214,554.173429 L895.330143,554.733357 C893.163786,556.216286 890.628786,557 888,557 C880.831429,557 875,551.168571 875,544 C875,536.831429 880.831429,531 888,531 C895.168571,531 901,536.831429 901,544 Z M887,551 L889,551 L889,541 L887,541 L887,551 Z M887,539 L889,539 L889,537 L887,537 L887,539 Z" id="Fill-172"></path>
+        </g>
+    </g>
+</svg>

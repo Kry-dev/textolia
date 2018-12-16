@@ -653,12 +653,8 @@ body {
     font-weight: 300;
     margin-bottom: 20px;
 
-    &:before {
+    .icon-lamp{
         position: absolute;
-        content: ' ';
-        background: url("../img/global/advice-img.png") 0 0 no-repeat;
-        width: 26px;
-        height: 26px;
         top: 22px;
         left: 28px;
     }
@@ -963,41 +959,108 @@ body {
     left: -1000px;
     box-shadow: 0 0 10px #0000001f;
 }
+.left-nav{
+    height: 100%;
+    width: 300px;
+    padding-left: 230px;
+    position: relative;
+    z-index: 200;
+    .panel{
+        min-width: 300px;
+        //min-height: 72px;
+        position: relative;
+        background-color: transparent;
+        cursor: pointer;
+        margin-bottom: 20px;
+        &-heading{
+            width: 72px;
+            height: 72px;
+            border-radius: 72px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            background: $white;
+            padding: 0 23px;
+            box-shadow: 0 0 20px #0000001f;
+            &:hover,
+            &:active,
+            &[aria-expanded="true"]{
+                width: 100%;
+                min-width: 350px;
+                .panel-title,
+                .icon-i,
+                .icon-arrow-l{  display: flex;}
+            }
+        }
+        &-title,
+        .icon-i,
+        .icon-arrow-l{  display: none;}
+        &-collapse{
+            padding: 20px 0 20px 72px;
+            width: 100%;
+            min-width: 300px;
+            &.collapsing{
+                width: 100%;
+            }
+        }
+        &-body{
+            width: 100%;
+        }
+    }
+    .dropdown-menu.show {
+        padding-top: 40px;
+        left: -40px !important;
+    }
 
+    .dropdown-menu {
+        background-color: transparent;
+        border: none;
+    }
+
+    .dropdown-item {
+        border: 2px solid #d4d1cd;
+        border-radius: 32px;
+        margin-bottom: 10px;
+        width: auto;
+        max-width: 260px;
+        display: inline-block;
+        position: relative;
+        transition: all 0.2s ease;
+        white-space: inherit;
+        padding:6px 20px;
+        &:hover {
+            border: 2px solid #c3ca0a;
+            background-color: #fff;
+            padding-right: 20px;
+            &::before {
+                position: absolute;
+                content: ' ';
+                background: url("../img/global/check-yes.png") 0 0 no-repeat;
+                width: 15px;
+                height: 11px;
+                right: 5px;
+                top: 50%;
+                margin-top: -5.5px;
+            }
+        }
+    }
+}
 .list-item-inner {
     font-size: 18px;
     position: relative;
     display: none;
-
-    &:before {
-        position: absolute;
-        content: ' ';
-        background: url("../img/global/left-arrow.png") 0 0 no-repeat;
-        width: 9px;
-        height: 14px;
-        top: 50%;
-        margin-top: -7px;
-        left: -15px;
-    }
-
-    &:after {
-        position: absolute;
-        content: ' ';
-        background: url("../img/global/info.png") 0 0 no-repeat;
-        width: 26px;
-        height: 26px;
-        top: 50%;
-        margin-top: -13px;
-        right: -30px;
-    }
 }
 
 
 .left-nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     z-index: 10;
     position: relative;
     text-align: center;
-    right: 28px;
+    right: 10px;
 
     li {
         display: block;
@@ -1014,50 +1077,48 @@ body {
         cursor: pointer;
 
         &:hover {
-            width: 350px;
-            padding: 26px 60px 26px 90px;
-
+            width: 300px;
+            padding: 26px 60px 26px 60px;
+            align-self: flex-start;
             .list-item-inner {
                 display: block;
             }
+            .icon {
+                left: 10%;
+            }
+            .icon-i {
+                display: block;
+                left: auto;
+                right: 5%;
+            }
+            .icon-arrow-l{
+                left: 5%;
+            }
         }
-
-        .icon-1 {
-            background: url("../img/global/left-nav1.png") 0 0 no-repeat;
-            width: 24px;
-            height: 24px;
+        .btn{
+            width: 100%;
+        }
+        .icon {
             position: absolute;
             top: 50%;
-            margin-top: -12px;
-            left: 25px;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
-
-        .icon-2 {
-            background: url("../img/global/left-nav2.png") 0 0 no-repeat;
-            width: 24px;
-            height: 24px;
-            position: absolute;
-            top: 50%;
-            margin-top: -12px;
-            left: 25px;
-        }
-
-        .icon-3 {
-            background: url("../img/global/left-nav3.png") 0 0 no-repeat;
-            width: 24px;
-            height: 24px;
-            position: absolute;
-            top: 50%;
-            margin-top: -12px;
-            left: 25px;
-        }
+        .icon-i{  display: none;}
+        //.icon-3 {
+        //    background: url("../img/global/left-nav3.png") 0 0 no-repeat;
+        //    width: 24px;
+        //    height: 24px;
+        //    position: absolute;
+        //    top: 50%;
+        //    margin-top: -12px;
+        //    left: 25px;
+        //}//
     }
 }
 
 .sel-form {
     float: right;
-
-
 }
 
 .jq-selectbox__select {
@@ -1113,46 +1174,6 @@ body {
     color: #000;
     background: none;
 }
-.main{
-    .dropdown-menu.show {
-        padding-top: 40px;
-        left: -40px !important;
-    }
-
-    .dropdown-menu {
-        background-color: transparent;
-        border: none;
-    }
-
-    .dropdown-item {
-        height: 32px;
-        border: 2px solid #d4d1cd;
-        border-radius: 32px;
-        margin-bottom: 10px;
-        width: auto;
-        display: inline-block;
-        position: relative;
-        transition: all 0.2s ease;
-
-        &:hover {
-            border: 2px solid #c3ca0a;
-            background-color: #fff;
-            padding-right: 45px;
-
-            &::before {
-                position: absolute;
-                content: ' ';
-                background: url("../img/global/check-yes.png") 0 0 no-repeat;
-                width: 15px;
-                height: 11px;
-                right: 10px;
-                top: 50%;
-                margin-top: -5.5px;
-            }
-        }
-    }
-}
-
 
 .btn-secondary:not(:disabled):not(.disabled):active:focus {
     box-shadow: none;
@@ -1271,7 +1292,6 @@ article {
 	padding-right: 0;
 	border-bottom: 1px dotted #d9d5d1;
 	border-radius: 0;
-	cursor: normal;
 	&:before {
 		display: none;
 	}
@@ -1280,6 +1300,7 @@ article {
 		background-color: transparent;
 		padding-left: 0px;
 		padding-right: 0px;
+    cursor: pointer;
 	}
 }
 

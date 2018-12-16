@@ -8,6 +8,8 @@ const svgmin = require('gulp-svgmin');
 const svgstore = require('gulp-svgstore');
 const cheerio = require('gulp-cheerio');
 const replace = require('gulp-replace');
+const svgSprite = require('gulp-svg-sprite');
+const spritesmith = require('gulp.spritesmith');
 //images
 const imagemin = require('gulp-imagemin');
 // styles
@@ -45,8 +47,8 @@ const paths = {
         dest: 'build/assets/img/'
     },
     svgIcons: {
-        src: 'src/svg/*.svg',
-        dest: 'build/assets/img/sprite/'
+        src: 'src/svg/**.*',
+        dest: 'build/assets/svg/'
     },
     fonts: {
         src: 'src/fonts/**/*.*',
@@ -58,36 +60,10 @@ const paths = {
         dest: 'build/'
     }
 };
-
-// SVG Sprite Build task
+//------------------svg sprites------------------------------------------------------------//
+// copy svgs
 function SVGSpriteBuild() {
-    return gulp
-        .src(paths.svgIcons.src)
-        .pipe(cheerio({
-            run: function ($) {
-                $('[fill]').removeAttr('fill');
-                $('[stroke]').removeAttr('stroke');
-                $('[style]').removeAttr('style');
-            },
-            parserOptions: { xmlMode: true }
-        }))
-        .pipe(svgmin(function (file) {
-            //var prefix = path.basename(file.relative, path.svgIcons(file.relative));
-            return {
-                plugins: [{
-                    cleanupIDs: {
-                        //prefix: prefix + '-',
-                        minify: true
-                    }
-                }]
-            }
-        }))
-        .pipe(replace('&gt;', '>'))
-        .pipe(svgstore({ inlineSvg: true }))
-        .pipe(rename({
-            basename: "sprite",
-            suffix: ".min"
-        }))
+    return gulp.src(paths.svgIcons.src)
         .pipe(gulp.dest(paths.svgIcons.dest));
 }
 

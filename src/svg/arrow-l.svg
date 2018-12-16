@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="290px" height="492px" viewBox="0 0 290 492" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Fill 1</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="48.1470658%" y1="16.0385611%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#E05743" offset="0%"></stop>
+            <stop stop-color="#F76B1C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="left-arrow" fill="url(#linearGradient-1)">
+            <path d="M281.184,23.984 L265.056,7.864 C259.996,2.792 253.232,0 246.024,0 C238.816,0 232.06,2.792 226.996,7.864 L7.848,227.008 C2.764,232.088 -0.02,238.876 -6.22361863e-15,246.092 C-0.02,253.34 2.76,260.12 7.848,265.204 L226.792,484.136 C231.856,489.208 238.612,492 245.824,492 C253.032,492 259.788,489.208 264.856,484.136 L280.98,468.016 C291.472,457.524 291.472,440.444 280.98,429.956 L97.128,246.104 L281.184,62.04 C286.252,56.984 289.04,50.224 289.04,43.016 C289.04,35.804 286.252,29.048 281.184,23.984 Z" id="Fill-1"></path>
+        </g>
+    </g>
+</svg>

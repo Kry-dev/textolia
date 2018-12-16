@@ -11,79 +11,85 @@ html(lang='en')
     //link(rel='stylesheet', href='css/jquery.formstyler.css', type='text/css')
     //link(rel='stylesheet', href='css/jquery.formstyler.theme.css', type='text/css')
     link(rel='stylesheet', href='assets/css/app.min.css', type='text/css')
+  include mixin/all-mixin
   body
-    .global_main--block
-      header
-        .container
-          .row.justify-content-end
-            .col-11.offset-1
-              .orange-border
-              ul.nav.menu-navbar
-                li.nav-item
-                  a.nav-link(href='#')
-                    img(src='assets/img/global/menu_img.png', alt='')
-                li.nav-item.active
-                  a.nav-link(href='page_4.html') Write
-                li.nav-item
-                  a.nav-link(href='page_3.html') Edit
-      main.main
+    .wrapper
+      // Sidebar
+      #sidebar.sidebar
+        .sidebar-header
+          a.sidebar-logo(href="index.html")
+            img.logo(src="assets/img/global/logo.png")
+            img.logo-sm(src="assets/img/global/logo-sm.png")
+        #accordion.panel-group.left-nav
+          .panel.panel-default
+            a.panel-heading(data-toggle='collapse', data-parent='#accordion', href='#collapse1')
+              +icon('list')
+              +icon('arrow-l')
+              span.panel-title Keyword suggestions
+              +icon('i')
+            #collapse1.panel-collapse.collapse
+              .panel-body
+                .drop-item-2p.drop-item-2p-key
+                  a(href="#").key-sugg
+                    | Cat
+                    .key-sugg-number.key-sugg-number__red 0/3
+                  a(href="#").key-sugg
+                    | Long Hair
+                    .key-sugg-number.key-sugg-number__orange 1/2
+                  a(href="#").key-sugg
+                    | Breed
+                    .key-sugg-number.key-sugg-number__green 2/2
+                .drop-item-2p.drop-item-2p-key
+                  a(href="#").key-sugg.key-sugg__red
+                    | Siberian
+                    .key-sugg-number.key-sugg-number__red 0/4
+                  a(href="#").key-sugg.key-sugg__red
+                    | Russia
+                    .key-sugg-number.key-sugg-number__red 0/4
+                  a(href="#").key-sugg.key-sugg__red
+                    | Neva mascarade
+                    .key-sugg-number.key-sugg-number__yellow 3/1
+                .drop-item-2p.drop-item-2p-key.drop-item-2p-keybn
+                  a(href="#").key-sugg.key-sugg__yellow
+                    | Feline
+                    .key-sugg-number.key-sugg-number__red 0/3
+                  a(href="#").key-sugg.key-sugg__yellow
+                    | Kittens
+                    .key-sugg-number.key-sugg-number__orange 1/2
+                .drop-item-2p.drop-item-2p-key.drop-item-2p-keybn
+                  a.filter-link(href='#') See more
+          .panel.panel-default
+            a.panel-heading(data-toggle='collapse', data-parent='#accordion', href='#collapse2')
+              +icon('Tt')
+              +icon('arrow-l')
+              span.panel-title Sentence suggestions
+              +icon('i')
+            #collapse2.panel-collapse.collapse
+              .panel-body
+                a.dropdown-item.drop-item-2p(href='#') This cat typically weighs 8 to 17
+                a.dropdown-item.drop-item-2p(href='#') The Siberian’s heart is as warm as his homeland is cold.
+                a.dropdown-item.drop-item-2p(href='#') Siberian cat vs russian blue
+                a.dropdown-item.drop-item-2p(href='#') Siberian cat vs bengal cat
+
+      main.content
+        .global_main--block
+          header
+            .container.px-0
+              .row.justify-content-end
+                .col-11.offset-1
+                  .orange-border
+                  ul.nav.menu-navbar
+                    li.nav-item
+                      a.nav-link(href='#')
+                        +icon('save')
+                    li.nav-item.active
+                      a.nav-link(href='page_4.html') Write
+                    li.nav-item
+                      a.nav-link(href='page_3.html') Edit
         .container
           .row
-            .col-sm-4
-              .row
-                .col-sm-4
-                  .nav-col-bg
-                  ul.left-nav-list
-                    li.left-nav-list__logo.clearfix
-                      a(href='#')
-                        img(src='assets/img/global/logo.png', alt='')
-                    li.left-nav-list__item
-                      i.icon-1
-                      .list-item-inner.dropdown
-                        button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle.drop-custom(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-                          | Keyword suggestions
-                        .dropdown-menu(aria-labelledby='dropdownMenuButton', x-placement='bottom-start')
-                          .dropdown-item.drop-item-2p.drop-item-2p-key
-                            .key-sugg
-                              | Cat
-                              .key-sugg-number.key-sugg-number__red 0/3
-                            .key-sugg
-                              | Long Hair
-                              .key-sugg-number.key-sugg-number__orange 1/2
-                            .key-sugg
-                              | Breed
-                              .key-sugg-number.key-sugg-number__green 2/2
-                          .dropdown-item.drop-item-2p.drop-item-2p-key
-                            .key-sugg.key-sugg__red
-                              | Siberian
-                              .key-sugg-number.key-sugg-number__red 0/4
-                            .key-sugg.key-sugg__red
-                              | Russia
-                              .key-sugg-number.key-sugg-number__red 0/4
-                            .key-sugg.key-sugg__red
-                              | Neva mascarade
-                              .key-sugg-number.key-sugg-number__yellow 3/1
-                          .dropdown-item.drop-item-2p.drop-item-2p-key.drop-item-2p-keybn
-                            .key-sugg.key-sugg__yellow
-                              | Feline
-                              .key-sugg-number.key-sugg-number__red 0/3
-                            .key-sugg.key-sugg__yellow
-                              | Kittens
-                              .key-sugg-number.key-sugg-number__orange 1/2
-                          .dropdown-item.drop-item-2p.drop-item-2p-key.drop-item-2p-keybn
-                            a.filter-link(href='#') See more
-                    li.left-nav-list__item
-                      i.icon-2
-                      .list-item-inner.dropdown
-                        button#dropdownMenuButton.btn.btn-secondary.dropdown-toggle.drop-custom(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
-                          | Sentence suggestions
-                        .dropdown-menu(aria-labelledby='dropdownMenuButton', x-placement='bottom-start')
-                          a.dropdown-item.drop-item-2p(href='#') This cat typically weighs 8 to 17
-                          a.dropdown-item.drop-item-2p(href='#') The Siberian’s heart is as warm as his homeland is cold.
-                          a.dropdown-item.drop-item-2p(href='#') Siberian cat vs russian blue
-                          a.dropdown-item.drop-item-2p(href='#') Siberian cat vs bengal cat
-                .col-sm-8
-            .col-sm-8.col-right
+            .col-sm-3
+            .col-sm-9.col-right
               .filter-wrap
                 .filter
                   .filter-name
@@ -103,15 +109,15 @@ html(lang='en')
                 .filter.filter-link
                   a.filter-link(href='#') Modify
               .block-main-wrap.advice-block
-                | We advice you to write a text of
-                span.advice_span--bold 2000 words.
-                |  The complexity should be low and the global repetition should
-                |                             be minimum 5 times the most important keywords.
-                |                             We have discovered a rich snippet opportunity with the question
-                span.advice_span--bold What is a siberian cat?
-                |  Answer the
-                |                             question with a list with at least
-                span.advice_span--bold 3 bullet points.
+                +icon('lamp')
+                span We advice you to write a text of
+                  span.advice_span--bold  2000 words.
+                  | The complexity should be low and the global repetition should
+                  | be minimum 5 times the most important keywords.
+                  | We have discovered a rich snippet opportunity with the question
+                  span.advice_span--bold  What is a siberian cat?
+                  |  Answer the question with a list with at least
+                  span.advice_span--bold  3 bullet points.
               .block-main-wrap.text-input.text-input-yes.text-input--inform.input_inform--icon.clearfix
                 .seo-title Title:
                 form(action='')

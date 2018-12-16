@@ -1,11 +1,27 @@
 .icon {
 	position: relative;
 	display: inline-block;
-	width: 1em;
-	height: 1em;
-	fill: currentColor;
+	width: 2em;
+	height: 2em;
+	&-lamp{
+		@include icon('lamp', 28px, 28px);
+	}
+	&-save{
+		@include icon('save', 28px, 28px);
+	}
+	&-list{
+		@include icon('list', 28px, 28px);
+	}
+	&-Tt{
+		@include icon('Tt', 23px, 26px);
+	}
+	&-i{
+		@include icon('i', 26px, 26px);
+	}
+	&-arrow-l{
+		@include icon('arrow-l', 10px, 15px);
+	}
 }
-
 .icon-cancel {
 	font-size:(512/10)*1rem;
 	width:(512/512)*1em;
@@ -62,4 +78,7 @@
 .icon-in-color {
 	fill:#285AEB;
 }
+
+
+
 

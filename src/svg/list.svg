@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="25.5115413%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#E05743" offset="0%"></stop>
+            <stop stop-color="#F76B1C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="shutterstock_631988234" transform="translate(-248.000000, -1152.000000)" fill="url(#linearGradient-1)">
+            <g id="Group" transform="translate(248.000000, 1152.000000)">
+                <path d="M5,32 C2.58506064,32 0.564489619,30.281352 0.10027961,28 L0,28 L0,26 L8,26 L8,5 C8,2.24 10.243,0 13,0 L27,0 C29.4149394,0 31.4355104,1.71864804 31.8997204,4 L32,4 L32,6 L26,6 L26,27 C26,29.76 23.757,32 21,32 L5,32 Z M8.9986006,30 L21,30 C22.654,30 24,28.65 24,27 L24,6 L16,6 L16,5 C16,3.35 14.654,2 13,2 C11.346,2 10,3.35 10,5 L10,27 C10,28.1252997 9.6271385,29.1641581 8.9986006,30 Z M16.9986006,2 C17.4358721,2.58149213 17.7493979,3.26124289 17.8997204,4 L29.8280317,4 C29.414781,2.8377678 28.3029581,2 27,2 L16.9986006,2 Z M7.82803173,28 L2.17196827,28 C2.58521895,29.1622322 3.69704189,30 5,30 C6.30295811,30 7.41478105,29.1622322 7.82803173,28 Z M13.063,17 L13.063,15 L21,15 L21,17 L13.063,17 Z M13.063,13 L13.063,11 L21,11 L21,13 L13.063,13 Z M13.063,21 L13.063,19 L21,19 L21,21 L13.063,21 Z" id="Combined-Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>
