@@ -29,6 +29,7 @@ a:focus {
 .wrapper {
 	display: flex;
 	align-items: stretch;
+	margin: 0 auto;
 }
 
 .sidebar {
@@ -39,6 +40,7 @@ a:focus {
 	transition: all 0.3s;
 	position: relative;
 	min-height: 100vh;
+	z-index:5;
 	&:after{
 		content: "";
 		width: 3px;
@@ -48,7 +50,7 @@ a:focus {
 		right: 0;
 		top: 0;
 		background: #f5f4ea;
-		z-index: 1;
+		z-index: 6;
 	}
 	.sidebar-header {
 		display: flex;
@@ -174,19 +176,23 @@ a[data-toggle="collapse"] {
 	right: 5px;
 }
 
-$sidebar-w: 200px;
+$sidebar-w: 300px;
 .wrapper.wrapper-text-blocks{
 	.sidebar{
-		position: fixed;
+		position: absolute;
 		top: 0;
 		left: 0;
 		max-width: $sidebar-w;
 		min-width: $sidebar-w;
 		height: 100%;
-		z-index: 200;
+		z-index: 2;
+		&:hover,
+		&:focus{
+			z-index: 200;
+		}
 	}
-	.left-nav{
-		padding-left:($sidebar-w - 72px);
+	.content{
+		padding-left:$sidebar-w;
 	}
 }
 
@@ -199,8 +205,11 @@ $sidebar-w: 200px;
 	min-height: 100vh;
 	transition: all 0.3s;
 	background: #faf9f4;
+	position: relative;
+	//z-index: 5;
 	&-header{
 		display: flex;
+		justify-content: flex-end;
 		padding: 35px 20px;
 	}
 	&-title{

@@ -12,226 +12,237 @@ html(lang='en')
   include mixin/all-mixin
   body
     .wrapper.wrapper-text-blocks
-      // Sidebar
-      #sidebar.sidebar
-        .sidebar-header
-          a.sidebar-logo(href="index.html")
-            img.logo(src="assets/img/global/logo.png")
-            img.logo-sm(src="assets/img/global/logo-sm.png")
-        #accordion.panel-group.left-nav
-          .panel.panel-default
-            a.panel-heading(data-toggle='collapse', data-parent='#accordion', href='#collapse1')
-              +icon('list')
-              +icon('arrow-l')
-              span.panel-title Keyword suggestions
-              +icon('i')
-            #collapse1.panel-collapse.collapse
-              .panel-body
-                .drop-item-2p.drop-item-2p-key
-                  a(href="#").key-sugg
-                    | Cat
-                    .key-sugg-number.key-sugg-number__red 0/3
-                  a(href="#").key-sugg
-                    | Long Hair
-                    .key-sugg-number.key-sugg-number__orange 1/2
-                  a(href="#").key-sugg
-                    | Breed
-                    .key-sugg-number.key-sugg-number__green 2/2
-                .drop-item-2p.drop-item-2p-key
-                  a(href="#").key-sugg.key-sugg__red
-                    | Siberian
-                    .key-sugg-number.key-sugg-number__red 0/4
-                  a(href="#").key-sugg.key-sugg__red
-                    | Russia
-                    .key-sugg-number.key-sugg-number__red 0/4
-                  a(href="#").key-sugg.key-sugg__red
-                    | Neva mascarade
-                    .key-sugg-number.key-sugg-number__yellow 3/1
-                .drop-item-2p.drop-item-2p-key.drop-item-2p-keybn
-                  a(href="#").key-sugg.key-sugg__yellow
-                    | Feline
-                    .key-sugg-number.key-sugg-number__red 0/3
-                  a(href="#").key-sugg.key-sugg__yellow
-                    | Kittens
-                    .key-sugg-number.key-sugg-number__orange 1/2
-                .drop-item-2p.drop-item-2p-key.drop-item-2p-keybn
-                  a.filter-link(href='#') See more
-          .panel.panel-default
-            a.panel-heading(data-toggle='collapse', data-parent='#accordion', href='#collapse2')
-              +icon('Tt')
-              +icon('arrow-l')
-              span.panel-title Sentence suggestions
-              +icon('i')
-            #collapse2.panel-collapse.collapse
-              .panel-body
-                a.dropdown-item.drop-item-2p(href='#') This cat typically weighs 8 to 17
-                a.dropdown-item.drop-item-2p(href='#') The Siberian’s heart is as warm as his homeland is cold.
-                a.dropdown-item.drop-item-2p(href='#') Siberian cat vs russian blue
-                a.dropdown-item.drop-item-2p(href='#') Siberian cat vs bengal cat
+      .container-fluid
+        // Sidebar
+        #sidebar.sidebar
+          .sidebar-header
+            a.sidebar-logo(href="index.html")
+              img.logo(src="assets/img/global/logo.png")
+              img.logo-sm(src="assets/img/global/logo-sm.png")
+          #accordion.panel-group.left-nav
+            .panel.panel-default
+              a.panel-heading(data-toggle='collapse', data-parent='#accordion', href='#collapse1')
+                +icon('list')
+                +icon('arrow-l')
+                span.panel-title Keyword suggestions
+                +icon('i')
+              #collapse1.panel-collapse.collapse
+                .panel-body
+                  .drop-item-2p.drop-item-2p-key
+                    a(href="#").key-sugg
+                      | Cat
+                      .key-sugg-number.key-sugg-number__red 0/3
+                    a(href="#").key-sugg
+                      | Long Hair
+                      .key-sugg-number.key-sugg-number__orange 1/2
+                    a(href="#").key-sugg
+                      | Breed
+                      .key-sugg-number.key-sugg-number__green 2/2
+                  .drop-item-2p.drop-item-2p-key
+                    a(href="#").key-sugg.key-sugg__red
+                      | Siberian
+                      .key-sugg-number.key-sugg-number__red 0/4
+                    a(href="#").key-sugg.key-sugg__red
+                      | Russia
+                      .key-sugg-number.key-sugg-number__red 0/4
+                    a(href="#").key-sugg.key-sugg__red
+                      | Neva mascarade
+                      .key-sugg-number.key-sugg-number__yellow 3/1
+                  .drop-item-2p.drop-item-2p-key.drop-item-2p-keybn
+                    a(href="#").key-sugg.key-sugg__yellow
+                      | Feline
+                      .key-sugg-number.key-sugg-number__red 0/3
+                    a(href="#").key-sugg.key-sugg__yellow
+                      | Kittens
+                      .key-sugg-number.key-sugg-number__orange 1/2
+                  .drop-item-2p.drop-item-2p-key.drop-item-2p-keybn
+                    a.filter-link(href='#') See more
+            .panel.panel-default
+              a.panel-heading(data-toggle='collapse', data-parent='#accordion', href='#collapse2')
+                +icon('Tt')
+                +icon('arrow-l')
+                span.panel-title Sentence suggestions
+                +icon('i')
+              #collapse2.panel-collapse.collapse
+                .panel-body
+                  a.dropdown-item.drop-item-2p(href='#') This cat typically weighs 8 to 17
+                  a.dropdown-item.drop-item-2p(href='#') The Siberian’s heart is as warm as his homeland is cold.
+                  a.dropdown-item.drop-item-2p(href='#') Siberian cat vs russian blue
+                  a.dropdown-item.drop-item-2p(href='#') Siberian cat vs bengal cat
+            .panel.panel-default
+              a.panel-heading(data-toggle='collapse', data-parent='#accordion', href='#collapse3')
+                +icon('paper-list')
+                +icon('arrow-l')
+                span.panel-title Entities suggestions
+                +icon('i')
+              #collapse3.panel-collapse.collapse
+                .panel-body
+                  a.dropdown-item.drop-item-2p(href='#') This cat typically weighs 8 to 17
+                  a.dropdown-item.drop-item-2p(href='#') The Siberian’s heart is as warm as his homeland is cold.
+                  a.dropdown-item.drop-item-2p(href='#') Siberian cat vs russian blue
+                  a.dropdown-item.drop-item-2p(href='#') Siberian cat vs bengal cat
 
-      main.content
-        .global_main--block
-          header
-            .container.px-0
-              .row.justify-content-end
-                .col-11.offset-1
-                  .orange-border
-                  ul.nav.menu-navbar
-                    li.nav-item
-                      a.nav-link(href='#')
-                        +icon('save')
-                    li.nav-item.active
-                      a.nav-link(href='page_4.html') Write
-                    li.nav-item
-                      a.nav-link(href='page_3.html') Edit
-        .container
-          .row
-            .col-sm-4
-            .col-sm-8.col-right
-              .filter-wrap
-                .filter
-                  .filter-name
-                    | your topic:
-                  a(href="#").filter-value
-                    | Siberian cat
-                .filter
-                  .filter-name
-                    | website category:
-                  a(href="#").filter-value
-                    | Animal
-                .filter
-                  .filter-name
-                    | content type:
-                  a(href="#").filter-value
-                    | Informative
-                .filter.filter-link
-                  a.filter-link(href='#') Modify
-              .block-main-wrap.advice-block
-                +icon('lamp')
-                span We advice you to write a text of
-                  span.advice_span--bold  2000 words.
-                  | The complexity should be low and the global repetition should
-                  | be minimum 5 times the most important keywords.
-                  | We have discovered a rich snippet opportunity with the question
-                  span.advice_span--bold  What is a siberian cat?
-                  |  Answer the question with a list with at least
-                  span.advice_span--bold  3 bullet points.
-              #textBlocks.textBlocks
-                .card.mb-3.text-input--inform
-                  #headingOne.card-header
-                    .form-group(data-toggle='collapse', data-target='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
-                      h5.mb-0
-                        label(for='Title') Title:
-                      textarea#Title.form-control(rows='1',placeholder="Type your title here with max 200 characters")
-                  button.card-popover(data-toggle="popover" data-container="body" data-placement="right" type="button" data-html="true"
-                  id="popoverTitle")
-                    +icon('i')
-                  #collapseOne.collapse.show(aria-labelledby='headingOne', data-parent='#textBlocks')
-                    .card-body
-                      .text-input--inform
-                        ul.seo-key
-                          li
-                            a(href="#") Cat
-                          li
-                            a(href="#") Siberian
-                          li
-                            a(href="#") Information
-                        .seo-characters
-                          span.char-bold 200
-                          | /200 characters left
-                .card.mb-3
-                  #headingTwo.card-header
-                    .form-group(data-toggle='collapse', data-target='#collapseTwo', aria-expanded='true', aria-controls='collapseTwo')
-                      h5.mb-0
-                        label(for='Meta') Meta:
-                      textarea#Meta.form-control(rows='1',placeholder="Type your Meta with max 200 characters")
-                    button.card-popover(data-toggle="popover" data-container="body" data-placement="right" type="button" data-html="true"
-                    id="popoverMeta")
-                      +icon('i')
-                  #collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#textBlocks')
-                    .card-body
-                      .text-input--inform
-                        ul.seo-key
-                          li
-                            a(href="#") Cat
-                          li
-                            a(href="#") Siberian
-                          li
-                            a(href="#") Information
-                        .seo-characters
-                          span.char-bold 200
-                          | /200 characters left
-                .card.mb-3
-                  #headingThree.card-header
-                    .form-group(data-toggle='collapse', data-target='#collapseThree', aria-expanded='true', aria-controls='collapseThree')
-                      h5.mb-0
-                        label(for='H1') H1:
-                      textarea#H1.form-control(rows='1',placeholder="Type your H1 here with max 200 characters")
-                    button.card-popover(data-toggle="popover" data-container="body" data-placement="right" type="button" data-html="true"
-                    id="popoverH1")
-                      +icon('i')
-                  #collapseThree.collapse(aria-labelledby='headingThree', data-parent='#textBlocks')
-                    .card-body
-                      .text-input--inform
-                        ul.seo-key
-                          li
-                            a(href="#") Cat
-                          li
-                            a(href="#") Siberian
-                          li
-                            a(href="#") Information
-                        .seo-characters
-                          span.char-bold 200
-                          | /200 characters left
+        #content.content
+          .content-header.p-0
+            header.global_main--block
+              .orange-border
+              ul.nav.menu-navbar
+                li.nav-item
+                  a.nav-link(href='#')
+                    +icon('save')
+                li.nav-item.active
+                  a.nav-link(href='page_4.html') Write
+                li.nav-item
+                  a.nav-link(href='page_3.html') Edit
+          .content-body
+            .container
+              .row
+                .col-sm-3.col-left
+                .col-sm-9.col-right
+                  .filter-wrap
+                    .filter
+                      .filter-name
+                        | your topic:
+                      a(href="#").filter-value
+                        | Siberian cat
+                    .filter
+                      .filter-name
+                        | website category:
+                      a(href="#").filter-value
+                        | Animal
+                    .filter
+                      .filter-name
+                        | content type:
+                      a(href="#").filter-value
+                        | Informative
+                    .filter.filter-link
+                      a.filter-link(href='#') Modify
+                  .block-main-wrap.advice-block
+                    +icon('lamp')
+                    span We advice you to write a text of
+                      span.advice_span--bold  2000 words.
+                      | The complexity should be low and the global repetition should
+                      | be minimum 5 times the most important keywords.
+                      | We have discovered a rich snippet opportunity with the question
+                      span.advice_span--bold  What is a siberian cat?
+                      |  Answer the question with a list with at least
+                      span.advice_span--bold  3 bullet points.
+                  #textBlocks.textBlocks
+                    .card.mb-3.text-input--inform
+                      #headingOne.card-header
+                        .form-group(data-toggle='collapse', data-target='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                          h5.mb-0
+                            label(for='Title') Title:
+                          textarea#Title.form-control(rows='1',placeholder="Type your title here with max 200 characters")
+                      button.card-popover(data-toggle="popover" data-container="body" data-placement="right" type="button" data-html="true"
+                      id="popoverTitle")
+                        +icon('i')
+                      #collapseOne.collapse.show(aria-labelledby='headingOne', data-parent='#textBlocks')
+                        .card-body
+                          .text-input--inform
+                            ul.seo-key
+                              li
+                                a(href="#") Cat
+                              li
+                                a(href="#") Siberian
+                              li
+                                a(href="#") Information
+                            .seo-characters
+                              span.char-bold 200
+                              | /200 characters left
+                    .card.mb-3
+                      #headingTwo.card-header
+                        .form-group(data-toggle='collapse', data-target='#collapseTwo', aria-expanded='true', aria-controls='collapseTwo')
+                          h5.mb-0
+                            label(for='Meta') Meta:
+                          textarea#Meta.form-control(rows='1',placeholder="Type your Meta with max 200 characters")
+                        button.card-popover(data-toggle="popover" data-container="body" data-placement="right" type="button" data-html="true"
+                        id="popoverMeta")
+                          +icon('i')
+                      #collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#textBlocks')
+                        .card-body
+                          .text-input--inform
+                            ul.seo-key
+                              li
+                                a(href="#") Cat
+                              li
+                                a(href="#") Siberian
+                              li
+                                a(href="#") Information
+                            .seo-characters
+                              span.char-bold 200
+                              | /200 characters left
+                    .card.mb-3
+                      #headingThree.card-header
+                        .form-group(data-toggle='collapse', data-target='#collapseThree', aria-expanded='true', aria-controls='collapseThree')
+                          h5.mb-0
+                            label(for='H1') H1:
+                          textarea#H1.form-control(rows='1',placeholder="Type your H1 here with max 200 characters")
+                        button.card-popover(data-toggle="popover" data-container="body" data-placement="right" type="button" data-html="true"
+                        id="popoverH1")
+                          +icon('i')
+                      #collapseThree.collapse(aria-labelledby='headingThree', data-parent='#textBlocks')
+                        .card-body
+                          .text-input--inform
+                            ul.seo-key
+                              li
+                                a(href="#") Cat
+                              li
+                                a(href="#") Siberian
+                              li
+                                a(href="#") Information
+                            .seo-characters
+                              span.char-bold 200
+                              | /200 characters left
 
-              .block-main-wrap.block-main-article
-                .article-top
-                  .seo-title Article:
-                  .article-style-pannel
-                    button.article-style-pannel__btn
-                      +icon('T')
-                    button.article-style-pannel__btn
-                      +icon('t-it')
-                    button.article-style-pannel__btn
-                      +icon('T-udrl')
-                    button.article-style-pannel__btn
-                      +icon('clip')
-                    button.article-style-pannel__btn
-                      +icon('m-list')
-                    button.article-style-pannel__btn
-                      +icon('shelude')
-                  form.sel-form
-                    select
-                      option template style: Academic
-                      option template style: Acad
-                      option template style: Academ
-                article
-                  h2 Intro
-                  p  
-                  p  
-                  h2 H2
-                  p You can make a list here
-                  ul
-                    li Item 1
-                    li Item 3
-                    li Item 3
-                  p  
-                  p  
-                  h2 H2
-                  p Use our sentence suggestions tool
-                  p  
-                  h2 Conclusion
-                .article-bottom.article_bottom--edit
-                  ul.article-info.article_info--edit
-                    li
-                      | Words
-                      span.advice_span--bold 1500
-                    li
-                      | Characters
-                      span.advice_span--bold 3450
-                    li
-                      | Sentences
-                      span.advice_span--bold 100
+                  .block-main-wrap.block-main-article
+                    .article-top
+                      .seo-title Article:
+                      .article-style-pannel
+                        button.article-style-pannel__btn
+                          +icon('T')
+                        button.article-style-pannel__btn
+                          +icon('t-it')
+                        button.article-style-pannel__btn
+                          +icon('T-udrl')
+                        button.article-style-pannel__btn
+                          +icon('clip')
+                        button.article-style-pannel__btn
+                          +icon('m-list')
+                        button.article-style-pannel__btn
+                          +icon('shelude')
+                      form.sel-form
+                        select
+                          option template style: Academic
+                          option template style: Acad
+                          option template style: Academ
+                    article
+                      h2 Intro
+                      p  
+                      p  
+                      h2 H2
+                      p You can make a list here
+                      ul
+                        li Item 1
+                        li Item 3
+                        li Item 3
+                      p  
+                      p  
+                      h2 H2
+                      p Use our sentence suggestions tool
+                      p  
+                      h2 Conclusion
+                    .article-bottom.article_bottom--edit
+                      ul.article-info.article_info--edit
+                        li
+                          | Words
+                          span.advice_span--bold 1500
+                        li
+                          | Characters
+                          span.advice_span--bold 3450
+                        li
+                          | Sentences
+                          span.advice_span--bold 100
 
     footer
     #popover-content-popoverTitle.d-none
@@ -251,6 +262,7 @@ html(lang='en')
         $(document).ready(function () {
             $("[data-toggle=popover]").each(function (i, obj) {
                 $(this).popover({
+                    trigger: "hover focus",
                     html: true,
                     content: function () {
                         var id = $(this).attr('id')

@@ -16,6 +16,9 @@
 	&-clip{@include icon('clip', 18px, 20px);  }
 	&-m-list{@include icon('m-list', 22px, 22px);  }
 	&-shelude{@include icon('shelude', 22px, 22px);  }
+	&-check{@include icon('check', 22px, 22px);  }
+	&-close{@include icon('close', 22px, 22px);  }
+	&-paper-list{@include icon('paper-list', 22px, 22px);  }
 }
 .icon-cancel {
 	font-size:(512/10)*1rem;
