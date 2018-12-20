@@ -1,0 +1,278 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title Textolia
+    meta(name='keywords', content='')
+    meta(name='description', content='')
+    meta(name='format-detection', content='telephone=no')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin='anonymous')
+    link(href='https://fonts.googleapis.com/css?family=Roboto:300,400,700,900', rel='stylesheet')
+    link(rel='stylesheet', href='assets/css/app.min.css', type='text/css')
+  include mixin/all-mixin
+  body
+    .wrapper
+        .container.px-0
+            .row.justify-content-end.px-0
+                header.global_main--block
+                    .orange-border
+                    ul.nav.menu-navbar
+                        li.nav-item
+                            a.nav-link(href='#')
+                                +icon('save')
+                        li.nav-item
+                            a.nav-link(href='page_4.html') Write
+                        li.nav-item.active
+                            a.nav-link(href='page_3.html') Edit
+            .row
+                .col-3.sidebar-col.px-0
+                    #sidebar.sidebar
+                        .sidebar-header
+                            a.sidebar-logo(href="index.html")
+                                img.logo(src="assets/img/global/logo.png")
+                                img.logo-sm(src="assets/img/global/logo-sm.png")
+                        #accordion.panel-group.left-nav
+                            .panel.panel-default
+                                a.panel-heading(data-toggle='collapse', data-parent='#accordion', href='#collapse1')
+                                    +icon('list')
+                                    +icon('arrow-l')
+                                    span.panel-title Keyword suggestions
+                                    +icon('i')
+                                #collapse1.panel-collapse.collapse
+                                    .panel-body
+                                        .drop-item-2p.drop-item-2p-key
+                                            a(href="#").key-sugg
+                                                | Cat
+                                                .key-sugg-number.key-sugg-number__red 0/3
+                                            a(href="#").key-sugg
+                                                | Long Hair
+                                                .key-sugg-number.key-sugg-number__orange 1/2
+                                            a(href="#").key-sugg
+                                                | Breed
+                                                .key-sugg-number.key-sugg-number__green 2/2
+                                        .drop-item-2p.drop-item-2p-key
+                                            a(href="#").key-sugg.key-sugg__red
+                                                | Siberian
+                                                .key-sugg-number.key-sugg-number__red 0/4
+                                            a(href="#").key-sugg.key-sugg__red
+                                                | Russia
+                                                .key-sugg-number.key-sugg-number__red 0/4
+                                            a(href="#").key-sugg.key-sugg__red
+                                                | Neva mascarade
+                                                .key-sugg-number.key-sugg-number__yellow 3/1
+                                        .drop-item-2p.drop-item-2p-key.drop-item-2p-keybn
+                                            a(href="#").key-sugg.key-sugg__yellow
+                                                | Feline
+                                                .key-sugg-number.key-sugg-number__red 0/3
+                                            a(href="#").key-sugg.key-sugg__yellow
+                                                | Kittens
+                                                .key-sugg-number.key-sugg-number__orange 1/2
+                                        .drop-item-2p.drop-item-2p-key.drop-item-2p-keybn
+                                            a.filter-link(href='#') See more
+                            .panel.panel-default
+                                a.panel-heading(data-toggle='collapse', data-parent='#accordion', href='#collapse2')
+                                    +icon('Tt')
+                                    +icon('arrow-l')
+                                    span.panel-title Sentence suggestions
+                                    +icon('i')
+                                #collapse2.panel-collapse.collapse
+                                    .panel-body
+                                        a.dropdown-item.drop-item-2p(href='#') This cat typically weighs 8 to 17
+                                        a.dropdown-item.drop-item-2p(href='#') The Siberian’s heart is as warm as his homeland is cold.
+                                        a.dropdown-item.drop-item-2p(href='#') Siberian cat vs russian blue
+                                        a.dropdown-item.drop-item-2p(href='#') Siberian cat vs bengal cat
+
+                            .panel.panel-default
+                                a.panel-heading(data-toggle='collapse', data-parent='#accordion', href='#collapse3')
+                                    +icon('paper-list')
+                                    +icon('arrow-l')
+                                    span.panel-title Entities suggestions
+                                    +icon('i')
+                                #collapse3.panel-collapse.collapse
+                                    .panel-body
+                                        a.dropdown-item.drop-item-2p(href='#') This cat typically weighs 8 to 17
+                                        a.dropdown-item.drop-item-2p(href='#') The Siberian’s heart is as warm as his homeland is cold.
+                                        a.dropdown-item.drop-item-2p(href='#') Siberian cat vs russian blue
+                                        a.dropdown-item.drop-item-2p(href='#') Siberian cat vs bengal cat
+
+                .col-2 2
+                .col-7.col-right
+                    .filter-wrap
+                        .filter
+                            .filter-name
+                                | your topic:
+                            .filter-value
+                                | Siberian cat
+                        .filter
+                            .filter-name
+                                | website category:
+                            .filter-value
+                                | Animal
+                        .filter
+                            .filter-name
+                                | content type:
+                            .filter-value
+                                | Informative
+                        .filter.filter-link
+                            a.filter-link(href='#') Modify
+                    .block-main-wrap.advice-block
+                        +icon('lamp')
+                        span We advice you to write a text of
+                            span.advice_span--bold  2000 words.
+                            | The complexity should be low and the global repetition should
+                            | be minimum 5 times the most important keywords.
+                            | We have discovered a rich snippet opportunity with the question
+                            span.advice_span--bold  What is a siberian cat?
+                            |  Answer the question with a list with at least
+                            span.advice_span--bold  3 bullet points.
+                    .textBlocks
+                        .card.mb-3.text-input--inform
+                            #headingOne.card-header
+                                .form-group(data-toggle='collapse', data-target='#collapseOne', aria-expanded='true', aria-controls='collapseOne')
+                                    h5.mb-0
+                                        label(for='Title') Title:
+                                    textarea#Title.form-control(rows='1',placeholder="Type your title here with max 200 characters") Siberian Cat Breed Information, Pictures, Characteristics & Facts
+                            button.card-popover-check(data-toggle="popover" data-container="body" data-placement="right" type="button" data-html="true"
+                            id="popoverTitle")
+                                +icon('check')
+                            #collapseOne.collapse.show(aria-labelledby='headingOne', data-parent='#textBlocks')
+                                .card-body
+                                    .text-input--inform
+                                        ul.seo-key
+                                            li
+                                                a(href="#") Cat
+                                            li
+                                                a(href="#") Siberian
+                                            li
+                                                a(href="#") Information
+                                        .seo-characters
+                                            span.char-bold 200
+                                            | /200 characters left
+                        .card.mb-3
+                            #headingTwo.card-header
+                                .form-group(data-toggle='collapse', data-target='#collapseTwo', aria-expanded='true', aria-controls='collapseTwo')
+                                    h5.mb-0
+                                        label(for='Meta') Meta
+                                    textarea#Meta.form-control(rows='2',placeholder="Type your Meta with max 200 characters") From Russia with love: that’s the Siberian,
+                                        | a glamorous native cat from the taiga of Siberia, a forested area with a subarctic climate that no doubt contributed to this cat’s
+                                        | long, thick, protective coat. See all Siberian characteristics below!
+                                button.card-popover-check(data-toggle="popover" data-container="body" data-placement="right" type="button" data-html="true"
+                                id="popoverTitle")
+                                    +icon('check')
+                            #collapseTwo.collapse(aria-labelledby='headingTwo', data-parent='#textBlocks')
+                                .card-body
+                                    .text-input--inform
+                                        ul.seo-key
+                                            li
+                                                a(href="#") Cat
+                                            li
+                                                a(href="#") Siberian
+                                            li
+                                                a(href="#") Information
+                                        .seo-characters
+                                            span.char-bold 200
+                                            | /200 characters left
+                        .card.mb-3
+                            #headingThree.card-header
+                                .form-group(data-toggle='collapse', data-target='#collapseThree', aria-expanded='true', aria-controls='collapseThree')
+                                    h5.mb-0
+                                        label(for='H1') H1:
+                                    textarea#H1.form-control(rows='1',placeholder="Type your H1 here with max 200 characters") Siberian Cat Breed Information
+                                button.card-popover-check(data-toggle="popover" data-container="body" data-placement="right" type="button" data-html="true"
+                                id="popoverH1-no")
+                                    +icon('close')
+                            #collapseThree.collapse(aria-labelledby='headingThree', data-parent='#textBlocks')
+                                .card-body
+                                    .text-input--inform
+                                        ul.seo-key
+                                            li
+                                                a(href="#") Cat
+                                            li
+                                                a(href="#") Siberian
+                                            li
+                                                a(href="#") Information
+                                        .seo-characters
+                                            span.char-bold 200
+                                            | /200 characters left
+
+                    .block-main-wrap.clearfix.block-main-article
+                        .article-top
+                            .seo-title Article:
+                            .article-style-pannel
+                                button.article-style-pannel__btn
+                                    +icon('T')
+                                button.article-style-pannel__btn
+                                    +icon('t-it')
+                                button.article-style-pannel__btn
+                                    +icon('T-udrl')
+                                button.article-style-pannel__btn
+                                    +icon('clip')
+                                button.article-style-pannel__btn
+                                    +icon('m-list')
+                                button.article-style-pannel__btn
+                                    +icon('shelude')
+                            form.sel-form
+                                select
+                                    option template style: Academic
+                                    option template style: Acad
+                                    option template style: Academ
+                        article.article-redactor(data-toggle="focus",data-container="body",data-placement="left",data-html="true",id="popoverText")
+                            p
+                                | The Siberian is a landrace variety of domestic cat, present in Russia for centuries, and more recently developed as a formal breed, with standards promulgated since the late 1980s.
+                            h2 The forest cat
+                            p
+                                | They vary from medium to medium-large in size. A longer name of the formal breed is Siberian Forest Cat, but it is usually referred to as the Siberian or the
+                                span.article-orange Siberian !
+                                |  cat. Another name for the formal breed is the Moscow Semi-Longhair. The cat is an ancient breed that is now believed to be ancestral to all modern long-haired cats. The cat has similarities with the Norwegian forest cat, to which it is
+                                span.article-violet likly
+                                |  closely related. It is a natural breed of Siberia and the national cat of Russia.
+                            h2 A forest cat
+                            p
+                                | While it began as a landrace, it is selectively bred and pedigreed today in at least seven major cat fancier and breeder organisations. The colorpoint variant of the breed is called the Neva Masquerade by some registries, including Fédération Internationale Féline (FIFé).
+                            .article_synonyms--block
+                                span.synonyms-span Synonyms
+                                .checkbox-wrap.checkbox
+                                    input#lang(type='checkbox')
+                                    label Past
+                                .checkbox-wrap
+                                    input#lang(type='checkbox')
+                                    label Familial
+                        .article-bottom
+                            ul.article-info
+                                li
+                                    | Words
+                                    span 1500
+                                li
+                                    | Characters
+                                    span 3450
+                                li
+                                    | Sentences
+                                    span 100
+
+  footer
+  #popover-content-popoverTitle.d-none
+      | We advice you to write a title of 200 characters including at least
+      | b  3 of the most important keywords
+  #popover-content-popoverMeta.d-none
+      | We advice you to write a title of 200 characters including at least
+      | b  3 of the most important keywords
+  #popover-content-popoverH1.d-none
+      | We advice you to write a title of 200 characters including at least
+      | b  3 of the most important keywords
+  script(src='assets/js/vendor/libs.min.js')
+  script(src='assets/js/vendor/user.js')
+  script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
+  script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
+  script.
+      $(document).ready(function () {
+          $("[data-toggle=popover]").each(function (i, obj) {
+              $(this).popover({
+                  trigger: "hover focus",
+                  html: true,
+                  content: function () {
+                      var id = $(this).attr('id')
+                      return $('#popover-content-' + id).html();
+                  }
+              });
+          });
+      });

@@ -7,55 +7,58 @@ html(lang="en")
     include mixin/all-mixin
     body
         .wrapper
-            // Sidebar
-            nav#sidebar.sidebar
-                .sidebar-header
-                    a.sidebar-logo(href="index.html")
-                        img.logo(src="assets/img/global/logo.png")
-                        img.logo-sm(src="assets/img/global/logo-sm.png")
-                ul.sidebar-menu.mb-5
-                    li.active
-                        a(href="#")
-                            i.fas.fa-copy
-                            span My Texts
-                    li
-                        a(href="#")
-                            i.fas.fa-glasses
-                            span My Profile
-                    li
-                        a(href="#")
-                            i.fas.fa-sliders-h
-                            span My Statistics
-                    li
-                        a(href="#")
-                            i.fas.fa-keyboard
-                            span My Account
-                    li
-                        a(href="#")
-                            i.fas.fa-lightbulb
-                            span Log Out
-                .sidebar-bottom
-                    .view-switch
-                        p.mb-0 view-mode:
-                        .check-switch
-                            input#check1.switch(type='checkbox')
-                            label.label-switch(for='check1')
-                        .check-switch-text
-                            p day
-                            p night
+            .container.px-0
+                .row
+                    .col-3.sidebar-col.px-0
+                        // Sidebar
+                        nav#sidebar.sidebar
+                            .sidebar-header.mt-5
+                                a.sidebar-logo.mt-3(href="index.html")
+                                    img.logo(src="assets/img/global/logo.png")
+                                    img.logo-sm(src="assets/img/global/logo-sm.png")
+                            ul.sidebar-menu.mb-5
+                                li.active
+                                    a(href="#")
+                                        i.fas.fa-copy
+                                        span My Texts
+                                li
+                                    a(href="#")
+                                        i.fas.fa-glasses
+                                        span My Profile
+                                li
+                                    a(href="#")
+                                        i.fas.fa-sliders-h
+                                        span My Statistics
+                                li
+                                    a(href="#")
+                                        i.fas.fa-keyboard
+                                        span My Account
+                                li
+                                    a(href="#")
+                                        i.fas.fa-lightbulb
+                                        span Log Out
+                            .sidebar-bottom
+                                .view-switch
+                                    p.mb-0 view-mode:
+                                    .check-switch
+                                        input#check1.switch(type='checkbox')
+                                        label.label-switch(for='check1')
+                                    .check-switch-text
+                                        p day
+                                        p night
 
-
-            // Page Content
-            #content.content
-                .content-header
-                    h1.content-title
-                        span.text-logo Textolia
-                        span Your indispensable tool for optimized content
-                    //button#sidebarCollapse.btn.btn-default(type="button")
-                        i.fas.fa-bars
-                .content-body
-                    //include global/progress-form
-                    include global/progress-form-2
+                    .col-9.col-right
+                        // Page Content
+                        #content.content
+                            .content-header
+                                h1.content-title
+                                    span.text-logo Textolia
+                                    span Your indispensable tool for optimized content
+                                //button#sidebarCollapse.btn.btn-default(type="button")
+                                    i.fas.fa-bars
+                            .content-body
+                                //include global/progress-form
+                                include global/progress-form-2
 
     // jQuery CDN - Slim version
     script(src='https://code.jquery.com/jquery-3.3.1.min.js')
