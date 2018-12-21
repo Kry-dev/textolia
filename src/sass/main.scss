@@ -936,6 +936,28 @@ body {
     border-bottom: 2px dotted #dddada;
     padding-bottom: 15px;
     margin-bottom: 15px;
+    .dropdown.bootstrap-select{
+        width: 240px;
+    }
+    .dropdown-toggle{
+        border-radius: 32px;
+        font: 14px/37px 'Roboto', sans-serif;
+        border: none;
+        background: #faf9f4;
+        box-shadow: inset 0px 2px 6px -2px #6b4d4da3;
+        outline: none;
+        height: 37px;
+        padding: 0 15px;
+        font-weight: bold;
+        &:focus{
+            outline: none !important;
+            cursor: pointer;
+        }
+    }
+    .dropdown-menu.show{
+        padding: 0;
+        margin: 0;
+    }
 }
 
 .article-bottom {

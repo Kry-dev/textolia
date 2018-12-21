@@ -65,7 +65,8 @@ jQuery(function ($) {
 
 
     setTimeout(function () {
-        $('input, select').styler();
+        //$('input, select').styler();
+        $('input').styler();
     }, 100)
 
 });

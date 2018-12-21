@@ -8,6 +8,8 @@ html(lang='en')
     meta(name='format-detection', content='telephone=no')
     link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css', integrity='sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO', crossorigin='anonymous')
     link(href='https://fonts.googleapis.com/css?family=Roboto:300,400,700,900', rel='stylesheet')
+    link(src="https://cdnjs.cloudflare.com/ajax/libs/pretty-checkbox/3.0.0/pretty-checkbox.min.css")
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css')
     link(rel='stylesheet', href='assets/css/app.min.css', type='text/css')
     // Vendor JS
     script(defer='', src='https://use.fontawesome.com/releases/v5.0.13/js/solid.js', integrity='sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ', crossorigin='anonymous')
@@ -73,16 +75,24 @@ html(lang='en')
                   p.keyword-paragraph
                     | Select additional words that you haven’t
                     | add yet to your text:
-                  .checkbox-wrap.checkbox
-                    input#lang(type='checkbox')
-                    label Feline
-                  .checkbox-wrap
-                    input#lang(type='checkbox')
-                    label Kittens
+                  // danger
+                  p
+                    .pretty.p-default
+                      input(type='checkbox')
+                      .state.p-danger
+                        label Feline
+                  // danger
+                  p
+                    .pretty.p-default
+                      input(type='checkbox')
+                      .state.p-danger
+                        label Kittens
                   p.keyword-paragraph  Remove some words that are overused:
-                  .checkbox_wrap--2
-                    input#lang(type='checkbox')
-                    label Neva mascarade
+                  // danger
+                  .pretty.p-default
+                    input(type='checkbox')
+                    .state.p-danger
+                      label Neva mascarade
                 .dial-block
                   .dial.dial_block--3(data-linewidth='3', data-width='110') 73
                   .dial.dial.dial_block--4(data-linewidth='3', data-width='110') 20
@@ -216,11 +226,10 @@ html(lang='en')
                     +icon('m-list')
                   button.article-style-pannel__btn
                     +icon('shelude')
-                form.sel-form
-                  select
-                    option template style: Academic
-                    option template style: Acad
-                    option template style: Academ
+                select#templateStyle.selectpicker()
+                  option(value='1') template style: Academic
+                  option(value='2') template style: Acad
+                  option(value='3') template style: Academ
               form.article-content.article_content--edit(action='')
                 p.text-field-article
                   | The Siberian is a landrace variety of domestic cat, present in Russia for centuries, and more recently developed as a formal breed,
@@ -268,12 +277,15 @@ html(lang='en')
     #popover-content-popoverH1-no.d-none
       .negative--block.text_negative--block Meta too short (200 characters)
       .negative--block.text_negative--block Not enough keywords
-    script(src='assets/js/vendor/libs.min.js')
+    //script(src='assets/js/vendor/libs.min.js')
+    script(src='https://code.jquery.com/jquery-3.3.1.min.js')
     script(src='assets/js/vendor/user.js')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js', integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49', crossorigin='anonymous')
     script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js', integrity='sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy', crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/js/bootstrap-select.min.js', crossorigin='anonymous')
     script.
         $(document).ready(function () {
+            $(".selectpicker").selectpicker();
             $("[data-toggle=popover]").each(function (i, obj) {
                 $(this).popover({
                     trigger: "hover focus",
